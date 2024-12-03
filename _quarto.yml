@@ -16,24 +16,24 @@ book:
   repo-url: "https://github.com/ontoligent/programming-for-data-science" # Variable does not work here
   chapters:
     - part: index.qmd # 00 Welcome 
-      chapters: 
-        - modules/m00/m00-intro.qmd
-        - video-gallery.qmd
+#       chapters: 
+#         - modules/m00/m00-intro.qmd
+#         - video-gallery.qmd
         
-    - part: modules/m01/m01-intro.qmd # 01 Getting Started
-      chapters:
-        - topics/rivanna.qmd
-        - topics/unix.qmd
-        - topics/setting-up-ssh.qmd
-        - topics/git-and-github.qmd
-      appendices:
-        - topics/oreilly-accounts.qmd
-        - topics/refreshing-the-course-repo.qmd
+#     - part: modules/m01/m01-intro.qmd # 01 Getting Started
+#       chapters:
+#         - topics/rivanna.qmd
+#         - topics/unix.qmd
+#         - topics/setting-up-ssh.qmd
+#         - topics/git-and-github.qmd
+#       appendices:
+#         - topics/oreilly-accounts.qmd
+#         - topics/refreshing-the-course-repo.qmd
         
     - part: modules/m02/m02-intro.qmd # 02 Introducing Python
       chapters:
-        - topics/on-data.qmd
-        - topics/python-object-types.qmd
+        - notebooks/M02_BasicPython/on-data.qmd
+        - notebooks/M02_BasicPython/python-object-types.qmd
         - notebooks/M02_BasicPython/M02-01-DataTypes.ipynb
         - notebooks/M02_BasicPython/M02-02-Numbers.ipynb
         - notebooks/M02_BasicPython/M02-03-Booleans.ipynb
@@ -43,7 +43,7 @@ book:
         
     - part: modules/m03/m03-intro.qmd # 03 Control Structures
       chapters:
-        - topics/vals-vars-expressions-statements.qmd
+        - notebooks/M03_ControlStructures/vals-vars-expressions-statements.qmd
         - notebooks/M03_ControlStructures/M03-01-ControlStructures.ipynb
         - notebooks/M03_ControlStructures/M03-02-IterablesAndIterators.ipynb
         - notebooks/M03_ControlStructures/M03-03-Comprehensions.ipynb
@@ -121,16 +121,16 @@ book:
         - notebooks/M12_RViz/M12-03-Qplot-and-Plotly.ipynb
         - notebooks/M12_RViz/M12-04-Plotnine.ipynb
         
-    - part: modules/m13/m13-intro.qmd # "13 Agile"
-      chapters: 
-        - notebooks/M13_Agile/M13-01-ProjectManagement.ipynb
-        - notebooks/M13_Agile/M13-02-AgileDevelopment.ipynb
-        - notebooks/M13_Agile/M13-03-UserStories.ipynb
+#     - part: modules/m13/m13-intro.qmd # "13 Agile"
+#       chapters: 
+#         - notebooks/M13_Agile/M13-01-ProjectManagement.ipynb
+#         - notebooks/M13_Agile/M13-02-AgileDevelopment.ipynb
+#         - notebooks/M13_Agile/M13-03-UserStories.ipynb
     
-    - part: "Appendices"
-      chapters: 
-        - topics/oreilly-accounts.qmd
-        # - topics/refreshing-the-course-repo.qmd
+#     - part: "Appendices"
+#       chapters: 
+#         - topics/oreilly-accounts.qmd
+#         # - topics/refreshing-the-course-repo.qmd
   
   sidebar:
     style: docked
