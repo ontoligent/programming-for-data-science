@@ -1,0 +1,159 @@
+project:
+  title: "{{< var site_title >}}"
+  type: book
+  output-dir: docs
+
+execute:
+  freeze: true
+  
+book:
+  title: "{{< var course_num >}}: {{< var course_title >}}"
+  author: "Rafael C. Alvarado"
+  date: "05/08/2024"
+  reader-mode: false
+  page-navigation: true
+  repo-actions: [edit]
+  repo-url: "https://github.com/ontoligent/DS5100-book" # Variable does not work here
+  chapters:
+    - part: index.qmd # 00 Welcome 
+      chapters: 
+        - modules/m00/m00-intro.qmd
+        - video-gallery.qmd
+        
+    - part: modules/m01/m01-intro.qmd # 01 Getting Started
+      chapters:
+        - topics/rivanna.qmd
+        - topics/unix.qmd
+        - topics/setting-up-ssh.qmd
+        - topics/git-and-github.qmd
+      appendices:
+        - topics/oreilly-accounts.qmd
+        - topics/refreshing-the-course-repo.qmd
+        
+    - part: modules/m02/m02-intro.qmd # 02 Introducing Python
+      chapters:
+        - topics/on-data.qmd
+        - topics/python-object-types.qmd
+        - notebooks/M02_BasicPython/M02-01-DataTypes.ipynb
+        - notebooks/M02_BasicPython/M02-02-Numbers.ipynb
+        - notebooks/M02_BasicPython/M02-03-Booleans.ipynb
+        - notebooks/M02_BasicPython/M02-04-Strings.ipynb
+        - notebooks/M02_BasicPython/M02-05-Structures.ipynb
+        - notebooks/M02_BasicPython/M02-06-AsideOnImmutables.ipynb
+        
+    - part: modules/m03/m03-intro.qmd # 03 Control Structures
+      chapters:
+        - topics/vals-vars-expressions-statements.qmd
+        - notebooks/M03_ControlStructures/M03-01-ControlStructures.ipynb
+        - notebooks/M03_ControlStructures/M03-02-IterablesAndIterators.ipynb
+        - notebooks/M03_ControlStructures/M03-03-Comprehensions.ipynb
+        - notebooks/M03_ControlStructures/M03-04-NestedComprehensions.ipynb
+        
+    - part: modules/m04/m04-intro.qmd # 04 Functions
+      chapters: 
+        - notebooks/M04_PythonFunctions/M04-01-Functions.ipynb
+        - notebooks/M04_PythonFunctions/M04-02-Importing.ipynb
+        - notebooks/M04_PythonFunctions/M04-03-LambdaFunctions.ipynb
+        - notebooks/M04_PythonFunctions/M04-04-RecursiveFunctions.ipynb
+        - notebooks/M04_PythonFunctions/M04-05-Scope.ipynb
+        - notebooks/M04_PythonFunctions/M04-06-FunctionsCallingFunctions.ipynb
+        
+    - part: modules/m05/m05-intro.qmd # "05 NumPy"
+      chapters:
+        - notebooks/M05_NumPy/M05-00-Time.ipynb
+        - notebooks/M05_NumPy/M05-01-BasicFileIO.ipynb
+        - notebooks/M05_NumPy/M05-02-NumpyDesign.ipynb
+        - notebooks/M05_NumPy/M05-03-NumPyIndexing.ipynb
+        - notebooks/M05_NumPy/M05-04-NumPyOperating.ipynb
+        - notebooks/M05_NumPy/M05-05-NumPyFunctions.ipynb
+        
+    - part: modules/m06/m06-intro.qmd # "06 Pandas"
+      chapters:
+        - notebooks/M06_Pandas/M06-00-IntroducingPandas.ipynb
+        - notebooks/M06_Pandas/M06-01-ExploringPandas.ipynb
+        - notebooks/M06_Pandas/M06-02-DeeperIntoPandas.ipynb
+        - notebooks/M06_Pandas/M06-03-NarrowWide.ipynb
+        - notebooks/M06_Pandas/M06-04-MethodChaining.ipynb
+        - notebooks/M06_Pandas/M06-05-Pandas-and-SQL.ipynb
+        
+    - part: modules/m07/m07-intro.qmd # "07 Classes"
+      chapters: 
+        - topics/what-is-oop.qmd      
+        - notebooks/M07_PythonClasses/M07-01-Classes.ipynb
+        - notebooks/M07_PythonClasses/M07-02-ClassesExample.ipynb
+        - notebooks/M07_PythonClasses/M07-03-MoreOnClasses.ipynb
+        - notebooks/M07_PythonClasses/M07-04-ClassAttributeWeirdness.ipynb
+        - notebooks/M07_PythonClasses/M07-05-Example.ipynb
+        
+    - part: modules/m08/m08-intro.qmd # "08 Testing"
+      chapters:
+        # - modules/m08/m08-testing-and-verification.qmd
+        - notebooks/M08_PythonTesting/M08-00-TestingAndVerification.ipynb
+        - notebooks/M08_PythonTesting/M08-01-ExceptionHandling.ipynb 
+        - notebooks/M08_PythonTesting/M08-02-PythonUnitTesting.ipynb
+        
+    - part: modules/m09/m09-intro.qmd # "09 Modules"
+      chapters: 
+        - notebooks/M09_PythonModules/M09-01-ModulesAndPackages.ipynb
+        - notebooks/M09_PythonModules/M09-02-Namespaces.ipynb
+        - notebooks/M09_PythonModules/M09-03-MakingYourOwn.ipynb
+        
+        # - modules/m09/m09-review.qmd
+    - part: modules/m10/m10-intro.qmd # "10 Basic R"
+      chapters: 
+        - notebooks/M10_RBasics/M10-01-Intro.ipynb
+        - notebooks/M10_RBasics/M10-02-DataTypes.ipynb
+        - notebooks/M10_RBasics/M10-03-DataStructures.ipynb
+        - notebooks/M10_RBasics/M10-04-DataFrames.ipynb
+        - notebooks/M10_RBasics/M10-05-ControlStructures.ipynb
+        - notebooks/M10_RBasics/M10-06-Functions.ipynb
+        
+    - part: modules/m11/m11-intro.qmd # "11 Dplyr"
+      chapters: 
+        - notebooks/M11_RDplyr/M11-01-Tibbles.ipynb
+        - notebooks/M11_RDplyr/M11-02-Dplyr.ipynb
+
+    - part: modules/m12/m12-intro.qmd # "12 Visualization"
+      chapters:
+        - notebooks/M12_RViz/M12-00-AGrammarOfGraphics.ipynb      
+        - notebooks/M12_RViz/M12-01-GettingStartedWithGGPlot.ipynb
+        - notebooks/M12_RViz/M12-02-RMarkdown.ipynb
+        - notebooks/M12_RViz/M12-03-Qplot-and-Plotly.ipynb
+        - notebooks/M12_RViz/M12-04-Plotnine.ipynb
+        
+    - part: modules/m13/m13-intro.qmd # "13 Agile"
+      chapters: 
+        - notebooks/M13_Agile/M13-01-ProjectManagement.ipynb
+        - notebooks/M13_Agile/M13-02-AgileDevelopment.ipynb
+        - notebooks/M13_Agile/M13-03-UserStories.ipynb
+    
+    - part: "Appendices"
+      chapters: 
+        - topics/oreilly-accounts.qmd
+        # - topics/refreshing-the-course-repo.qmd
+  
+  sidebar:
+    style: docked
+    reader-mode: false
+    # style: floating
+    background: light
+    collapse-level: 1
+    subtitle: Summer 2024
+
+# comments:
+#   hypothesis: true
+
+format:
+  html:
+    toc: true
+    theme: cosmo
+    number-sections: false
+    fig-cap-location: bottom
+    link-external-icon: true
+    link-external-newwindow: true
+    reader-mode: false
+  # pdf:
+  #   documentclass: scrreport    
+
+bibliography:
+  - refs.bib

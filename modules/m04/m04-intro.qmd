@@ -1,0 +1,31 @@
+# M04 Functions
+
+## Topics
+
+-   Built-in functions
+-   User-defined functions
+-   Variable scope
+-   Lambda functions
+-   Design of functions
+-   Recursion
+
+## Readings
+
+### Suggested
+
+-   [Lutz 2019, Part IV, Chapter 16: Function Basics](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch16.html)
+-   [Lutz 2019, Part IV, Chapter 17: Scopes](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch17.html)
+    -   Non-local is for advanced users.
+-   [Lutz 2019, Part IV, Chapter 18. Arguments](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch18.html)
+-   [Lutz 2019, Part IV, Chapter 19: Advanced Function Topics](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch19.html)
+
+### Optional
+
+-   [McKinney, 2023, Python for Data Analysis, "3.2: Functions"](https://wesmckinney.com/book/python-builtin#functions)
+-   [Functions (W3S)](https://www.w3schools.com/python/python_functions.asp)
+-   [Global and Local Variables (GFG)](https://www.geeksforgeeks.org/global-local-variables-python/?ref=lbp)
+-   [Lambda Functions (Real Python)](https://realpython.com/python-lambda/)
+
+## Videos
+
+<iframe src="https://kaltura-connect.its.virginia.edu/embedplaylist/secure/embed/v2/1/playlistId/1_zcuqcvm2/uiConfId/44972551" width="740px" height="330px" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerpolicy="no-referrer-when-downgrade" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="M01 Introducing Python"></iframe>

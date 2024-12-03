@@ -1,0 +1,32 @@
+# M03 Control Structures
+
+## Topics
+
+-   More on Statements and Syntax
+-   Control Structures and Loops
+-   Conditional Logic
+-   Iterators
+-   Comprehensions
+
+## Readings
+
+### Suggested
+
+-   [Lutz, 2019, Part III, Chapter 10. Introducing Python Statements](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch10.html)
+-   [Lutz, 2019, Part III, Chapter 11. Assignments, Expressions, and Prints](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch11.html)
+    -   Read only up to and including "The Python 3.X print Function."
+-   [Lutz, 2019, Part III, Chapter 12. if Tests and Syntax Rules](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch12.html)
+-   [Lutz, 2019, Part III, Chapter 13. while and for Loops](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch13.html)
+-   [Lutz, 2019, Part III, Chapter 14. Iterations and Comprehensions](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch14.html)
+-   [Lutz, 2019, Part III, Chapter 15: The Documentations Interlude](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch15.html)
+
+### Optional
+
+-   [Variables, Expressions, Statements, Types (Python Notes)](https://thomas-cokelaer.info/tutorials/python/variables.html)
+-   [More Control Flow Tools (Python Docs)](https://docs.python.org/3/tutorial/controlflow.html)
+-   [If ... Then (W3S)](https://www.w3schools.com/python/python_conditions.asp)
+-   [Iterators (GFG)](https://www.geeksforgeeks.org/iterators-in-python/)
+
+## Videos
+
+<iframe src="https://kaltura-connect.its.virginia.edu/embedplaylist/secure/embed/v2/1/playlistId/1_zcuqcvm2/uiConfId/44972551" width="740px" height="330px" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerpolicy="no-referrer-when-downgrade" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="M01 Introducing Python"></iframe>

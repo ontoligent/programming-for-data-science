@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>DS 5100: Programming for Data Science - NB: NumPy Functions</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../modules/m06/m06-intro.html" rel="next">
+<link href="../../notebooks/M05_NumPy/M05-04-NumPyOperating.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../modules/m05/m05-intro.html">M05 NumPy</a></li><li class="breadcrumb-item"><a href="../../notebooks/M05_NumPy/M05-05-NumPyFunctions.html"><span class="chapter-title">NB: NumPy Functions</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">DS 5100: Programming for Data Science</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/ontoligent/DS5100-book" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/m00/m00-intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../video-gallery.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Video Gallery</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules/m01/m01-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M01 Getting Started</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/rivanna.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">About Rivanna</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/unix.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Using Unix</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/setting-up-ssh.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">SSH for GitHub</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/git-and-github.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Git and GitHub</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules/m02/m02-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M02 Introducing Python</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/on-data.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Data and Code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/python-object-types.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Object Types</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M02_BasicPython/M02-01-DataTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Data Types, Operators, and Expressions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M02_BasicPython/M02-02-Numbers.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Numbers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M02_BasicPython/M02-03-Booleans.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Booleans</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M02_BasicPython/M02-04-Strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Strings</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M02_BasicPython/M02-05-Structures.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Data Structures</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M02_BasicPython/M02-06-AsideOnImmutables.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Aside On Immutables</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules/m03/m03-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M03 Control Structures</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/vals-vars-expressions-statements.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Values, Variables, Expressions, and Statements</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M03_ControlStructures/M03-01-ControlStructures.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Control Structures</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M03_ControlStructures/M03-02-IterablesAndIterators.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Iterables and Iterators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M03_ControlStructures/M03-03-Comprehensions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Comprehensions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M03_ControlStructures/M03-04-NestedComprehensions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Nested Comprehensions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules/m04/m04-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M04 Functions</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M04_PythonFunctions/M04-01-Functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Introduction to Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M04_PythonFunctions/M04-02-Importing.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Importing Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M04_PythonFunctions/M04-03-LambdaFunctions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Lambda Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M04_PythonFunctions/M04-04-RecursiveFunctions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Recursion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M04_PythonFunctions/M04-05-Scope.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Scope</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M04_PythonFunctions/M04-06-FunctionsCallingFunctions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Function Groups</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules/m05/m05-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M05 NumPy</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M05_NumPy/M05-00-Time.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Python Timing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M05_NumPy/M05-01-BasicFileIO.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Basic File I/O</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M05_NumPy/M05-02-NumpyDesign.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Introducing NumPy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M05_NumPy/M05-03-NumPyIndexing.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: NumPy Indexing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M05_NumPy/M05-04-NumPyOperating.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: NumPy Operations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M05_NumPy/M05-05-NumPyFunctions.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">NB: NumPy Functions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules/m06/m06-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M06 Pandas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M06_Pandas/M06-00-IntroducingPandas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Introducting Pandas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M06_Pandas/M06-01-ExploringPandas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Exploring Pandas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M06_Pandas/M06-02-DeeperIntoPandas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Deeper Into Pandas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M06_Pandas/M06-03-NarrowWide.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Narrow vs Wide Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M06_Pandas/M06-04-MethodChaining.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Method Chaining</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M06_Pandas/M06-05-Pandas-and-SQL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Pandas and SQL</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules/m07/m07-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M07 Classes</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/what-is-oop.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">What is OOP?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M07_PythonClasses/M07-01-Classes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Introducing Classes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M07_PythonClasses/M07-02-ClassesExample.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: From Functions to Classes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M07_PythonClasses/M07-03-MoreOnClasses.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: More About Classes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M07_PythonClasses/M07-04-ClassAttributeWeirdness.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Understanding Class Attributes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M07_PythonClasses/M07-05-Example.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Putting Your Class in a File</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules/m08/m08-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M08 Testing</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M08_PythonTesting/M08-00-TestingAndVerification.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Testing and Verification</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M08_PythonTesting/M08-01-ExceptionHandling.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Exception Handling</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M08_PythonTesting/M08-02-PythonUnitTesting.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Unit Testing with Unittest</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules/m09/m09-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M09 Modules</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M09_PythonModules/M09-01-ModulesAndPackages.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Modules and Packages</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M09_PythonModules/M09-02-Namespaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Namespaces and Paths</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M09_PythonModules/M09-03-MakingYourOwn.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: User-Created Packages</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules/m10/m10-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M10 Basic R</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M10_RBasics/M10-01-Intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Introducing R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M10_RBasics/M10-02-DataTypes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: R Data Types and Operators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M10_RBasics/M10-03-DataStructures.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: R Data Structures</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M10_RBasics/M10-04-DataFrames.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: R Data Frames</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M10_RBasics/M10-05-ControlStructures.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: R Control Structures</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M10_RBasics/M10-06-Functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: R Functions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules/m11/m11-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M11 Dplyr</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M11_RDplyr/M11-01-Tibbles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: The Tidyverse and Tibbles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M11_RDplyr/M11-02-Dplyr.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Dplyr</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules/m12/m12-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M12 Visualization</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M12_RViz/M12-00-AGrammarOfGraphics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">GGPlot and the Grammar of Graphics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M12_RViz/M12-01-GettingStartedWithGGPlot.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Getting Started with GGPlot2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M12_RViz/M12-02-RMarkdown.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB R Markdown</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M12_RViz/M12-03-Qplot-and-Plotly.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Plotly and GGPlotly</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M12_RViz/M12-04-Plotnine.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: GGPlot in Python with Plotnine</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules/m13/m13-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M13 Agile</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M13_Agile/M13-01-ProjectManagement.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Project Management</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M13_Agile/M13-02-AgileDevelopment.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Agile Development</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M13_Agile/M13-03-UserStories.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">User Stories</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="false">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/oreilly-accounts.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Setting Up O’Reilly</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#universal-functions" id="toc-universal-functions" class="nav-link active" data-scroll-target="#universal-functions">Universal Functions</a></li>
+  <li><a href="#vectorization" id="toc-vectorization" class="nav-link" data-scroll-target="#vectorization">Vectorization</a></li>
+  <li><a href="#conditional-logic" id="toc-conditional-logic" class="nav-link" data-scroll-target="#conditional-logic">Conditional Logic</a>
+  <ul class="collapse">
+  <li><a href="#np.where" id="toc-np.where" class="nav-link" data-scroll-target="#np.where"><code>np.where()</code></a></li>
+  </ul></li>
+  <li><a href="#mathematical-and-statistical-methods" id="toc-mathematical-and-statistical-methods" class="nav-link" data-scroll-target="#mathematical-and-statistical-methods">Mathematical and Statistical Methods</a>
+  <ul class="collapse">
+  <li><a href="#mean" id="toc-mean" class="nav-link" data-scroll-target="#mean"><code>.mean()</code></a></li>
+  <li><a href="#sum" id="toc-sum" class="nav-link" data-scroll-target="#sum"><code>.sum()</code></a></li>
+  <li><a href="#cumsum" id="toc-cumsum" class="nav-link" data-scroll-target="#cumsum"><code>.cumsum()</code></a></li>
+  </ul></li>
+  <li><a href="#boolean-arrays" id="toc-boolean-arrays" class="nav-link" data-scroll-target="#boolean-arrays">Boolean Arrays</a>
+  <ul class="collapse">
+  <li><a href="#sum-1" id="toc-sum-1" class="nav-link" data-scroll-target="#sum-1"><code>.sum()</code></a></li>
+  <li><a href="#any-and-.all" id="toc-any-and-.all" class="nav-link" data-scroll-target="#any-and-.all"><code>.any()</code> and <code>.all()</code></a></li>
+  </ul></li>
+  <li><a href="#sorting" id="toc-sorting" class="nav-link" data-scroll-target="#sorting">Sorting</a></li>
+  <li><a href="#set-logic" id="toc-set-logic" class="nav-link" data-scroll-target="#set-logic">Set Logic</a>
+  <ul class="collapse">
+  <li><a href="#np.unique" id="toc-np.unique" class="nav-link" data-scroll-target="#np.unique"><code>np.unique()</code></a></li>
+  <li><a href="#np.in1d" id="toc-np.in1d" class="nav-link" data-scroll-target="#np.in1d"><code>np.in1d()</code></a></li>
+  </ul></li>
+  <li><a href="#file-input-and-output" id="toc-file-input-and-output" class="nav-link" data-scroll-target="#file-input-and-output">File Input and Output</a>
+  <ul class="collapse">
+  <li><a href="#np.save" id="toc-np.save" class="nav-link" data-scroll-target="#np.save"><code>np.save()</code></a></li>
+  <li><a href="#np.load" id="toc-np.load" class="nav-link" data-scroll-target="#np.load"><code>np.load()</code></a></li>
+  <li><a href="#np.savetxt-and-np.loadtxt" id="toc-np.savetxt-and-np.loadtxt" class="nav-link" data-scroll-target="#np.savetxt-and-np.loadtxt"><code>np.savetxt()</code> and <code>np.loadtxt()</code></a></li>
+  <li><a href="#np.savez" id="toc-np.savez" class="nav-link" data-scroll-target="#np.savez"><code>np.savez()</code></a></li>
+  </ul></li>
+  <li><a href="#linear-algebra" id="toc-linear-algebra" class="nav-link" data-scroll-target="#linear-algebra">Linear Algebra</a>
+  <ul class="collapse">
+  <li><a href="#dot-and-np.dot" id="toc-dot-and-np.dot" class="nav-link" data-scroll-target="#dot-and-np.dot"><code>.dot()</code> and <code>np.dot()</code></a></li>
+  <li><a href="#np.linalg.inv" id="toc-np.linalg.inv" class="nav-link" data-scroll-target="#np.linalg.inv"><code>np.linalg.inv()</code></a></li>
+  <li><a href="#numpy.linalg.qr" id="toc-numpy.linalg.qr" class="nav-link" data-scroll-target="#numpy.linalg.qr"><code>numpy.linalg.qr()</code></a></li>
+  </ul></li>
+  <li><a href="#random-number-generation" id="toc-random-number-generation" class="nav-link" data-scroll-target="#random-number-generation">Random Number Generation</a>
+  <ul class="collapse">
+  <li><a href="#np.random.normal" id="toc-np.random.normal" class="nav-link" data-scroll-target="#np.random.normal"><code>np.random.normal()</code></a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.dev/ontoligent/DS5100-book/blob/main/notebooks/M05_NumPy/M05-05-NumPyFunctions.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../modules/m05/m05-intro.html">M05 NumPy</a></li><li class="breadcrumb-item"><a href="../../notebooks/M05_NumPy/M05-05-NumPyFunctions.html"><span class="chapter-title">NB: NumPy Functions</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">NB: NumPy Functions</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Programming for Data Science</p>
+<p>NumPy provides a wide <strong>variety of functions and methods</strong> that take advantage of the multi-dimensional array data structure it introduces.</p>
+<p>These are grouped into <strong>modules</strong> according to purpose, such as <code>linalg</code> for linear algebra and <code>math</code> for standard mathematical functions.</p>
+<p>Here, we go over some of these tools, but our goal is more to give you a taste of what NumPy offers.</p>
+<p>You will want to frequent the <strong>documentation</strong> to discover the full breadth of functions and methods.</p>
+<p>More important, the goal is to introduce <strong>how NumPy thinks</strong> of functions and methods.</p>
+<p>As mentioned earlier, NumPy offers an approach to applying functions to collections of data <strong>without resorting to looping</strong>, nesting, etc.</p>
+<p>Let’s start with this.</p>
+<section id="universal-functions" class="level2">
+<h2 class="anchored" data-anchor-id="universal-functions">Universal Functions</h2>
+<p>NumPy introduces the concept of a <strong>universal function</strong>.</p>
+<p>A universal function, or <code>ufunc</code>, is a function that performs <strong>element-wise operations</strong> on data in ndarrays.</p>
+<p>Universal functions use the same pattern we saw with arithmetic operations, applying a function to elements.</p>
+<p>You may think of these as <strong>fast vectorized wrappers for simple functions</strong> that take one or more scalar values and produce one or more scalar results.</p>
+<p>Let’s look at some examples.</p>
+<div id="cell-4" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;slide&quot;}" data-tags="[]" data-execution_count="311">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let’s first define an array that we want to operate on.</p>
+<div id="cell-6" class="cell" data-tags="[]" data-execution_count="312">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.arange(<span class="dv">10</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>arr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="312">
+<pre><code>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</code></pre>
+</div>
+</div>
+<p>To perform an element-wise square root operation on this, we might do the following:</p>
+<div id="cell-8" class="cell" data-tags="[]" data-execution_count="313">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>np.array([sqrt(x) <span class="cf">for</span> x <span class="kw">in</span> arr])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="313">
+<pre><code>array([0.        , 1.        , 1.41421356, 1.73205081, 2.        ,
+       2.23606798, 2.44948974, 2.64575131, 2.82842712, 3.        ])</code></pre>
+</div>
+</div>
+<p>However, NumPy offers a more concise approach:</p>
+<div id="cell-10" class="cell" data-tags="[]" data-execution_count="314">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>np.sqrt(arr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="314">
+<pre><code>array([0.        , 1.        , 1.41421356, 1.73205081, 2.        ,
+       2.23606798, 2.44948974, 2.64575131, 2.82842712, 3.        ])</code></pre>
+</div>
+</div>
+<p>It’s also faster:</p>
+<div id="cell-12" class="cell" data-tags="[]" data-execution_count="315">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>timeit np.array([sqrt(x) <span class="cf">for</span> x <span class="kw">in</span> arr])</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>timeit np.sqrt(arr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>2.26 µs ± 18.4 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+710 ns ± 3.97 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)</code></pre>
+</div>
+</div>
+<p>Here’s an element-wise exponent operation:</p>
+<div id="cell-14" class="cell" data-tags="[]" data-execution_count="316">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>np.exp(arr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="316">
+<pre><code>array([1.00000000e+00, 2.71828183e+00, 7.38905610e+00, 2.00855369e+01,
+       5.45981500e+01, 1.48413159e+02, 4.03428793e+02, 1.09663316e+03,
+       2.98095799e+03, 8.10308393e+03])</code></pre>
+</div>
+</div>
+<p>Some vectorized functions can take two arrays.</p>
+<div id="cell-16" class="cell" data-tags="[]" data-execution_count="317">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.randn(<span class="dv">8</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.randn(<span class="dv">8</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>x, y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="317">
+<pre><code>(array([-0.02865278, -1.47829863,  0.820916  ,  0.86317255,  0.85184202,
+        -0.52943286,  0.79710862,  0.43352724]),
+ array([ 0.79527927,  0.98962373,  0.30685449, -1.88671886,  0.24585142,
+        -0.79768499, -1.30316536,  0.84871309]))</code></pre>
+</div>
+</div>
+<p>This takes the maximum between the corrresponding elements in <code>x</code> and <code>y</code>:</p>
+<div id="cell-18" class="cell" data-execution_count="318">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>np.maximum(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="318">
+<pre><code>array([ 0.79527927,  0.98962373,  0.820916  ,  0.86317255,  0.85184202,
+       -0.52943286,  0.79710862,  0.84871309])</code></pre>
+</div>
+</div>
+<p>Let’s create another array of random floats and apply the modulus function.</p>
+<p>This returns two values.</p>
+<div id="cell-20" class="cell" data-tags="[]" data-execution_count="319">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>arr_rand <span class="op">=</span> np.random.randn(<span class="dv">7</span>) <span class="op">*</span> <span class="dv">5</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>arr_rand</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="319">
+<pre><code>array([ 6.18511759, -2.17250696,  2.74951073,  3.81623877, -1.56924266,
+        8.44800585,  3.22968695])</code></pre>
+</div>
+</div>
+<div id="cell-21" class="cell" data-tags="[]" data-execution_count="320">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>remainder, whole_part <span class="op">=</span> np.modf(arr_rand)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>remainder</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="320">
+<pre><code>array([ 0.18511759, -0.17250696,  0.74951073,  0.81623877, -0.56924266,
+        0.44800585,  0.22968695])</code></pre>
+</div>
+</div>
+<div id="cell-22" class="cell" data-execution_count="321">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>whole_part</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="321">
+<pre><code>array([ 6., -2.,  2.,  3., -1.,  8.,  3.])</code></pre>
+</div>
+</div>
+<p>What happens when we try to get the square root of a negative number?</p>
+<div id="cell-24" class="cell" data-tags="[]" data-execution_count="322">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>np.sqrt(arr_rand)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/tmp/ipykernel_946251/3237590434.py:1: RuntimeWarning: invalid value encountered in sqrt
+  np.sqrt(arr_rand)</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="322">
+<pre><code>array([2.48698966,        nan, 1.65816487, 1.95351959,        nan,
+       2.90654535, 1.79713298])</code></pre>
+</div>
+</div>
+<p><code>nan</code> is a special value in NumPy.</p>
+</section>
+<section id="vectorization" class="level2">
+<h2 class="anchored" data-anchor-id="vectorization">Vectorization</h2>
+<p>Beyond universal functions, NumPy expresses many kinds of data processing tasks as concise array-oriented expressions <strong>without writing loops</strong>.</p>
+<p>This practice of <strong>replacing explicit loops with array expressions</strong> is referred to by some people as <strong>vectorization</strong>.</p>
+<p>Vectorized array operations are often significantly <strong>faster</strong> than their pure Python equivalents.</p>
+<p>They are also <strong>visually concise and elegant</strong>, although loops have the virtue of visualizing what’s under the hood in an algorithm.</p>
+</section>
+<section id="conditional-logic" class="level2">
+<h2 class="anchored" data-anchor-id="conditional-logic">Conditional Logic</h2>
+<section id="np.where" class="level3">
+<h3 class="anchored" data-anchor-id="np.where"><code>np.where()</code></h3>
+<p>The <code>np.where</code> function is a vectorized version of the ternary expression <code>x if condition else y</code>.</p>
+<p>Suppose we had a boolean array and two arrays of values and we wanted to pick between the two arrays based on the boolean.</p>
+<p>We might do something like this:</p>
+<div id="cell-29" class="cell" data-tags="[]" data-execution_count="323">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>xarr <span class="op">=</span> np.array([<span class="fl">1.1</span>, <span class="fl">1.2</span>, <span class="fl">1.3</span>, <span class="fl">1.4</span>, <span class="fl">1.5</span>])</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>yarr <span class="op">=</span> np.array([<span class="fl">2.1</span>, <span class="fl">2.2</span>, <span class="fl">2.3</span>, <span class="fl">2.4</span>, <span class="fl">2.5</span>])</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>cond <span class="op">=</span> np.array([<span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">True</span>, <span class="va">False</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-30" class="cell" data-tags="[]" data-execution_count="324">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [(x <span class="cf">if</span> c <span class="cf">else</span> y) <span class="cf">for</span> x, y, c <span class="kw">in</span> <span class="bu">zip</span>(xarr, yarr, cond)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-31" class="cell" data-execution_count="325">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="325">
+<pre><code>[1.1, 2.2, 1.3, 1.4, 2.5]</code></pre>
+</div>
+</div>
+<p>A quick note on <code>zip()</code>.</p>
+<p>This function takes two or more iterables (e.g.&nbsp;lists) of the same length and returns their grouped elements by index.</p>
+<p>In effect, it binds a group of lists as <strong>columns</strong> in a table and returns their <strong>rows</strong>.</p>
+<p>For example,</p>
+<div id="cell-33" class="cell" data-tags="[]" data-execution_count="326">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>, <span class="st">'d'</span>]</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> [(a, b) <span class="cf">for</span> a, b <span class="kw">in</span> <span class="bu">zip</span>(A, B)]</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>C</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="326">
+<pre><code>[(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd')]</code></pre>
+</div>
+</div>
+<p>Here is the vectorized version:</p>
+<div id="cell-35" class="cell" data-execution_count="327">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> np.where(cond, xarr, yarr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-36" class="cell" data-execution_count="328">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="328">
+<pre><code>array([1.1, 2.2, 1.3, 1.4, 2.5])</code></pre>
+</div>
+</div>
+<p>And it’s faster, too:</p>
+<div id="cell-38" class="cell" data-tags="[]" data-execution_count="329">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>timeit [(x <span class="cf">if</span> c <span class="cf">else</span> y) <span class="cf">for</span> x, y, c <span class="kw">in</span> <span class="bu">zip</span>(xarr, yarr, cond)]</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>timeit np.where(cond, xarr, yarr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1.42 µs ± 6.33 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+1.03 µs ± 8.67 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)</code></pre>
+</div>
+</div>
+<p>Here is another example, where we use a boolean expression that returns an array to conditionally operate on a <span class="math inline">\(2\)</span>-D array.</p>
+<div id="cell-40" class="cell" data-execution_count="330">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.random.randn(<span class="dv">4</span>, <span class="dv">4</span>)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>arr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="330">
+<pre><code>array([[-0.37372765, -0.07008402, -0.9804428 , -0.4962722 ],
+       [-0.48452222, -1.63528018,  2.02413952,  0.95929382],
+       [ 0.85871743, -0.32967862, -0.22090242, -0.95784047],
+       [ 0.31219406,  0.98487624,  1.00231528, -0.12983138]])</code></pre>
+</div>
+</div>
+<div id="cell-41" class="cell" data-execution_count="331">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">&gt;</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="331">
+<pre><code>array([[False, False, False, False],
+       [False, False,  True,  True],
+       [ True, False, False, False],
+       [ True,  True,  True, False]])</code></pre>
+</div>
+</div>
+<div id="cell-42" class="cell" data-execution_count="332">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>np.where(arr <span class="op">&gt;</span> <span class="dv">0</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="332">
+<pre><code>array([[-2, -2, -2, -2],
+       [-2, -2,  2,  2],
+       [ 2, -2, -2, -2],
+       [ 2,  2,  2, -2]])</code></pre>
+</div>
+</div>
+<div id="cell-43" class="cell" data-execution_count="333">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>np.where(arr <span class="op">&gt;</span> <span class="dv">0</span>, <span class="dv">2</span>, arr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="333">
+<pre><code>array([[-0.37372765, -0.07008402, -0.9804428 , -0.4962722 ],
+       [-0.48452222, -1.63528018,  2.        ,  2.        ],
+       [ 2.        , -0.32967862, -0.22090242, -0.95784047],
+       [ 2.        ,  2.        ,  2.        , -0.12983138]])</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="mathematical-and-statistical-methods" class="level2">
+<h2 class="anchored" data-anchor-id="mathematical-and-statistical-methods">Mathematical and Statistical Methods</h2>
+<p>Statistical computations are aggregate functions applied to vectors within an array.</p>
+<p>In a <span class="math inline">\(2\)</span>-D array, they can be applied to rows or columns, i.e.&nbsp;<strong>axis <span class="math inline">\(0\)</span> or axis <span class="math inline">\(1\)</span></strong>.</p>
+<p>To demonstrate, let’s create an array of random values.</p>
+<p>We can think of it is a table of observations and random variables.</p>
+<div id="cell-46" class="cell" data-execution_count="334">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.random.randn(<span class="dv">5</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-47" class="cell" data-execution_count="335">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>arr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="335">
+<pre><code>array([[ 0.85124258,  1.26274113, -1.41403354, -1.92964977],
+       [-0.9302931 ,  0.21807627, -0.19301232, -1.69534407],
+       [ 1.06757947, -0.34279466, -0.33276255,  1.68059036],
+       [ 0.38249005,  0.17731579, -0.46004143, -0.00862738],
+       [-1.7617584 , -0.17263553,  0.56952929, -0.50669218]])</code></pre>
+</div>
+</div>
+<section id="mean" class="level3">
+<h3 class="anchored" data-anchor-id="mean"><code>.mean()</code></h3>
+<p>We can get the mean of all the numbers in the array by using a method or a function.</p>
+<div id="cell-49" class="cell" data-execution_count="336">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>arr.mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="336">
+<pre><code>-0.17690399891686628</code></pre>
+</div>
+</div>
+<div id="cell-50" class="cell" data-execution_count="337">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>np.mean(arr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="337">
+<pre><code>-0.17690399891686628</code></pre>
+</div>
+</div>
+<p>Here we get the mean for each row.</p>
+<div id="cell-52" class="cell" data-execution_count="338">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>arr.mean(axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="338">
+<pre><code>array([-0.3074249 , -0.6501433 ,  0.51815315,  0.02278426, -0.4678892 ])</code></pre>
+</div>
+</div>
+<p>And here for each column.</p>
+<div id="cell-54" class="cell" data-execution_count="339">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>arr.mean(axis<span class="op">=</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="339">
+<pre><code>array([-0.07814788,  0.2285406 , -0.36606411, -0.49194461])</code></pre>
+</div>
+</div>
+</section>
+<section id="sum" class="level3">
+<h3 class="anchored" data-anchor-id="sum"><code>.sum()</code></h3>
+<p>We can do the same with summing.</p>
+<div id="cell-56" class="cell" data-execution_count="340">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>np.<span class="bu">sum</span>(arr), arr.<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="340">
+<pre><code>(-3.5380799783373256, -3.5380799783373256)</code></pre>
+</div>
+</div>
+<div id="cell-57" class="cell" data-execution_count="341">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>arr.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="341">
+<pre><code>array([-0.39073939,  1.142703  , -1.83032055, -2.45972304])</code></pre>
+</div>
+</div>
+<div id="cell-58" class="cell" data-execution_count="342">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>arr.mean(axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="342">
+<pre><code>array([-0.3074249 , -0.6501433 ,  0.51815315,  0.02278426, -0.4678892 ])</code></pre>
+</div>
+</div>
+</section>
+<section id="cumsum" class="level3">
+<h3 class="anchored" data-anchor-id="cumsum"><code>.cumsum()</code></h3>
+<p>And here is cumulative summing.</p>
+<div id="cell-60" class="cell" data-execution_count="343">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>])</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>arr.cumsum()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="343">
+<pre><code>array([ 0,  1,  3,  6, 10, 15, 21, 28])</code></pre>
+</div>
+</div>
+<div id="cell-61" class="cell" data-execution_count="344">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], [<span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>]])</span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>arr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="344">
+<pre><code>array([[0, 1, 2],
+       [3, 4, 5],
+       [6, 7, 8]])</code></pre>
+</div>
+</div>
+<div id="cell-62" class="cell" data-execution_count="345">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>arr.cumsum(axis<span class="op">=</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="345">
+<pre><code>array([[ 0,  1,  2],
+       [ 3,  5,  7],
+       [ 9, 12, 15]])</code></pre>
+</div>
+</div>
+<div id="cell-63" class="cell" data-execution_count="346">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>arr.cumprod(axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="346">
+<pre><code>array([[  0,   0,   0],
+       [  3,  12,  60],
+       [  6,  42, 336]])</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="boolean-arrays" class="level2">
+<h2 class="anchored" data-anchor-id="boolean-arrays">Boolean Arrays</h2>
+<section id="sum-1" class="level3">
+<h3 class="anchored" data-anchor-id="sum-1"><code>.sum()</code></h3>
+<p>Since booleans are <span class="math inline">\(0\)</span>s and <span class="math inline">\(1\)</span>, we can sum them to get a total truth count.</p>
+<div id="cell-66" class="cell" data-execution_count="347">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.random.randn(<span class="dv">100</span>)</span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>(arr <span class="op">&gt;</span> <span class="dv">0</span>).<span class="bu">sum</span>() <span class="co"># Number of positive values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="347">
+<pre><code>43</code></pre>
+</div>
+</div>
+<div id="cell-67" class="cell" data-tags="[]" data-execution_count="348">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>bools <span class="op">=</span> np.array([<span class="va">False</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">False</span>])</span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>bools.<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="348">
+<pre><code>1</code></pre>
+</div>
+</div>
+</section>
+<section id="any-and-.all" class="level3">
+<h3 class="anchored" data-anchor-id="any-and-.all"><code>.any()</code> and <code>.all()</code></h3>
+<div id="cell-69" class="cell" data-execution_count="349">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>bools.<span class="bu">any</span>(), bools.<span class="bu">all</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="349">
+<pre><code>(True, False)</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="sorting" class="level2">
+<h2 class="anchored" data-anchor-id="sorting">Sorting</h2>
+<p>NumPy provides several sorting options. Here we look at the most basic forms, the sort function <code>np.sort()</code> and the method <code>.sort()</code>.</p>
+<p>Here’s the method option.</p>
+<div id="cell-71" class="cell" data-execution_count="350">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.random.randn(<span class="dv">6</span>)</span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>arr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="350">
+<pre><code>array([-0.13048996, -0.72462279, -0.06963874,  0.3639324 ,  2.22785044,
+       -0.47912818])</code></pre>
+</div>
+</div>
+<div id="cell-72" class="cell" data-execution_count="351">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>arr.sort()</span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>arr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="351">
+<pre><code>array([-0.72462279, -0.47912818, -0.13048996, -0.06963874,  0.3639324 ,
+        2.22785044])</code></pre>
+</div>
+</div>
+<p>Note that this performs an <strong>in-place</strong> operation — it changes the state of the object.</p>
+<p>The method also does not return anything.</p>
+<p>If you just want to get a sorted version of the vector without changing the state of the object, use the function.</p>
+<p>This does return a value.</p>
+<div id="cell-75" class="cell" data-tags="[]" data-execution_count="352">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>np.sort(arr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="352">
+<pre><code>array([-0.72462279, -0.47912818, -0.13048996, -0.06963874,  0.3639324 ,
+        2.22785044])</code></pre>
+</div>
+</div>
+<p>To reverse sort, you have to slice the result and walk backwords:</p>
+<div id="cell-77" class="cell" data-tags="[]" data-execution_count="353">
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>arr[::<span class="op">-</span><span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="353">
+<pre><code>array([ 2.22785044,  0.3639324 , -0.06963874, -0.13048996, -0.47912818,
+       -0.72462279])</code></pre>
+</div>
+</div>
+<p>Here we sort a <span class="math inline">\(2\)</span>-D array by row.</p>
+<p>That is, each row is sorted.</p>
+<div id="cell-79" class="cell" data-execution_count="354">
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.random.randn(<span class="dv">5</span>, <span class="dv">3</span>)</span>
+<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>arr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="354">
+<pre><code>array([[ 0.75982535, -1.44121737,  0.55483639],
+       [-2.06462226,  1.14922865, -0.18207867],
+       [-2.47882161,  0.16483045,  1.21204657],
+       [ 0.12048109,  0.885755  ,  1.77209294],
+       [-1.39199022,  0.87544244,  1.42260675]])</code></pre>
+</div>
+</div>
+<div id="cell-80" class="cell" data-execution_count="355">
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>arr.sort(axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>arr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="355">
+<pre><code>array([[-1.44121737,  0.55483639,  0.75982535],
+       [-2.06462226, -0.18207867,  1.14922865],
+       [-2.47882161,  0.16483045,  1.21204657],
+       [ 0.12048109,  0.885755  ,  1.77209294],
+       [-1.39199022,  0.87544244,  1.42260675]])</code></pre>
+</div>
+</div>
+<p>NumPy defaults to sorting on the last axis, which you can specify by using <span class="math inline">\(-1\)</span>.</p>
+<div id="cell-82" class="cell" data-tags="[]" data-execution_count="356">
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a>arr.sort(<span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a>arr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="356">
+<pre><code>array([[-1.44121737,  0.55483639,  0.75982535],
+       [-2.06462226, -0.18207867,  1.14922865],
+       [-2.47882161,  0.16483045,  1.21204657],
+       [ 0.12048109,  0.885755  ,  1.77209294],
+       [-1.39199022,  0.87544244,  1.42260675]])</code></pre>
+</div>
+</div>
+<p>Here we use sort to compute the <span class="math inline">\(5\%\)</span> quantile of a vector of floats.</p>
+<div id="cell-84" class="cell" data-execution_count="357">
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>large_arr <span class="op">=</span> np.random.randn(<span class="dv">1000</span>)</span>
+<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>large_arr.sort()</span>
+<span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a>large_arr[<span class="bu">int</span>(<span class="fl">0.05</span> <span class="op">*</span> <span class="bu">len</span>(large_arr))]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="357">
+<pre><code>-1.6779175381412759</code></pre>
+</div>
+</div>
+<div id="cell-85" class="cell" data-execution_count="358">
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fl">0.05</span> <span class="op">*</span> <span class="bu">len</span>(large_arr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="358">
+<pre><code>50.0</code></pre>
+</div>
+</div>
+</section>
+<section id="set-logic" class="level2">
+<h2 class="anchored" data-anchor-id="set-logic">Set Logic</h2>
+<p>NumPy provides some methods to perform set membership operations.</p>
+<section id="np.unique" class="level3">
+<h3 class="anchored" data-anchor-id="np.unique"><code>np.unique()</code></h3>
+<p>This returns a sorted array of distinct values in an array.</p>
+<div id="cell-88" class="cell" data-execution_count="359">
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> np.array([<span class="st">'Bob'</span>, <span class="st">'Joe'</span>, <span class="st">'Will'</span>, <span class="st">'Bob'</span>, <span class="st">'Will'</span>, <span class="st">'Joe'</span>, <span class="st">'Joe'</span>])</span>
+<span id="cb93-2"><a href="#cb93-2" aria-hidden="true" tabindex="-1"></a>np.unique(names)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="359">
+<pre><code>array(['Bob', 'Joe', 'Will'], dtype='&lt;U4')</code></pre>
+</div>
+</div>
+<div id="cell-89" class="cell" data-execution_count="360">
+<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>ints <span class="op">=</span> np.array([<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">4</span>])</span>
+<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a>np.unique(ints)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="360">
+<pre><code>array([1, 2, 3, 4])</code></pre>
+</div>
+</div>
+</section>
+<section id="np.in1d" class="level3">
+<h3 class="anchored" data-anchor-id="np.in1d"><code>np.in1d()</code></h3>
+<p>This method tests whether each element of a <span class="math inline">\(1\)</span>-D array is also present in a second array.</p>
+<div id="cell-91" class="cell" data-execution_count="361">
+<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> np.array([<span class="dv">6</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span>
+<span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a>np.in1d(values, [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">6</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="361">
+<pre><code>array([ True, False, False,  True,  True, False,  True])</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="file-input-and-output" class="level2">
+<h2 class="anchored" data-anchor-id="file-input-and-output">File Input and Output</h2>
+<p>NumPy provides methods and functions to read and write data from disk.</p>
+<section id="np.save" class="level3">
+<h3 class="anchored" data-anchor-id="np.save"><code>np.save()</code></h3>
+<p>Save an array to a binary file in NumPy <code>.npy</code> format.</p>
+<p>Automatically adds the <code>.npy</code> file extension.</p>
+<div id="cell-94" class="cell" data-execution_count="362">
+<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.arange(<span class="dv">10</span>)</span>
+<span id="cb99-2"><a href="#cb99-2" aria-hidden="true" tabindex="-1"></a>np.save(<span class="st">'some_array'</span>, arr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="np.load" class="level3">
+<h3 class="anchored" data-anchor-id="np.load"><code>np.load()</code></h3>
+<p>This reads in a file in NumPy format.</p>
+<div id="cell-96" class="cell" data-execution_count="363">
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a>np.load(<span class="st">'some_array.npy'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="363">
+<pre><code>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</code></pre>
+</div>
+</div>
+</section>
+<section id="np.savetxt-and-np.loadtxt" class="level3">
+<h3 class="anchored" data-anchor-id="np.savetxt-and-np.loadtxt"><code>np.savetxt()</code> and <code>np.loadtxt()</code></h3>
+<p>These read from and write to plain text files.</p>
+<div id="cell-98" class="cell" data-execution_count="364">
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a>np.savetxt(<span class="st">'some_array.txt'</span>, arr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-99" class="cell" data-tags="[]" data-execution_count="365">
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a>np.loadtxt(<span class="st">'some_array.txt'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="365">
+<pre><code>array([0., 1., 2., 3., 4., 5., 6., 7., 8., 9.])</code></pre>
+</div>
+</div>
+</section>
+<section id="np.savez" class="level3">
+<h3 class="anchored" data-anchor-id="np.savez"><code>np.savez()</code></h3>
+<p>This saves several arrays into a single file in uncompressed <code>.npz</code> format.</p>
+<div id="cell-101" class="cell" data-execution_count="366">
+<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a>np.savez(<span class="st">'array_archive.npz'</span>, a<span class="op">=</span>arr, b<span class="op">=</span>arr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-102" class="cell" data-execution_count="367">
+<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a>arch <span class="op">=</span> np.load(<span class="st">'array_archive.npz'</span>)</span>
+<span id="cb106-2"><a href="#cb106-2" aria-hidden="true" tabindex="-1"></a>arch[<span class="st">'b'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="367">
+<pre><code>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</code></pre>
+</div>
+</div>
+<p>This uses a compressed format.</p>
+<div id="cell-104" class="cell" data-execution_count="368">
+<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a>np.savez_compressed(<span class="st">'arrays_compressed.npz'</span>, a<span class="op">=</span>arr, b<span class="op">=</span>arr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Clean up …</p>
+<div id="cell-106" class="cell" data-execution_count="369">
+<div class="sourceCode cell-code" id="cb109"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>rm some_array.npy</span>
+<span id="cb109-2"><a href="#cb109-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>rm some_array.txt</span>
+<span id="cb109-3"><a href="#cb109-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>rm array_archive.npz</span>
+<span id="cb109-4"><a href="#cb109-4" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>rm arrays_compressed.npz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="linear-algebra" class="level2">
+<h2 class="anchored" data-anchor-id="linear-algebra">Linear Algebra</h2>
+<p>NumPy also offers a number of linear algebraic methods.</p>
+<p>Because linear algebra is so fundamental to numeric analysis, many functions are in the main NumPy namespace. These include: <code>dot</code>, <code>vdot</code>, <code>inner</code>, <code>outer</code>, <code>matmul</code>, <code>tensordot</code>, <code>einsum</code>, <code>einsum_path</code> and <code>kron</code>.</p>
+<p>Functions present in <code>numpy.linalg</code> are the following:</p>
+<ul>
+<li>Matrix and vector products: <code>multi_dot</code>, <code>matrix_power</code></li>
+<li>Decompositions: <code>cholesky</code>, <code>qr</code>, <code>svd</code></li>
+<li>Matrix eigenvalues: <code>eig</code>, <code>eigh</code>, <code>eigvals</code>, <code>eigvalsh</code></li>
+<li>Norms and other numbers: <code>norm</code>, <code>cond</code>, <code>det</code>, <code>matrix_rank</code>, <code>slogdet</code></li>
+<li>Solving equations and inverting matrices: <code>solve</code>, <code>tensorsolve</code>, <code>lstsq</code>, <code>inv</code>, <code>pinv</code>, <code>tensorinv</code></li>
+<li>Exceptions: <code>LinAlgError</code></li>
+</ul>
+<p>We’ll look at just a couple of these.</p>
+<section id="dot-and-np.dot" class="level3">
+<h3 class="anchored" data-anchor-id="dot-and-np.dot"><code>.dot()</code> and <code>np.dot()</code></h3>
+<p>This gives you the dot product of two arrays.</p>
+<p>It returns a result based on the shape of the input data.</p>
+<p>So, given two arrays <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>:</p>
+<table>
+<tbody><tr>
+<th>
+If
+</th>
+<th>
+Then
+</th>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are <span class="math inline">\(1\)</span>-D (vector)
+</td>
+<td>
+inner product
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are <span class="math inline">\(2\)</span>-D (matrix)
+</td>
+<td>
+marix multiplaction
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(a\)</span> or <span class="math inline">\(b\)</span> are <span class="math inline">\(0\)</span>-D (scalar)
+</td>
+<td>
+equivalent to <tt>multiply()</tt>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(a\)</span> is <span class="math inline">\(N\)</span>-D and <span class="math inline">\(b\)</span> is <span class="math inline">\(1\)</span>-D
+</td>
+<td>
+sum product over the last axis of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(a\)</span> is <span class="math inline">\(N\)</span>-D and <span class="math inline">\(b\)</span> is <span class="math inline">\(M\)</span>-D (where <span class="math inline">\(M &gt;= 2\)</span>)
+</td>
+<td>
+sum product over the last axis of <span class="math inline">\(a\)</span> and the second-to-last axis of <span class="math inline">\(b\)</span>: <br> <tt>dot(a, b)[i,j,k,m] = sum(a[i,j,:] * b[k,:,m])</tt>
+</td>
+</tr>
+</tbody></table>
+<!-- If both `a` and `b` are $1$-D arrays, it gives inner product of vectors (without complex conjugation).
+
+If both `a` and `b` are $2$-D arrays, it gives matrix multiplication, but using `matmul()` or `a @ b` is preferred.
+
+If either `a` or `b` is $0$-D (scalar), it gives the equivalent to `multiply()` and using `numpy.multiply(a, b)` or `a * b` is preferred.
+
+If `a` is an $N$-D array and `b` is a $1$-D array, it gives a sum product over the last axis of `a` and `b`.
+
+If `a` is an $N$-D array and `b` is an $M$-D array (where $M>=2$), it gives a sum product over the last axis of `a` and the second-to-last axis of `b`:
+  
+```python
+dot(a, b)[i,j,k,m] = sum(a[i,j,:] * b[k,:,m])
+``` -->
+<p>Let’s look at an example.</p>
+<div id="cell-110" class="cell" data-tags="[]" data-execution_count="370">
+<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([[<span class="fl">1.</span>, <span class="fl">2.</span>, <span class="fl">3.</span>], [<span class="fl">4.</span>, <span class="fl">5.</span>, <span class="fl">6.</span>]])</span>
+<span id="cb110-2"><a href="#cb110-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.array([[<span class="fl">6.</span>, <span class="fl">23.</span>], [<span class="op">-</span><span class="dv">1</span>, <span class="dv">7</span>], [<span class="dv">8</span>, <span class="dv">9</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-111" class="cell" data-execution_count="371">
+<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="371">
+<pre><code>array([[1., 2., 3.],
+       [4., 5., 6.]])</code></pre>
+</div>
+</div>
+<div id="cell-112" class="cell" data-tags="[]" data-execution_count="372">
+<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="372">
+<pre><code>array([[ 6., 23.],
+       [-1.,  7.],
+       [ 8.,  9.]])</code></pre>
+</div>
+</div>
+<div id="cell-113" class="cell" data-execution_count="373">
+<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a>x.dot(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="373">
+<pre><code>array([[ 28.,  64.],
+       [ 67., 181.]])</code></pre>
+</div>
+</div>
+<div id="cell-114" class="cell" data-execution_count="374">
+<div class="sourceCode cell-code" id="cb117"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb117-1"><a href="#cb117-1" aria-hidden="true" tabindex="-1"></a>np.dot(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="374">
+<pre><code>array([[ 28.,  64.],
+       [ 67., 181.]])</code></pre>
+</div>
+</div>
+<p>Here we get the dot product of a matrix and a vector.</p>
+<p>This gets the sum product over the rows of <code>x</code>.</p>
+<div id="cell-116" class="cell" data-tags="[]" data-execution_count="375">
+<div class="sourceCode cell-code" id="cb119"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb119-1"><a href="#cb119-1" aria-hidden="true" tabindex="-1"></a>np.dot(x, np.ones(<span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="375">
+<pre><code>array([ 6., 15.])</code></pre>
+</div>
+</div>
+<p>We can also use the the <code>@</code> operator in NumPy for <a href="https://www.codingem.com/numpy-at-operator/">matrix multiplication</a>.</p>
+<div id="cell-118" class="cell" data-execution_count="376">
+<div class="sourceCode cell-code" id="cb121"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb121-1"><a href="#cb121-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">@</span> np.ones(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="376">
+<pre><code>array([ 6., 15.])</code></pre>
+</div>
+</div>
+</section>
+<section id="np.linalg.inv" class="level3">
+<h3 class="anchored" data-anchor-id="np.linalg.inv"><code>np.linalg.inv()</code></h3>
+<p>Computes the inverse of a matrix.</p>
+<div id="cell-120" class="cell" data-execution_count="396">
+<div class="sourceCode cell-code" id="cb123"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb123-1"><a href="#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy.linalg <span class="im">import</span> inv, qr</span>
+<span id="cb123-2"><a href="#cb123-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.random.randn(<span class="dv">5</span>, <span class="dv">5</span>)</span>
+<span id="cb123-3"><a href="#cb123-3" aria-hidden="true" tabindex="-1"></a>X</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="396">
+<pre><code>array([[ 0.00657667,  0.94280294, -0.38778753, -1.27782778,  1.11744125],
+       [ 0.11611194,  0.38160734, -1.14998116,  1.1665558 , -0.41054575],
+       [-1.36436756, -0.56012045,  1.13364082, -0.52002208,  1.65062773],
+       [ 1.3858369 , -0.46831126,  0.07717   ,  0.31919749, -2.12694842],
+       [ 1.54317047,  0.50438473, -0.52536121, -0.1092352 ,  1.24429125]])</code></pre>
+</div>
+</div>
+<div id="cell-121" class="cell" data-tags="[]" data-execution_count="397">
+<div class="sourceCode cell-code" id="cb125"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb125-1"><a href="#cb125-1" aria-hidden="true" tabindex="-1"></a>inv(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="397">
+<pre><code>array([[-0.39878244, -0.54773915, -0.46683041, -0.19885435,  0.45676946],
+       [-5.62085111, -7.96286851, -9.36991848, -8.63364179,  0.0922498 ],
+       [-5.14910918, -7.016499  , -7.4090965 , -6.95651434,  0.24652277],
+       [-3.08196362, -3.16558159, -3.87235952, -3.84772023,  0.28306779],
+       [ 0.32842762,  0.66673685,  0.90894543,  0.47139604,  0.32872684]])</code></pre>
+</div>
+</div>
+</section>
+<section id="numpy.linalg.qr" class="level3">
+<h3 class="anchored" data-anchor-id="numpy.linalg.qr"><code>numpy.linalg.qr()</code></h3>
+<p>Here we compute the QR factorization of a matrix.</p>
+<p>That is, we decompose a matrix into an orthogonal matrix <span class="math inline">\(Q\)</span> and an upper triangular matrix <span class="math inline">\(R\)</span>.</p>
+<div id="cell-123" class="cell" data-execution_count="398">
+<div class="sourceCode cell-code" id="cb127"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb127-1"><a href="#cb127-1" aria-hidden="true" tabindex="-1"></a>Q, R <span class="op">=</span> qr(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-124" class="cell" data-tags="[]" data-execution_count="399">
+<div class="sourceCode cell-code" id="cb128"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb128-1"><a href="#cb128-1" aria-hidden="true" tabindex="-1"></a>Q</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="399">
+<pre><code>array([[-0.00264618, -0.72711785, -0.38911205, -0.50671846,  0.25123863],
+       [-0.04671863, -0.28092006,  0.81095117,  0.03350105,  0.51003644],
+       [ 0.54896491,  0.27144918, -0.31983195,  0.19796682,  0.69531974],
+       [-0.55760328,  0.52508801, -0.05515592, -0.52941709,  0.36060578],
+       [-0.62090779, -0.20731974, -0.29260103,  0.65010827,  0.25146753]])</code></pre>
+</div>
+</div>
+<div id="cell-125" class="cell" data-execution_count="400">
+<div class="sourceCode cell-code" id="cb130"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb130-1"><a href="#cb130-1" aria-hidden="true" tabindex="-1"></a>R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="400">
+<pre><code>array([[-2.48534567, -0.37985398,  0.96025135, -0.44675298,  1.33576317],
+       [ 0.        , -1.29524778,  1.06218467,  0.65051628, -1.62392066],
+       [ 0.        ,  0.        , -0.99479547,  1.62391435, -1.54243298],
+       [ 0.        ,  0.        ,  0.        ,  0.34362934,  1.68175458],
+       [ 0.        ,  0.        ,  0.        ,  0.        ,  0.76497413]])</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="random-number-generation" class="level2">
+<h2 class="anchored" data-anchor-id="random-number-generation">Random Number Generation</h2>
+<p>We have already used NumPy to generate random numbers.</p>
+<p>Here’s another function in this domain.</p>
+<section id="np.random.normal" class="level3">
+<h3 class="anchored" data-anchor-id="np.random.normal"><code>np.random.normal()</code></h3>
+<div id="cell-128" class="cell" data-execution_count="401">
+<div class="sourceCode cell-code" id="cb132"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a>samples <span class="op">=</span> np.random.normal(size<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">4</span>))</span>
+<span id="cb132-2"><a href="#cb132-2" aria-hidden="true" tabindex="-1"></a>samples</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="401">
+<pre><code>array([[-0.19696082, -0.26304121,  0.6363801 ,  0.20438421],
+       [-1.55414504,  0.9324663 ,  1.51351311,  0.42318343],
+       [ 0.60250211, -1.26817884,  0.05698393, -0.36026335],
+       [-0.67891835,  0.96903582, -0.7618861 ,  0.60346314]])</code></pre>
+</div>
+</div>
+<p>Let’s compare its speed to a more basic approach.</p>
+<div id="cell-130" class="cell" data-execution_count="402">
+<div class="sourceCode cell-code" id="cb134"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb134-1"><a href="#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> normalvariate</span>
+<span id="cb134-2"><a href="#cb134-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb134-3"><a href="#cb134-3" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">1000000</span></span>
+<span id="cb134-4"><a href="#cb134-4" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>timeit samples <span class="op">=</span> [normalvariate(<span class="dv">0</span>, <span class="dv">1</span>) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(N)]</span>
+<span id="cb134-5"><a href="#cb134-5" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>timeit np.random.normal(size<span class="op">=</span>N)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>486 ms ± 1.46 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+30.4 ms ± 21.2 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)</code></pre>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../notebooks/M05_NumPy/M05-04-NumPyOperating.html" class="pagination-link" aria-label="NB: NumPy Operations">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">NB: NumPy Operations</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../modules/m06/m06-intro.html" class="pagination-link" aria-label="M06 Pandas">
+        <span class="nav-page-text">M06 Pandas</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/ontoligent/DS5100-book/blob/main/notebooks/M05_NumPy/M05-05-NumPyFunctions.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
