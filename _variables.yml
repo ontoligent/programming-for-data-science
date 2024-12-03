@@ -1,8 +1,5 @@
-version: 3
-course_num: "DS 5100"
-course_title: "Programming for Data Science"
-course_allocation: "msds_ds5100"
-canvas_url: "https://canvas.its.virginia.edu/courses/107682"
-github_url: "https://github.com/ontoligent/DS5100-book"
-website_url: "https://ontoligent.github.io/DS5100-book"
-repo_name: "DS5100-book"
+version: 1
+book_title: "Programming for Data Science"
+github_url: "https://github.com/ontoligent/programming-for-data-science"
+website_url: "https://ontoligent.github.io/programming-for-data-science"
+repo_name: "programming-for-data-science"
