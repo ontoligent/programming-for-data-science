@@ -1,4 +1,4 @@
-# M12 Visualization
+# R Visualization
 
 ## Topics
 

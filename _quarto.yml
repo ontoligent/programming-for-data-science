@@ -1,5 +1,5 @@
 project:
-  title: "{{< var book_title >}}"
+  title: "Programming for Data Science Bootcamp"
   type: book
   output-dir: docs
 
@@ -15,22 +15,8 @@ book:
   repo-actions: [edit]
   repo-url: "https://github.com/ontoligent/programming-for-data-science" # Variable does not work here
   chapters:
-    - part: index.qmd # 00 Welcome 
-#       chapters: 
-#         - modules/m00/m00-intro.qmd
-#         - video-gallery.qmd
-        
-#     - part: modules/m01/m01-intro.qmd # 01 Getting Started
-#       chapters:
-#         - topics/rivanna.qmd
-#         - topics/unix.qmd
-#         - topics/setting-up-ssh.qmd
-#         - topics/git-and-github.qmd
-#       appendices:
-#         - topics/oreilly-accounts.qmd
-#         - topics/refreshing-the-course-repo.qmd
-        
-    - part: modules/m02/m02-intro.qmd # 02 Introducing Python
+    - part: index.qmd # 00 Welcome         
+    - part: modules/m02/m02-intro.qmd # Python Introduction
       chapters:
         - notebooks/M02_BasicPython/on-data.qmd
         - notebooks/M02_BasicPython/python-object-types.qmd
@@ -40,17 +26,18 @@ book:
         - notebooks/M02_BasicPython/M02-04-Strings.ipynb
         - notebooks/M02_BasicPython/M02-05-Structures.ipynb
         - notebooks/M02_BasicPython/M02-06-AsideOnImmutables.ipynb
-        - exercises/M02-Exercises.slides.html
+        - pages/M02-Exercises.qmd
         
-    - part: modules/m03/m03-intro.qmd # 03 Control Structures
+    - part: modules/m03/m03-intro.qmd # Python Control Structures
       chapters:
         - notebooks/M03_ControlStructures/vals-vars-expressions-statements.qmd
         - notebooks/M03_ControlStructures/M03-01-ControlStructures.ipynb
         - notebooks/M03_ControlStructures/M03-02-IterablesAndIterators.ipynb
         - notebooks/M03_ControlStructures/M03-03-Comprehensions.ipynb
         - notebooks/M03_ControlStructures/M03-04-NestedComprehensions.ipynb
+        - pages/M03-Exercises.qmd
         
-    - part: modules/m04/m04-intro.qmd # 04 Functions
+    - part: modules/m04/m04-intro.qmd # Python Functions
       chapters: 
         - notebooks/M04_PythonFunctions/M04-01-Functions.ipynb
         - notebooks/M04_PythonFunctions/M04-02-Importing.ipynb
@@ -58,8 +45,9 @@ book:
         - notebooks/M04_PythonFunctions/M04-04-RecursiveFunctions.ipynb
         - notebooks/M04_PythonFunctions/M04-05-Scope.ipynb
         - notebooks/M04_PythonFunctions/M04-06-FunctionsCallingFunctions.ipynb
+        - pages/M04-Exercises.qmd
         
-    - part: modules/m05/m05-intro.qmd # "05 NumPy"
+    - part: modules/m05/m05-intro.qmd # Python NumPy
       chapters:
         - notebooks/M05_NumPy/M05-00-Time.ipynb
         - notebooks/M05_NumPy/M05-01-BasicFileIO.ipynb
@@ -67,8 +55,9 @@ book:
         - notebooks/M05_NumPy/M05-03-NumPyIndexing.ipynb
         - notebooks/M05_NumPy/M05-04-NumPyOperating.ipynb
         - notebooks/M05_NumPy/M05-05-NumPyFunctions.ipynb
+        - pages/M05-Exercises.qmd
         
-    - part: modules/m06/m06-intro.qmd # "06 Pandas"
+    - part: modules/m06/m06-intro.qmd # Python Pandas
       chapters:
         - notebooks/M06_Pandas/M06-00-IntroducingPandas.ipynb
         - notebooks/M06_Pandas/M06-01-ExploringPandas.ipynb
@@ -76,31 +65,32 @@ book:
         - notebooks/M06_Pandas/M06-03-NarrowWide.ipynb
         - notebooks/M06_Pandas/M06-04-MethodChaining.ipynb
         - notebooks/M06_Pandas/M06-05-Pandas-and-SQL.ipynb
+        - pages/M06-Exercises.qmd
         
-    - part: modules/m07/m07-intro.qmd # "07 Classes"
-      chapters: 
-        - topics/what-is-oop.qmd      
-        - notebooks/M07_PythonClasses/M07-01-Classes.ipynb
-        - notebooks/M07_PythonClasses/M07-02-ClassesExample.ipynb
-        - notebooks/M07_PythonClasses/M07-03-MoreOnClasses.ipynb
-        - notebooks/M07_PythonClasses/M07-04-ClassAttributeWeirdness.ipynb
-        - notebooks/M07_PythonClasses/M07-05-Example.ipynb
+    # - part: modules/m07/m07-intro.qmd # "07 Classes"
+    #   chapters: 
+    #     - topics/what-is-oop.qmd      
+    #     - notebooks/M07_PythonClasses/M07-01-Classes.ipynb
+    #     - notebooks/M07_PythonClasses/M07-02-ClassesExample.ipynb
+    #     - notebooks/M07_PythonClasses/M07-03-MoreOnClasses.ipynb
+    #     - notebooks/M07_PythonClasses/M07-04-ClassAttributeWeirdness.ipynb
+    #     - notebooks/M07_PythonClasses/M07-05-Example.ipynb
         
-    - part: modules/m08/m08-intro.qmd # "08 Testing"
-      chapters:
-        # - modules/m08/m08-testing-and-verification.qmd
-        - notebooks/M08_PythonTesting/M08-00-TestingAndVerification.ipynb
-        - notebooks/M08_PythonTesting/M08-01-ExceptionHandling.ipynb 
-        - notebooks/M08_PythonTesting/M08-02-PythonUnitTesting.ipynb
+    # - part: modules/m08/m08-intro.qmd # "08 Testing"
+    #   chapters:
+    #     # - modules/m08/m08-testing-and-verification.qmd
+    #     - notebooks/M08_PythonTesting/M08-00-TestingAndVerification.ipynb
+    #     - notebooks/M08_PythonTesting/M08-01-ExceptionHandling.ipynb 
+    #     - notebooks/M08_PythonTesting/M08-02-PythonUnitTesting.ipynb
         
-    - part: modules/m09/m09-intro.qmd # "09 Modules"
-      chapters: 
-        - notebooks/M09_PythonModules/M09-01-ModulesAndPackages.ipynb
-        - notebooks/M09_PythonModules/M09-02-Namespaces.ipynb
-        - notebooks/M09_PythonModules/M09-03-MakingYourOwn.ipynb
+    # - part: modules/m09/m09-intro.qmd # "09 Modules"
+    #   chapters: 
+    #     - notebooks/M09_PythonModules/M09-01-ModulesAndPackages.ipynb
+    #     - notebooks/M09_PythonModules/M09-02-Namespaces.ipynb
+    #     - notebooks/M09_PythonModules/M09-03-MakingYourOwn.ipynb
         
         # - modules/m09/m09-review.qmd
-    - part: modules/m10/m10-intro.qmd # "10 Basic R"
+    - part: modules/m10/m10-intro.qmd # R Introduction
       chapters: 
         - notebooks/M10_RBasics/M10-01-Intro.ipynb
         - notebooks/M10_RBasics/M10-02-DataTypes.ipynb
@@ -109,12 +99,12 @@ book:
         - notebooks/M10_RBasics/M10-05-ControlStructures.ipynb
         - notebooks/M10_RBasics/M10-06-Functions.ipynb
         
-    - part: modules/m11/m11-intro.qmd # "11 Dplyr"
+    - part: modules/m11/m11-intro.qmd # R Dplyr
       chapters: 
         - notebooks/M11_RDplyr/M11-01-Tibbles.ipynb
         - notebooks/M11_RDplyr/M11-02-Dplyr.ipynb
 
-    - part: modules/m12/m12-intro.qmd # "12 Visualization"
+    - part: modules/m12/m12-intro.qmd # R Visualization
       chapters:
         - notebooks/M12_RViz/M12-00-AGrammarOfGraphics.ipynb      
         - notebooks/M12_RViz/M12-01-GettingStartedWithGGPlot.ipynb

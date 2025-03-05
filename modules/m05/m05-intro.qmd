@@ -1,4 +1,4 @@
-# M05 NumPy
+# Python NumPy
 
 ## Topics
 

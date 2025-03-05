@@ -6,7 +6,7 @@
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <title>M02-Exercises slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
-  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
+  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script><script>
 (function() {
@@ -7442,7 +7442,6 @@ main {
                     processEnvironments: true
                 },
                 displayAlign: 'center',
-                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -8384,11 +8383,11 @@ Cell <span class="ansi-green-fg">In[19], line 1</span>
 </code></pre>
 <p>Output:</p>
 <pre><code>Twinkle, twinkle, little star,
-	How I wonder what you are! 
-		Up above the world so high,   		
-		Like a diamond in the sky. 
+    How I wonder what you are! 
+    	Up above the world so high,   		
+    	Like a diamond in the sky. 
 Twinkle, twinkle, little star, 
-	How I wonder what you are
+    How I wonder what you are
 </code></pre>
 </div>
 </div>
@@ -8624,10 +8623,7 @@ require(
             history: true,
             transition: "slide",
             slideNumber: "",
-            plugins: [RevealNotes],
-            width: 960,
-			      height: 700,
-
+            plugins: [RevealNotes]
         });
 
         var update = function(event){

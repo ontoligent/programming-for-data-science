@@ -1,0 +1,5 @@
+# M03 Exercises
+
+{{< include snippets/exercise-instructions.qmd >}}
+
+[Exercises](../../exercises/M03-Exercises.slides.html)

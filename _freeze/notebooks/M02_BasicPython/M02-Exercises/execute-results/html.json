@@ -1,0 +1,15 @@
+{
+  "hash": "529310f63d461bd3cf3056690b8215c1",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# M02 Exercises\n\nTo develop your Python skills for this module, ...\n\n[Exercises](../../exercises/M02-Exercises.slides.html)",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

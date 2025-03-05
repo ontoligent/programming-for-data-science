@@ -1,4 +1,4 @@
-# M06 Pandas
+# Python Pandas
 
 ## Topics
 
