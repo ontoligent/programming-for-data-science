@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Programming for Data Science - NB: Getting Started with GGPlot2</title>
+<title>NB: Getting Started with GGPlot2 – {{&lt; var book_title &gt;}}</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -144,13 +144,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../modules/m12/m12-intro.html">M12 Visualization</a></li><li class="breadcrumb-item"><a href="../../notebooks/M12_RViz/M12-01-GettingStartedWithGGPlot.html"><span class="chapter-title">NB: Getting Started with GGPlot2</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -183,7 +183,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../modules/m02/m02-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M02 Introducing Python</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -234,7 +234,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../modules/m03/m03-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M03 Control Structures</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -270,7 +270,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../modules/m04/m04-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M04 Functions</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -311,7 +311,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../modules/m05/m05-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M05 NumPy</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -352,7 +352,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../modules/m06/m06-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M06 Pandas</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -393,7 +393,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../modules/m07/m07-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M07 Classes</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -434,7 +434,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../modules/m08/m08-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M08 Testing</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -460,7 +460,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../modules/m09/m09-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M09 Modules</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -486,7 +486,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../modules/m10/m10-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M10 Basic R</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -527,7 +527,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../modules/m11/m11-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M11 Dplyr</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -548,7 +548,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../modules/m12/m12-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M12 Visualization</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -673,7 +673,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-4-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -688,7 +688,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-5-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -751,7 +751,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-6-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-6-output-2.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -771,7 +771,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-7-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-7-output-2.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -803,7 +803,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-8-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-8-output-2.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -824,7 +824,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-9-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-9-output-2.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -848,7 +848,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-10-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -867,7 +867,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-11-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-11-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -887,7 +887,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-12-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-12-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -913,7 +913,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-13-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-13-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -933,7 +933,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-14-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-14-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -948,8 +948,7 @@ window.Quarto = {
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>corr <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">cor</span>(mtcars), <span class="dv">2</span>)</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>corr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A matrix: 11 × 11 of type dbl</caption>
 <thead>
 <tr class="header">
@@ -1126,7 +1125,6 @@ window.Quarto = {
 </table>
 </div>
 </div>
-</div>
 <p>The we <strong>melt</strong> it into narrow form:</p>
 <div id="cell-41" class="cell" data-tags="[]" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>narrow <span class="ot">&lt;-</span> reshape2<span class="sc">::</span><span class="fu">melt</span>(corr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1134,8 +1132,7 @@ window.Quarto = {
 <div id="cell-42" class="cell" data-tags="[]" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>narrow <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 6 × 3</caption>
 <thead>
 <tr class="header">
@@ -1192,7 +1189,6 @@ window.Quarto = {
 </table>
 </div>
 </div>
-</div>
 <p>Now we can pass the narrow data frame to our plot constructor:</p>
 <div id="cell-44" class="cell" data-tags="[]" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>narrow <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
@@ -1204,7 +1200,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-18-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-18-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1220,7 +1216,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-19-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-19-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1231,7 +1227,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-20-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-20-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1242,7 +1238,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-21-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-21-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1253,7 +1249,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-22-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-22-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1267,7 +1263,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-23-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-23-output-2.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1287,7 +1283,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-24-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-24-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1299,7 +1295,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-25-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-25-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1311,7 +1307,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-26-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-26-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1325,7 +1321,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-27-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-27-output-2.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1336,7 +1332,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-28-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-28-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1347,7 +1343,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-29-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-29-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1358,7 +1354,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-30-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M12-01-GettingStartedWithGGPlot_files/figure-html/cell-30-output-1.png" width="960" height="600" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1411,18 +1407,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1454,7 +1439,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1462,7 +1469,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

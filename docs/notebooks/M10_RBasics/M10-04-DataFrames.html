@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Programming for Data Science - NB: R Data Frames</title>
+<title>NB: R Data Frames – {{&lt; var book_title &gt;}}</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -115,13 +115,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../modules/m10/m10-intro.html">M10 Basic R</a></li><li class="breadcrumb-item"><a href="../../notebooks/M10_RBasics/M10-04-DataFrames.html"><span class="chapter-title">NB: R Data Frames</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -154,7 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../modules/m02/m02-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M02 Introducing Python</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -205,7 +205,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../modules/m03/m03-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M03 Control Structures</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -241,7 +241,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../modules/m04/m04-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M04 Functions</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -282,7 +282,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../modules/m05/m05-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M05 NumPy</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -323,7 +323,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../modules/m06/m06-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M06 Pandas</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -364,7 +364,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../modules/m07/m07-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M07 Classes</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -405,7 +405,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../modules/m08/m08-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M08 Testing</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -431,7 +431,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../modules/m09/m09-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M09 Modules</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -457,7 +457,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../modules/m10/m10-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M10 Basic R</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -498,7 +498,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../modules/m11/m11-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M11 Dplyr</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -519,7 +519,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../modules/m12/m12-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">M12 Visualization</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -625,8 +625,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(n, s, b)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 3 × 3</caption>
 <thead>
 <tr class="header">
@@ -660,7 +659,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-</div>
 <p>Notice that data frames are built <strong>column-wise</strong>.</p>
 <p>When displayed in certain environemnts, the top line of the data frame is the <strong>header</strong> and it contains the <strong>column</strong> names.</p>
 <p>The <strong>data type</strong> is listed below the column name.</p>
@@ -685,8 +683,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="6bd7cbc2-1733-435c-bb0d-33ce27541198" class="cell" data-tags="[]" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>mtcars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 32 × 11</caption>
 <thead>
 <tr class="header">
@@ -1171,7 +1168,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-</div>
 <p>To retrieve data in a cell, we enter its <strong>row</strong> and <strong>column</strong> coordinates in the single square bracket <code>[ ]</code> operator.</p>
 <p>The two coordinates are separated by a comma, e.g.&nbsp;<code>[row, col]</code>.</p>
 <p>Here is the cell value from the first row, second column of mtcars.</p>
@@ -1221,8 +1217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="e2723fb2-c6e3-4e14-bb68-7bc4623ce657" class="cell" data-tags="[]" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 6 × 11</caption>
 <thead>
 <tr class="header">
@@ -1343,7 +1338,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-</div>
 </section>
 </section>
 <section id="extracting-column-data" class="level1">
@@ -1416,8 +1410,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="2a74a0f9-413a-46a4-9354-1ebec30b2d34" class="cell" data-tags="[]" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mtcars[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 6 × 1</caption>
 <thead>
 <tr class="header">
@@ -1456,7 +1449,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 </div>
 <p>To reinforce this difference between getting a slice of a data frame and getting the data it contains, compare the classes of the results in each case.</p>
@@ -1476,8 +1468,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="346077d1-9b99-4c12-ab28-1fbcbee98d8b" class="cell" data-tags="[]" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mtcars[<span class="st">"mpg"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 6 × 1</caption>
 <thead>
 <tr class="header">
@@ -1518,13 +1509,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-</div>
 <p>To retrieve a data frame slice with the two columns <code>mpg</code> and <code>hp</code>, we put the column names into a vector inside the single square bracket operator:</p>
 <div id="981633be-4e6c-462d-8960-34c1dd0321b3" class="cell" data-tags="[]" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mtcars[<span class="fu">c</span>(<span class="st">"mpg"</span>, <span class="st">"hp"</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 6 × 2</caption>
 <thead>
 <tr class="header">
@@ -1573,7 +1562,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-</div>
 </section>
 </section>
 <section id="extracting-row-data" class="level1">
@@ -1594,8 +1582,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="564d82ce-663f-45c6-9f13-28258c8dfee1" class="cell" data-tags="[]" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>mtcars[<span class="dv">24</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 1 × 11</caption>
 <thead>
 <tr class="header">
@@ -1646,13 +1633,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-</div>
 <p>To retrieve more than one row, we use a numeric index <strong>vector</strong>:</p>
 <div id="455a1245-7e76-4f80-9ed9-67eb5d83fd06" class="cell" data-tags="[]" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>mtcars[<span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">24</span>),]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 2 × 11</caption>
 <thead>
 <tr class="header">
@@ -1715,7 +1700,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 </div>
 </section>
@@ -1725,8 +1709,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="1b325096-e0f1-4dbf-b0f9-6be3451cff59" class="cell" data-tags="[]" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>mtcars[<span class="st">"Camaro Z28"</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 1 × 11</caption>
 <thead>
 <tr class="header">
@@ -1777,13 +1760,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-</div>
 <p>And we can pack the row names in an index vector in order to retrieve multiple rows.</p>
 <div id="3f88fc20-8ea2-4055-b115-567e2ecbc585" class="cell" data-tags="[]" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>mtcars[<span class="fu">c</span>(<span class="st">"Datsun 710"</span>, <span class="st">"Camaro Z28"</span>),]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 2 × 11</caption>
 <thead>
 <tr class="header">
@@ -1846,7 +1827,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 </div>
 </section>
@@ -1869,8 +1849,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="b2e96132-3a7d-4497-bccd-cd8a0e20953f" class="cell" data-tags="[]" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>mtcars[mtcars<span class="sc">$</span>am <span class="sc">==</span> <span class="dv">1</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 13 × 11</caption>
 <thead>
 <tr class="header">
@@ -2089,7 +2068,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-</div>
 <p>And here is the gas mileage data for automatic transmission</p>
 <div id="b5de9c55-49ec-463a-9dd5-3e701ad18653" class="cell" data-tags="[]" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>mtcars[mtcars<span class="sc">$</span>am <span class="sc">==</span> <span class="dv">1</span>,]<span class="sc">$</span>mpg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2113,8 +2091,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> df</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>df2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 3 × 3</caption>
 <thead>
 <tr class="header">
@@ -2148,7 +2125,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-</div>
 <p>To make the change, we create a logical vector of column names that have the old name.</p>
 <p>Then we assign the new value, using the same <code>names()</code> function.</p>
 <div id="658c04d9-5118-4e32-a1fc-a0935ac3ddbc" class="cell" data-tags="[]" data-execution_count="27">
@@ -2157,8 +2133,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="b06fa603-c2e1-484f-8931-03ded9e39496" class="cell" data-tags="[]" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>df2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 3 × 3</caption>
 <thead>
 <tr class="header">
@@ -2192,14 +2167,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-</div>
 <p>Note, by the way, that the original <code>df</code> is unchanged.</p>
 <p>This is because R does not make a shallow copy.</p>
 <div id="75f3facc-d5a3-4eb0-89ef-34da61039f47" class="cell" data-tags="[]" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 3 × 3</caption>
 <thead>
 <tr class="header">
@@ -2233,7 +2206,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-</div>
 </section>
 <section id="a-few-more-things" class="level1">
 <h1>A Few More Things</h1>
@@ -2250,8 +2222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="37e9dc75-5040-4629-a3a4-425cf5488fe0" class="cell" data-tags="[]" data-execution_count="92">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>df_from_csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 3 × 3</caption>
 <thead>
 <tr class="header">
@@ -2285,7 +2256,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-</div>
 <p>R has a special function for reading in table data where cell data are separated by spaces.</p>
 <p>In this example, <code>mydata.txt</code> contains this:</p>
 <pre><code>100 a1 b1 
@@ -2296,8 +2266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>df_from_table <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">"mydata.txt"</span>)</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>df_from_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 4 × 3</caption>
 <thead>
 <tr class="header">
@@ -2336,7 +2305,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-</div>
 </section>
 <section id="plotting-data-with-plot" class="level2">
 <h2 class="anchored" data-anchor-id="plotting-data-with-plot">Plotting Data with <code>plot()</code></h2>
@@ -2347,8 +2315,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="7900f04c-daf9-4362-91a8-06e04f9fc9cf" class="cell" data-tags="[]" data-execution_count="90">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(airquality)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 6 × 6</caption>
 <thead>
 <tr class="header">
@@ -2429,14 +2396,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-</div>
 <p>If we pass it the whole data frame, it produces a scatter plot lattice:</p>
 <div id="6b686f10-d01a-43fa-85e6-aa97d2a96536" class="cell" data-tags="[]" data-execution_count="45">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(airquality)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M10-04-DataFrames_files/figure-html/cell-34-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M10-04-DataFrames_files/figure-html/cell-34-output-1.png" width="420" height="420" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -2447,7 +2413,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M10-04-DataFrames_files/figure-html/cell-35-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M10-04-DataFrames_files/figure-html/cell-35-output-1.png" width="420" height="420" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -2458,7 +2424,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M10-04-DataFrames_files/figure-html/cell-36-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M10-04-DataFrames_files/figure-html/cell-36-output-1.png" width="420" height="420" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -2469,7 +2435,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="M10-04-DataFrames_files/figure-html/cell-37-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="M10-04-DataFrames_files/figure-html/cell-37-output-1.png" width="420" height="420" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -2486,8 +2452,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(months.df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Month"</span>, <span class="st">"Freq"</span>)</span>
 <span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="fu">t</span>(months.df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A matrix: 2 × 5 of type chr</caption>
 <tbody>
 <tr class="odd">
@@ -2508,7 +2473,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 </div>
 <p>Note we used <code>t()</code> to transpose the data frame.</p>
@@ -2553,18 +2517,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -2596,7 +2549,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -2604,7 +2579,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
