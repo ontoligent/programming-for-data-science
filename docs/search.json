@@ -974,7 +974,7 @@
     "section": "",
     "text": "What is a Function?\nA function is piece of code, separate fom the larger program, that performs a specific task.\nThis piece of code is given a name and can be called from the main program.\nFunctions are the verbs of a programming language. They signify action, and take subjects and objects (as it were).",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Introduction to Functions</span>"
     ]
   },
@@ -985,7 +985,7 @@
     "section": "How do they Work?",
     "text": "How do they Work?\nFunctions take input data and produce output data.\n\nFunction inputs are called both parameters and arguments.\nOutputs are called return values\n\nFunctions are always written with parentheses at the end of their names, e.g.\nlen(some_list)\ntime()\nInternally, they contain a block of code to do their work.\nOften the produce a transformation … e.g. from simple to complex.\nWhen you use a function, we say you call a function. Programmers speak of “function calls” and “callbacks.”",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Introduction to Functions</span>"
     ]
   },
@@ -996,7 +996,7 @@
     "section": "Why Use Them?",
     "text": "Why Use Them?\nReduce complex tasks into simpler tasks.\nEliminate duplicate code — no need to re-write, reuse function as needed.\nMake code reusable. Once function is written, you can reuse it in any other program.\nDistribute tasks to multiple programmers. For example, each function can be written by someone.\nHide implementation details, i.e. abstraction.\nIncrease code readability.\nImprove debugging by improving traceability. Things are easier to follow; you can jump from function to function.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Introduction to Functions</span>"
     ]
   },
@@ -1007,7 +1007,7 @@
     "section": "Built-in Functions",
     "text": "Built-in Functions\nPython provides many built-in functions. See Python built-in functions.\nWe’ve looked at many of these already.\nThese are functions that are available to use any time your are running Python.\nTo take one simple example, this is a built-in function: bool().\nTakes an argument \\(x\\) and returns a boolean value, i.e. True or False.\n\nbool(0), bool(500)\n\n(False, True)",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Introduction to Functions</span>"
     ]
   },
@@ -1018,7 +1018,7 @@
     "section": "Imported Functions",
     "text": "Imported Functions\nPython is meant to be a highly modular language.\nIt is not designed to have a lot of special purpose functions built into it.\nThese keeps it light and highly customizable.\nMany functions can be imported into a program to add to the functions that you can call in a script.\n\nimport math\n\nmath.log(256, 2)\n\n8.0",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Introduction to Functions</span>"
     ]
   },
@@ -1029,7 +1029,7 @@
     "section": "User-Defined Functions",
     "text": "User-Defined Functions\nPython makes it easy for you to write your own functions. These are called user-defined functions.\nLet’s write a function to compare the list against a threshold.\n\ndef vals_greater_than_or_equal_to_threshold(vals, thresh):\n    '''\n    This is the \"docstring\" of a function. It is optional but expected. It describes it's \n    purpose and the nature of the input and return values, as well as a sense of what it does.\n    More elaborate information should appear in external documentation packages with the function.\n    \n    PURPOSE: Given a list of values, compare each value against a threshold\n    \n    INPUTS\n    vals    list of ints or floats\n    thresh  int or float\n    \n    OUTPUT\n    bools  list of booleans\n    '''\n    \n    filtered_vals = [val &gt;= thresh for val in vals]\n    \n    return filtered_vals\n\nLet’s break down the components\nThe function definition starts with def, followed by name, one or more arguments in parenthesis, and then a colon.\nNext comes a docstring to provide information to users about how and why to use the function.\nThe function body follows.\nLastly is a return statement\nThe function call allows for the function to be used.\nIt consists of function name and required arguments:\nvals_greater_than_or_equal_to_threshold(arg1, arg2) where arg1, arg2 are arbitrary names.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Introduction to Functions</span>"
     ]
   },
@@ -1040,7 +1040,7 @@
     "section": "About the docstring",
     "text": "About the docstring\nA docstring occurs as first statement in module, function, class, or method definition.\nInternally, it is saved in __doc__ attribute of the function object.\nIt needs to be indented, i.e. part of the code block associated with the function.\nIt can be a single line or a multi-line string.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Introduction to Functions</span>"
     ]
   },
@@ -1051,7 +1051,7 @@
     "section": "Users can print the docstring",
     "text": "Users can print the docstring\n\nprint(vals_greater_than_or_equal_to_threshold.__doc__)\n\n\n    This is the \"docstring\" of a function. It is optional but expected. It describes it's \n    purpose and the nature of the input and return values, as well as a sense of what it does.\n    More elaborate information should appear in external documentation packages with the function.\n    \n    PURPOSE: Given a list of values, compare each value against a threshold\n    \n    INPUTS\n    vals    list of ints or floats\n    thresh  int or float\n    \n    OUTPUT\n    bools  list of booleans\n    \n\n\nPrint the docstring using help():\n\nhelp(vals_greater_than_or_equal_to_threshold)\n\nHelp on function vals_greater_than_or_equal_to_threshold in module __main__:\n\nvals_greater_than_or_equal_to_threshold(vals, thresh)\n    This is the \"docstring\" of a function. It is optional but expected. It describes it's \n    purpose and the nature of the input and return values, as well as a sense of what it does.\n    More elaborate information should appear in external documentation packages with the function.\n    \n    PURPOSE: Given a list of values, compare each value against a threshold\n    \n    INPUTS\n    vals    list of ints or floats\n    thresh  int or float\n    \n    OUTPUT\n    bools  list of booleans\n\n\n\nOr, use the ? prefix in a Jupyter notebook:\n\n?vals_greater_than_or_equal_to_threshold\n\n\nSignature: vals_greater_than_or_equal_to_threshold(vals, thresh)\nDocstring:\nThis is the \"docstring\" of a function. It is optional but expected. It describes it's \npurpose and the nature of the input and return values, as well as a sense of what it does.\nMore elaborate information should appear in external documentation packages with the function.\nPURPOSE: Given a list of values, compare each value against a threshold\nINPUTS\nvals    list of ints or floats\nthresh  int or float\nOUTPUT\nbools  list of booleans\nFile:      /tmp/ipykernel_133200/392258855.py\nType:      function\n\n\n\nOr suffix …\n\nvals_greater_than_or_equal_to_threshold?\n\n\nSignature: vals_greater_than_or_equal_to_threshold(vals, thresh)\nDocstring:\nThis is the \"docstring\" of a function. It is optional but expected. It describes it's \npurpose and the nature of the input and return values, as well as a sense of what it does.\nMore elaborate information should appear in external documentation packages with the function.\nPURPOSE: Given a list of values, compare each value against a threshold\nINPUTS\nvals    list of ints or floats\nthresh  int or float\nOUTPUT\nbools  list of booleans\nFile:      /tmp/ipykernel_133200/392258855.py\nType:      function",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Introduction to Functions</span>"
     ]
   },
@@ -1062,7 +1062,7 @@
     "section": "Calling Our Function",
     "text": "Calling Our Function\nLet’s use, or “call,” our function.\nThe function body uses a list comprehensionto perform a filtering operation:\n[val &gt;= thresh for val in vals]\nValidate that it works for integers:\n\nx = [3, 4]\nthr = 4\n\nvals_greater_than_or_equal_to_threshold(x, thr)\n\n[False, True]\n\n\nValidate that it works for floats:\n\nx = [3.0, 4.2]\nthr = 4.2\n\nvals_greater_than_or_equal_to_threshold(x, thr)\n\n[False, True]\n\n\nThis gives correct results and does exactly what we want.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Introduction to Functions</span>"
     ]
   },
@@ -1073,7 +1073,7 @@
     "section": "Passing Parameters",
     "text": "Passing Parameters\nAll functions may take \\(0\\) or more arguments, also called parameters.\nFunctions need to be called with correct number of parameters.\nThis function requires two parameters, but the function call includes only one parameter.\n\ndef func_with_args(x, y):\n    return x + y\n\n\nfunc_with_args(10)\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[21], line 1\n----&gt; 1 func_with_args(10)\n\nTypeError: func_with_args() missing 1 required positional argument: 'y'",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Introduction to Functions</span>"
     ]
   },
@@ -1084,7 +1084,7 @@
     "section": "Parameter Order",
     "text": "Parameter Order\nWhen calling a function, parameter order matters.\n\ndef fcn_swapped_args(x, y):\n    out = 5 * x + y\n    return out\n\n\nx = 1\ny = 2\n\n\nfcn_swapped_args(x, y)\n\n7\n\n\n\nfcn_swapped_args(y, x)\n\n11",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Introduction to Functions</span>"
     ]
   },
@@ -1095,7 +1095,7 @@
     "section": "Named Parameters",
     "text": "Named Parameters\nGenerally it’s best to keep parameters in order.\nHowever, You can swap the order by putting the parameter names in the function call.\n\nfcn_swapped_args(y=y, x=x)",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Introduction to Functions</span>"
     ]
   },
@@ -1106,7 +1106,7 @@
     "section": "Weirdness Alert",
     "text": "Weirdness Alert\nNote that the same name can be used for the parameter names and the variables passed to them.\nThe names themselves have nothng to do with each other!\nIn other words, just because a function names an argument foo,\nthe variables passed to it don’t have to name foo or anything like it.\nThey can even be named the same thing—it does not matter.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Introduction to Functions</span>"
     ]
   },
@@ -1117,7 +1117,7 @@
     "section": "Default Arguments",
     "text": "Default Arguments\nUse default arguments to set the value of arguments.\nThis allows users to call functions with fewer (or no) arguments.\nDefaults are often set for the most common cases.\n\ndef show_results(precision, printing=True):\n    precision = round(precision, 2)\n    if printing:\n      print('precision =', precision)\n    return precision\n\n\npr = 0.912\nres = show_results(pr)\n\nprecision = 0.91\n\n\nThe function call didn’t specify printing, so it defaulted to True.\n\nfoo = show_results(pr, False)\n\nNOTE: Default arguments must follow non-default arguments in function definition.\nThis causes trouble:\n\ndef show_results(precision, printing=True, uhoh):\n    precision = round(precision, 2)\n    if printing:\n      print('precision =', precision)\n    return precision\n\n\n  Cell In[30], line 1\n    def show_results(precision, printing=True, uhoh):\n                                               ^\nSyntaxError: non-default argument follows default argument",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Introduction to Functions</span>"
     ]
   },
@@ -1128,7 +1128,7 @@
     "section": "Returning Values",
     "text": "Returning Values\nFunctions are not required to have return statement but it is a good idea to have one.\nIf there is no return statement, a function returns None.\nFunctions can return no value (None), one value, or many.\nMany values are returned as a tuple.\nAny Python object can be returned.\nThis returns None.\n\ndef fcn_nothing_to_return(x, y):\n    out = 'nothing to see here!'\n    print(out)\n\n\nfcn_nothing_to_return(x, y)\n\nnothing to see here!\n\n\n\nr = fcn_nothing_to_return(1, 1)\n\nnothing to see here!\n\n\n\nr\n\n\nprint(r)\n\nNone\n\n\nThis returns three values.\n\ndef negate_coords(x, y, z):\n    return -x, -y, -z \n\n\na, b, c = negate_coords(10, 20, 30)\n\n\na, b, c\n\n(-10, -20, -30)\n\n\n\nfoo = negate_coords(10, 20, 30)\n\n\nfoo\n\n(-10, -20, -30)\n\n\nIf you don’t need an output, use the dummy variable _.\n\nd, e, _ = negate_coords(10,20,30)\n\n\nd, e\n\n(-10, -20)\n\n\nNote: It’s generally a good idea to include return statements, even if not returning a value.\nThis shows that you did not forget to consider the return value.\nYou can use return or return None.\nFunctions can contain multiple return statements.\nThese may be used under different logical conditions.\n\ndef absolute_value(num):\n    if num &gt;= 0:\n        return num\n    return -num\n\n\nabsolute_value(-4), absolute_value(4)\n\n(4, 4)",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Introduction to Functions</span>"
     ]
   },
@@ -1139,7 +1139,7 @@
     "section": "Unpacking List-likes with *args",
     "text": "Unpacking List-likes with *args\nThe * prefix operator can be passed to avoid specifying the arguments individually.\n\ndef show_arg_expansion1(models):\n    print(models)\n\nWe can pass a tuple of values to the function …\n\nshow_arg_expansion1(\"logreg\", \"naive_bayes\", \"gbm\")\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[92], line 1\n----&gt; 1 show_arg_expansion1(\"logreg\", \"naive_bayes\", \"gbm\")\n\nTypeError: show_arg_expansion1() takes 1 positional argument but 3 were given\n\n\n\n\ndef show_arg_expansion2(*models):\n    print(models)\n\n\nshow_arg_expansion2(\"logreg\", \"naive_bayes\", \"gbm\")\n\n('logreg', 'naive_bayes', 'gbm')\n\n\nThis also allows for an unspecified number of arguments, such as how print() works.\nYou can also pass a list to the function.\nIf you want the elements unpacked, put * before the list.\n\nmodels = [\"logreg\", \"naive_bayes\", \"gbm\"]\nshow_arg_expansion2(*models)\n\n('logreg', 'naive_bayes', 'gbm')\n\n\nThis approach allows your function to accept an arbitrary number of arguments.\nNote you can prefix a string with an asterisk *:\n\nshow_arg_expansion2(*'abcdefg')\n\n('a', 'b', 'c', 'd', 'e', 'f', 'g')\n\n\nOr a string operation that returns a list:\n\nshow_arg_expansion2(*'a b c d e f g'.split())\n\n('a', 'b', 'c', 'd', 'e', 'f', 'g')\n\n\nYou can use the * prefix to pass list-like objects to a function with a defined number of arguments.\n\ndef arg_expansion_example(x, y):\n    return x**y\n\n\nmy_args = [2, 8]\narg_expansion_example(*my_args)\n\n256\n\n\nBut, the passed object must be the right length.\n\nmy_args2 = [2, 8, 5]\narg_expansion_example(*my_args2)\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[75], line 2\n      1 my_args2 = [2, 8, 5]\n----&gt; 2 arg_expansion_example(*my_args2)\n\nTypeError: arg_expansion_example() takes 2 positional arguments but 3 were given",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Introduction to Functions</span>"
     ]
   },
@@ -1150,7 +1150,7 @@
     "section": "Function Design",
     "text": "Function Design\nA function is not just a bag of code!\nDesign a function to do one thing.\nMake them as simple as possible. This makes them:\n\nmore comprehensible\neasier to maintain\nreusable\n\nThis helps avoid situations where a team has 20 variations of similar functions.\nGive your function a good name.\n\nIt should reflect the action it performs.\nBe consistent in your naming conventions.\nA name like compute_variances_sort_save_print suggests the function is overworked!\n\nIf the function compute_variances also produces plots and updates variables, it will cause confusion.\nAlways give your function a docstring\n\nParticularly important since indicating data types is not required.\n\nAs a side note, you can include this information by using type annotation.\n\nYou may be interested to learn some of the formatting languages that have been developed to write docstrings. See Lutz 2019 and this web page about Documenting Python Code for more info.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Introduction to Functions</span>"
     ]
   },
@@ -1161,7 +1161,7 @@
     "section": "",
     "text": "Importing\nPreviously we saw that we can extend the functions available to use in a Python program by importing them.\nFor example, we imported the Math module to make its log function available.\nIn this notebook, we cover some basic properties of import statements.\nWe’ll go into greater detail when we cover Modules.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Importing Functions</span>"
     ]
   },
@@ -1172,7 +1172,7 @@
     "section": "",
     "text": "import math",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Importing Functions</span>"
     ]
   },
@@ -1183,7 +1183,7 @@
     "section": "Quick Example",
     "text": "Quick Example\nRecall that calling a function from the import math object is straightforward:\nFor example, to get the square root of \\(12\\) we can now do this:\n\nimport math\n\nmath.sqrt(12)\n\n3.4641016151377544\n\n\n\nmath.floor(2.5)\n\n2\n\n\nHere’s an example using the Random module.\n\nimport random\n\n\nrandom.random()\n\n0.602481588733838\n\n\n\nrandom.randint(1, 100)\n\n8",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Importing Functions</span>"
     ]
   },
@@ -1194,7 +1194,7 @@
     "section": "Dot Notation",
     "text": "Dot Notation\nWe call functions from imported modules by object using “dot” notation.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Importing Functions</span>"
     ]
   },
@@ -1205,7 +1205,7 @@
     "section": "Importing More than One Module",
     "text": "Importing More than One Module\nYou can import as many modules into your code as you’d like.\nWe can do this as follows:\nimport math, random\nOr one import per line:\nimport math\nimport random\nIt is generally preferred to separate import statements by line.\nThis makes you code more readable and modular.\nRegarding modularity, with one import per line, you can do things like this:\nimport math\n# import random\nHere’s we quickly comment out an import statement without having to rewrite our code.\nIt is also a standard practice to put all of your import statements at the very top of your code, before any other code.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Importing Functions</span>"
     ]
   },
@@ -1216,7 +1216,7 @@
     "section": "Importing Specific Functions",
     "text": "Importing Specific Functions\nIf you know what to use a specific function from an imported module, you can import them directly, like so:\n\nfrom math import sqrt\n\n\nsqrt(99)\n\n9.9498743710662\n\n\nThis reduces the memory used by the library in your program, since it is not importing all of the module’s code.\nIt also allows you to call the function directly, with the object dot notation.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Importing Functions</span>"
     ]
   },
@@ -1227,7 +1227,7 @@
     "section": "Aliasing Imported Functions",
     "text": "Aliasing Imported Functions\nYou can alias the imported function.\nThis avoids having the function name conflict with an existing function in your program.\n\nfrom math import sqrt as SquareRoot\n\n\nSquareRoot(65000)\n\n254.95097567963924",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Importing Functions</span>"
     ]
   },
@@ -1238,7 +1238,7 @@
     "section": "",
     "text": "What’s a Lambda Function?\nPython lambda functions are small functions that can be written on one line.\nLike the one line if/else statement and comprehensions, they represent Python’s lean code writing tradition.\nLambda functions don’t need to be assigned to a variable — you can put them directly in places that expect functions the return, or expressions that evaluate to, values.\nThey sometimes called “anonymous” functions because they don’t have to have a name.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Lambda Functions</span>"
     ]
   },
@@ -1249,7 +1249,7 @@
     "section": "How Do You Define a Lambda Function?",
     "text": "How Do You Define a Lambda Function?\nThe general form of a lambda function is as follows:\nlambda x: x + 1\nthe first x is the argument, and the x after the colon is the body of the function.\nHere we just add one to the argument.\nThere is no return statement; the function just returns what body of the function evaluates to.\nYou can call the function like this:\n\n(lambda x: x + 1)(2)\n\n3\n\n\nNote how we treat it as an expression by wrapping it in parentheses.\nSince it evaluates to a function, we can use function parentheses at the end.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Lambda Functions</span>"
     ]
   },
@@ -1260,7 +1260,7 @@
     "section": "Assigning to a Variable",
     "text": "Assigning to a Variable\nYou can assign a lambda function to a variable.\nFor example, here are three lambda functions assigned to variables.\n\nsum_two_vars = lambda x, y: x + y\nis_non_negative = lambda x: x &gt;= 0\nis_dirty = lambda txt: 'dirty' in txt\n\n\nsum_two_vars(2, 4)\n\n6\n\n\n\nis_non_negative(-9)\n\nFalse\n\n\n\nis_dirty('dirty dishes')\n\nTrue\n\n\nLambda functions let us do things like this:\n\nfoo = {\n    'addone': lambda x: x + 1,\n    'square': lambda x: x * x,\n    'invert': lambda x: 1 / x\n}\n\nbar = 5 \n\nfor f in foo:\n    print(bar, f, '-&gt;', foo[f](bar))\n\n5 addone -&gt; 6\n5 square -&gt; 25\n5 invert -&gt; 0.2\n\n\nNote, you can also assign function names to variables, but of course you need to define them first.\n\ndef addone(x):\n    return x + 1\ndef square(x):\n    return x * x\ndef invert(x):\n    return 1/x\n\nfoo2 = [add_one, square, invert]\n\nfor f in foo2:\n    print(f(1))\n\n2\n1\n1.0",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Lambda Functions</span>"
     ]
   },
@@ -1271,7 +1271,7 @@
     "section": "Use Cases for Lambda",
     "text": "Use Cases for Lambda\nLambda functions are often used when you need use a function only once.\nSome prefer them for their ability to be part of one-liners.\nLambda functions are often used in Pandas.\nWe will discuss their use in more detail when we get to that topic.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Lambda Functions</span>"
     ]
   },
@@ -1282,7 +1282,7 @@
     "section": "",
     "text": "What is Recursion?\nRecursion in the context of programming occurs when a function calls to itsef.\nThis seems strange, since you’d think that to be called, a function must first be defined … And yet the definition contains a the function!\nThis is a bit like having a dictionary definition use the word it’s trying to define.\nHowever, a function definition is not like a dictionary definition.\nIt does not define a thing. It defines a set of instructions.\nSo, in effect, when a function calls itself, the instruction is:\nEach time the function goes back to the beginning, Python keeps track of the nested function calls in a call stack.\nThis will become clearer with examples.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Recursion</span>"
     ]
   },
@@ -1293,7 +1293,7 @@
     "section": "",
     "text": "“Go back to the beginning of the code block with a new set of argument values.”",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Recursion</span>"
     ]
   },
@@ -1304,7 +1304,7 @@
     "section": "A Formal Definition",
     "text": "A Formal Definition\nIn mathematics and computer science, a class of objects or methods exhibits recursive behavior when it can be defined by two properties:\n\nA simple base case or condition: a terminating scenario that does not use recursion to produce an answer.\nA recursive step: a set of rules that reduces all successive cases toward the base case.\n\nEvery recursive function must have a base condition that stops the recursion or else the function calls itself infinitely.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Recursion</span>"
     ]
   },
@@ -1315,7 +1315,7 @@
     "section": "A Note of Caution",
     "text": "A Note of Caution\nIn practice, the Python interpreter limits the depths of recursion to help avoid infinite recursions, resulting in stack overflows.\nWhen excessive memory consumption occurs on the call stack, it results in a stack overflow error.\nRecursion is cool, but is expensive and complicated.\nRecursive functions can usually be implemented by traditional loops.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Recursion</span>"
     ]
   },
@@ -1326,7 +1326,7 @@
     "section": "Example: Computing Factorials",
     "text": "Example: Computing Factorials\nThe factorial of a number \\(n\\) is the product of all the integers from \\(1\\) to \\(n\\).\nFor example, the factorial of \\(5\\) (denoted as \\(5!\\)) is \\(1\\times2\\times3\\times4\\times5 = 120\\).\nLet’s implement this in code using a recursive function.\n\ndef factorial(x):\n    \"Finds the factorial of an integer using recursion\"\n    \n    # Base condition\n    if x == 1: \n        return 1\n\n    # Recursive step\n    else:\n        return x * factorial(x - 1) # Self-reference\n\nNote how x gets smaller in the recursive step until it meets the base condition.\n\nn = 5\nfactorial(n)\n\n120\n\n\nThe same thing can be done as a while loop:\n\ndef factorial_while(x):\n    \"Finds the factorial of an integer using a while loop\"\n    result = x\n    while x &gt; 1:\n        x -= 1\n        result *= x\n    return result\n\n\nfactorial_while(n)\n\n120\n\n\nAnd as a for loop:\n\ndef factorial_for(x):\n    \"Finds the factorial of an integer using a for loop\"\n    result = 1\n    for i in range(1, x+1):\n        result *= i\n    return result\n\n\nfactorial_for(n)\n\n120",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Recursion</span>"
     ]
   },
@@ -1337,7 +1337,7 @@
     "section": "Example: The Fibonacci sequence",
     "text": "Example: The Fibonacci sequence\nThe Fibonacci sequence is defined by a series of numbers that equal the sum of the two previous numbers.\nMathematically, we define it as follows:\n\\(Fib(1) = 0\\) (base case 1)\n\\(Fib(2) = 1\\) (base case 2)\nFor all integers \\(n &gt; 2\\), \\(Fib(n) = Fib(n − 1) + Fib(n − 2)\\)\n\nFor \\(n = 8\\) the sequence is \\(0, 1, 1, 2, 3, 5, 8, 13\\).\n\n\ndef fibonacci(n):\n    \"Compute a Fibonacci value using recursion\"\n    if n &lt;= 0:\n        print(\"Incorrect input. Value must be 1 or greater.\")\n    elif n == 1:\n        return 0\n    elif n == 2:\n        return 1\n    else:\n        return fibonacci(n - 1) + fibonacci(n - 2)\n\nHere get the F number for a given positive integer:\n\nn = 8\nfibonacci(n)\n\n13\n\n\nHere we compute the sequence itself:\n\nprint(*[fibonacci(i) for i in range(1, n + 1)])\n\n0 1 1 2 3 5 8 13\n\n\nAs a for loop:\n\ndef fibber(n):\n    \"\"\"\n    Computes a Fibonacci Sequence using a for loop. \n    Returns a string of the series.\n    \"\"\"\n    F = [0,1] \n    for i in range(2, n):\n        F.append(F[i-1] + F[i-2])\n    print(*F)\n\n\nfibber(n)\n\n0 1 1 2 3 5 8 13\n\n\nNote that here, we are letting the data structure do the work.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Recursion</span>"
     ]
   },
@@ -1348,7 +1348,7 @@
     "section": "Aside: A General Sequence Function",
     "text": "Aside: A General Sequence Function\nRecursive functions are often used to produce mathematical sequences, but since they have limits on depth, they are of limited use for this purpose.\nHere is a function that can combine many sequences using two sequence parameters: * The initial state of the sequence, represented as the list seq. * For example, in the Fibonacci sequence, seq is [0, 1] * The function to apply to the sequence at each iteration, represneted as a lambda function with the arguments x and i for the the sequence list seq and the iteration number respectively. * For example, in the Fibonacci sequence the kernel function is lambda x, i: x[i-1] + x[i-2]\n\ndef sequencer(n = 10, seq=[1, 1, 2], kernel=lambda x, i: x[i-1] + x[i-2]):\n    \"\"\"\n    Computes a Sequence using a for loop. \n    \n    n: an integer which must be &gt; 3. Defaults to 10.\n    seq: is a list in the initial state of the sequence. \n        Must have at least one value. Defaults to Fibonacci [1,1,2]\n    kernel: the function applied to the series at each iteration. \n        x stands for the seq list, \n        i to the iteration number. \n        Defaults to lambda x, i: x[i-1] + x[i-2]\n    \n    Prints the series as an undelimited string.\n    \"\"\"\n    \n    for i in range(len(seq), n): \n        seq.append(kernel(seq, i))\n        \n    print(*seq)\n\nThe series of positive integers\n\nn = 8\n\n\nsequencer(n, [1], lambda x, i: x[i-1] + 1)\n\n1 2 3 4 5 6 7 8\n\n\nThe series of even numbers\n\nsequencer(n, [2], lambda x, i: x[i-1] + 2)\n\n2 4 6 8 10 12 14 16\n\n\nThe series of odd numbers\n\nsequencer(n, [1], lambda x, i: x[i-1] + 2)\n\n1 3 5 7 9 11 13 15\n\n\nThe series of Fibonacci numbers\n\nsequencer(n, [0,1], lambda x, i: x[i-1] + x[i-2])\n\n0 1 1 2 3 5 8 13\n\n\nThe series of Squares\n\nsequencer(n, [2], lambda x, i: x[i-1]**2)\n\n2 4 16 256 65536 4294967296 18446744073709551616 340282366920938463463374607431768211456",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Recursion</span>"
     ]
   },
@@ -1359,7 +1359,7 @@
     "section": "",
     "text": "What is Scope?\nScope is a fundamental concept in computer programming.\nScope is a property of a variable or other object that refers to where it can be seen in a program.\nTo be seen, or visible, means to be available or usable.\nIf a variable is in scope to a function, it is visible to the function.\nIf it is out of scope to a function, it is not visible to the function.\nScope hinges on the fact that programs have regions within which variables can be assigned.\nThese regions consist of nested code blocks.\nWe saw this distinction when looking at how function arguments work.\nIn the code below, x, y, and z are inside the function, while a, b, and c are outside of it.\nThe code inside the function block is local to the function.\nThe code outside the function block is global to the program.\nTo put it visuallly, the area contained by the red rectangle is local and the area of the green rectangle is global.\nNot that indentation does the work of defining the regions by which scope is defined.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Scope</span>"
     ]
   },
@@ -1370,7 +1370,7 @@
     "section": "",
     "text": "def my_function(x, y):\n    z = x + y\n    return z\n\na = 10\nb = 20\nc = my_function(x=a, y=b)\n\n\n\n\n\n\nscope.png",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Scope</span>"
     ]
   },
@@ -1381,7 +1381,7 @@
     "section": "Lutz on Scoping",
     "text": "Lutz on Scoping\nHere’s an excerpt from Lutz, Chapter 17. Please read the whole thing.\nThe enclosing module is a global scope. Each module is a global scope—that is, a namespace in which variables created (assigned) at the top level of the module file live. Global variables become attributes of a module object to the outside world after imports but can also be used as simple variables within the module file itself.\nThe global scope spans a single file only. Don’t be fooled by the word “global” here—names at the top level of a file are global to code within that single file only. There is really no notion of a single, all-encompassing global file-based scope in Python. Instead, names are partitioned into modules, and you must always import a module explicitly if you want to be able to use the names its file defines. When you hear “global” in Python, think “module.”\nAssigned names are local unless declared global or nonlocal. By default, all the names assigned inside a function definition are put in the local scope (the namespace associated with the function call). If you need to assign a name that lives at the top level of the module enclosing the function, you can do so by declaring it in a global statement inside the function. If you need to assign a name that lives in an enclosing def, as of Python 3.X you can do so by declaring it in a nonlocal statement.\nAll other names are enclosing function locals, globals, or built-ins. Names not assigned a value in the function definition are assumed to be enclosing scope locals, defined in a physically surrounding def statement; globals that live in the enclosing module’s namespace; or built-ins in the predefined built-ins module Python provides.\nEach call to a function creates a new local scope. Every time you call a function, you create a new local scope—that is, a namespace in which the names created inside that function will usually live. You can think of each def statement (and lambda expression) as defining a new local scope, but the local scope actually corresponds to a function call. Because Python allows functions to call themselves to loop—an advanced technique known as recursion and noted briefly in Chapter 9 when we explored comparisons—each active call receives its own copy of the function’s local variables. Recursion is useful in functions we write as well, to process structures whose shapes can’t be predicted ahead of time; we’ll explore it more fully in Chapter 19.\nThere are actually other scope levels.\nHere is a nice visualization of them:\n\n\n\nScope Levels\n\n\nPlease read Lutz, Chapter 17 for a good overview of scoping.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Scope</span>"
     ]
   },
@@ -1392,7 +1392,7 @@
     "section": "The Tinted Glass Metaphor",
     "text": "The Tinted Glass Metaphor\n\nCode regions in a program are like vehicles with tinted glass:\n\nPassengers can see outside, but outsiders can’t see inside.\nPassengers in a vehicle can let outsiders look in by lowering the window.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Scope</span>"
     ]
   },
@@ -1403,7 +1403,7 @@
     "section": "Example 1",
     "text": "Example 1\nA variable x i defined outside a function but used inside of it.\nIn the code below x is global and seen from inside the function.\nThe variable a is local to the function.\nTrying to print outside function throws error.\n\nx = 10\n\ndef scope_func1(a):\n    out = x + a\n    return out\n\nThe following works because x is global and functions can access globals so long as they don’t reassign the variable name.\n\ny = scope_func1(6)\nprint(y)\n\n16\n\n\nThe following fails because a local and not visible outside the function.\n\nprint(a)\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\n/tmp/ipykernel_833819/1189138062.py in &lt;module&gt;\n----&gt; 1 print(a)\n\nNameError: name 'a' is not defined",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Scope</span>"
     ]
   },
@@ -1414,7 +1414,7 @@
     "section": "Example 2",
     "text": "Example 2\nA variable x defined both outside and inside function, and used inside the function.\nThis function reassigns x, so it becomes local.\nA variable becomes local once it is used in an assignment statement within a function, or if it is the name of an argument.\n\nx = 10 # Global\n\ndef scope_func2(a):\n    x = 20 # Local\n    print('x from inside:', x)\n    out = x + a\n    return out\n\n\ny = scope_func2(6)\nprint(y)\nprint('x from outside:', x)\n\nx from inside: 20\n26\nx from outside: 10",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Scope</span>"
     ]
   },
@@ -1425,7 +1425,7 @@
     "section": "Example 2a",
     "text": "Example 2a\nHere we define x as an argument.\nThis has the same effect as defining it in the body of the function.\n\nx = 10 # Global\n\ndef scope_func2a(a, x=20): # Argment variables are local\n    print('x from inside:', x)\n    out = x + a\n    return out\n\n\ny = scope_func2a(6)\nprint(y)\nprint('x from outside:', x)\n\nx from inside: 20\n26\nx from outside: 10\n\n\nAs an argument, though, it can be assigned the value of the global.\nNevertheless, only the value is being passed between the global and local versions of x.\n\nx = 10 # Global\n\ndef scope_func2a(a, x=20):\n\n    print('x from inside before incremenet:', x)\n    x += 10\n    print('x from inside after incremenet:', x)\n    \n    out = x + a\n    \n    return out\n\n\ny = scope_func2a(6, x=x)\nprint(y)\nprint('x from outside :', x)\n\nx from inside before incremenet: 10\nx from inside after incremenet: 20\n26\nx from outside : 10",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Scope</span>"
     ]
   },
@@ -1436,7 +1436,7 @@
     "section": "Example 3",
     "text": "Example 3\nA variable x defined both outside and inside function, and used inside the function in both global and local modes.\nThis one is interesting. It fails, but it’s not clear why at first.\n\nx = 10\n\ndef scope_func3(a):\n    print('x from fcn, before local definition:', x) # Global use of x\n    x = 20 # Local use of x\n    print('x from fcn, after local definition:', x)\n    out = x + a\n    return out\n\n\nprint('x from outside before local definition:', x)\nscope_func3(6)\nprint('x from outside after local definition:', x)\n\nx from outside before local definition: 30\n\n\n\n---------------------------------------------------------------------------\nUnboundLocalError                         Traceback (most recent call last)\n/tmp/ipykernel_833819/2019026568.py in &lt;module&gt;\n      1 print('x from outside before local definition:', x)\n----&gt; 2 scope_func3(6)\n      3 print('x from outside after local definition:', x)\n\n/tmp/ipykernel_833819/3644353993.py in scope_func3(a)\n      2 \n      3 def scope_func3(a):\n----&gt; 4     print('x from fcn, before local definition:', x) # Global use of x\n      5     x = 20 # Local use of x\n      6     print('x from fcn, after local definition:', x)\n\nUnboundLocalError: local variable 'x' referenced before assignment\n\n\n\nThe problem is that Python knows you are assigning x within the local scope of the function, so it won’t allow you to use it until it is defined.\nThe error can be fixed by referencing x as global inside function.\n\nx = 10\n\ndef scope_func4(a):\n    global x\n    \n    print('x from inside, before local definition:', x)\n    x = 20\n    print('x from inside, after local definition:', x)\n    \n    out = x + a\n    return out\n\n\ny = scope_func4(6)\nprint(y)\nprint('x from outside:', x)\n\nx from inside, before local definition: 10\nx from inside, after local definition: 20\n26\nx from outside: 20",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Scope</span>"
     ]
   },
@@ -1447,7 +1447,7 @@
     "section": "Local / global conflicts",
     "text": "Local / global conflicts\nWhat will calling guess() do?\n\nx = 10\n\ndef guess():\n    x += 10 \n    print(x)\n\n\nguess()\n\n\n---------------------------------------------------------------------------\nUnboundLocalError                         Traceback (most recent call last)\n/tmp/ipykernel_833819/2016184111.py in &lt;module&gt;\n----&gt; 1 guess()\n\n/tmp/ipykernel_833819/3992268873.py in guess()\n      2 \n      3 def guess():\n----&gt; 4     x += 10\n      5     print(x)\n\nUnboundLocalError: local variable 'x' referenced before assignment\n\n\n\nConsider the following expression, which is the same as the unary operation inside of the function guess().\n\nx = x + 10\n\nThe x on the left is local, since it is being defined inside the function.\nHowever, the x on the right is assumed to already be defined, and so is global.\nIn effect, Python is presented with a contradiction and so throws an error.\nWe will see that R does not do this; it just goes with the global.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Scope</span>"
     ]
   },
@@ -1458,7 +1458,7 @@
     "section": "Nonlocal",
     "text": "Nonlocal\nIf a variable is assigned in an enclosing def, it is nonlocal to nested functions.\nThe nonlocal keyword is similar to global, except that it refers to the scope of the enclosing function, not the script that contains the funtions.\n\nx = 10 # Global\ndef func1(): # Enclosing function\n    x = 20 # Local to function; \"Nonlocal\" to nested function\n    def func1a():\n        x = 30 # Local to nested function\n        print(x)\n    func1a()\n    print(x)\n\n\nprint(x)\nfunc1()\nprint(x)\n\n10\n30\n20\n10\n\n\n\nx = 10\ndef func2():\n    x = 20\n    def func2a():\n        nonlocal x\n        x = 30\n        print(x)\n    func2a()\n    print(x)\n\n\nprint(x) # 1\nfunc2()\nprint(x) # 4\n\n10\n30\n30\n10\n\n\n\nx = 10\ndef func3():\n    x = 20\n    def func3a():\n        global x\n        x = 30\n        print(x)\n    func3a()\n    print(x)\n\n\nprint(x)\nfunc3()\nprint(x)\n\n10\n30\n20\n30",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Scope</span>"
     ]
   },
@@ -1469,7 +1469,7 @@
     "section": "Namespaces",
     "text": "Namespaces\nYou may wonder how Python keeps track to two variables with the same name in a program.\nFor example, when x is defined both globally and locally within the same program.\nPython solves this problem by giving each region a name.\nThe region becomes a namespace.\nWith namespaces, a unique name to associated with each and every object in a Python program.\nNamespacea work like the file system on a computer.\nJust as you can have many files of the same name as long as they are in different folders.\nThe complete name of the file is actually the filename and the names of its parent folders, i.e. the path to the file in the file system.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Scope</span>"
     ]
   },
@@ -1480,7 +1480,7 @@
     "section": "globals() and locals()",
     "text": "globals() and locals()\nPython keeps track of objects and namespaces in a dictionary. You can access local and global variables with globals() and locals().\n\ndef foo():\n    x = 1\n    print(locals())\n\n\nfoo()\n\n{'x': 1}\n\n\n\nG = globals()\n\n\nG['foo']\n\n&lt;function __main__.foo()&gt;\n\n\n\n[key for key in globals().keys() if not key.startswith('_')]\n\n['In',\n 'Out',\n 'get_ipython',\n 'exit',\n 'quit',\n 'x',\n 'scope_func2',\n 'y',\n 'scope_func2a',\n 'scope_func1',\n 'scope_func3',\n 'scope_func4',\n 'guess',\n 'func1',\n 'func2',\n 'func3',\n 'foo',\n 'G']",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Scope</span>"
     ]
   },
@@ -1491,7 +1491,7 @@
     "section": "Some Visualizations",
     "text": "Some Visualizations\n\nThe same object name can be present in multiple namespaces as isolation between the same name is maintained by their namespace.\n\nSource: “Namespaces and Scope in Python” (GFG).",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Scope</span>"
     ]
   },
@@ -1502,7 +1502,7 @@
     "section": "",
     "text": "Example 1: Converting Temperatures\nHere are three functions that work together to make a temperature converter.\nNotice how the last function integrates the first two.\ndef f_to_c(temp):  \n    \"\"\"\n    Converts F to C and returns a rounded result.\n    Expects an integer and returns an integer.\n    \"\"\"\n    return round((temp - 32) * (5/9))\n    \ndef c_to_f(temp):  \n    \"\"\"\n    Converts C to F and returns a rounded result.\n    Expects an integer and returns an integer.\n    \"\"\"\n    return round(temp * (9/5) + 32)\n    \ndef convert(temp, scale): \n    \"\"\"\n    Combines conversion functions into a two-way converter.\n    Expects a souce temp (int) and a target scale ('f' or 'c').\n    \"\"\"\n    if scale.lower() == \"c\":\n        return f_to_c(temp)  # function call to f_to_c\n    else:\n        return c_to_f(temp)  # function call to c_to_f\nNow, here is function that combines the above functions into a user-facing interface to the other functions.\ndef convert_app():\n    \"\"\"\n    Provides a user-interface to the the conversion functions.\n    \"\"\"\n    \n    # Get user input\n    temp = int(input(\"Enter a temperature: \"))                \n    scale = input(\"Enter the scale to convert to: (c or f) \")[0].lower()\n    \n    # Infer source scale, to be used in the output message\n    if scale == 'c':\n        current_scale = 'f'\n    else:\n        current_scale = 'c'\n    \n    # Do the conversion\n    converted = convert(temp, scale)\n    \n    # Print results for user\n    print(f\"{temp}{current_scale.upper()} is equal to {converted}{scale.upper()}.\")\nconvert_app()\n\nEnter a temperature:  45\nEnter the scale to convert to: (c or f)  f\n45C is equal to 113F.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Function Groups</span>"
     ]
   },
@@ -1513,7 +1513,7 @@
     "section": "",
     "text": "A More Pythonic Solution\nWe replace if/then statements with dictionary keys.\nThe keys represent the target temperature scale to which we are converting.\nEssentially, we put your logic in the data structure.\n\nconverters = {\n    'c': lambda t: (t - 32) * (5/9),\n    'f': lambda t: t * (9/5) + 32\n}\n\n\ndef convert_app2():\n    \n    # Input from user\n    source_temp  = int(input(\"Enter a temperature: \"))                \n    target_scale = input(\"Enter the scale to convert to: (c or f) \")\n    \n    # Convert from one scale to the other\n    target_temp  = converters[target_scale](source_temp)\n\n    # Get the source scale for display purposes\n    source_scale = list(set(converters.keys()) - set(target_scale))[0]\n    \n    # Output to user\n    print(source_temp, source_scale, \"converted becomes:\" , round(target_temp), target_scale)\n\n\nconvert_app2()\n\nEnter a temperature:  45\nEnter the scale to convert to: (c or f)  f\n45 c converted becomes: 113 f",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Function Groups</span>"
     ]
   },
@@ -1524,7 +1524,7 @@
     "section": "Example 2: Counting Vowels",
     "text": "Example 2: Counting Vowels\nHere is another example of functions calling each other in increasing levels of complexity.\n\ndef is_vowel(letter):\n    \"Tests if a letter is a vowel.\"\n    return letter in \"aeiou\"\n        \ndef num_vowels(my_string):\n    \"Counts the number of vowels in a string.\"    \n    my_string = my_string.lower()\n    count = 0\n    for i in range(len(my_string)): # for each character\n        if is_vowel(my_string[i]):  # call function above\n            count += 1              # increment count if true\n    return count\n\n    # A more concise way:\n    # return sum([is_vowel(letter) for letter in my_string.lower()])\n    \ndef vowel_counter():\n    \"User interface to return the number of vowels in a given string.\"\n    my_str = input(\"Enter a string: \")\n    vcount = num_vowels(my_str)\n    print(f\"There are {vcount} vowels in the string.\")\n\n\nvowel_counter()\n\nEnter a string:  This is a string.\nThere are 4 vowels in the string.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Function Groups</span>"
     ]
   },
@@ -1535,7 +1535,7 @@
     "section": "Example 3: Calculating Tax",
     "text": "Example 3: Calculating Tax\nIn this example, we define a group of functions to perform a more complicated task. We want to compute the taxes owed for an income and a tax rate. We want our user to enter an income and to get their tax bill back.\nTo compute tax, we have these data:\ngross_pay    tax_rate\n---------------------\n0   - 240    0%\n241 - 480    15%\n481 - more   28% \nWe write two related functions:\n\nOne to compute the tax based on a gross pay and a tax rate.\nOne to compute the net pay using the previous function.\n\nIn addition, we write functions that use these functions to interact with a user.\n\nOne to get the input value of the gross pay and print the tax.\nOne to print the net pay based on the previous function.\n\nNote the division of labor, or “separation of concerns”, in these functions:\n\nSome do calculative work.\nSome do interactive work.\n\nTo meet these requirements, we create a group of functions that expect some global variables to exist and use these instead of return statements.\n\ndef compute_tax():\n    \"\"\"\n    Computes tax rate and applies to gross pay to get tax.\n    Expects gross_pay to be defined globally.\n    Adds tax_rate and tax to globals for use by other functins.\n    \"\"\"\n    global tax_rate, tax\n    # Get rate by lower bound\n    if gross_pay &gt; 480:\n        tax_rate = .28\n    elif gross_pay &gt; 240:\n        tax_rate = .15\n    else:\n        tax_rate = 0\n    tax = gross_pay * tax_rate\n            \ndef compute_net_pay():\n    \"\"\"\n    Computes net pay based on globals produced by compute_tax().\n    Expects gross_pay and tax to be defined globally.\n    Adds net_pay to to globals.\n    \"\"\"\n    global net_pay\n    net_pay = gross_pay - tax\n\ndef get_tax():   \n    \"\"\"\n    Computes and prints tax based on user input.\n    Essentially a wrapper around compute_tax().\n    Adds gross_pay to globals.\n    \"\"\"\n    global gross_pay\n    gross_pay = int(input(\"Enter your gross pay in dollars: \"))                            \n    compute_tax()\n    print(f\"Based on a tax rate of {round(tax_rate * 100)}%, the tax you owe on ${gross_pay} is ${round(tax)}.\")\n    \ndef get_net_pay():\n    \"\"\"\n    Computes and prints net pay based on globals.\n    \"\"\"\n    compute_net_pay()\n    print(f\"Your take home (net) pay is ${round(net_pay)}.\")\n    \ndef do_all():\n    \"Runs both user-facing functions.\"\n    get_tax()\n    get_net_pay()\n\n\nget_tax()\n\nEnter your gross pay in dollars:  1000000\nBased on a tax rate of 28%, the tax you owe on $1000000 is $280000.\n\n\n\nget_net_pay()\n\nYour take home (net) pay is $720000.\n\n\n\ndo_all()\n\nEnter your gross pay in dollars:  1000000\nBased on a tax rate of 28%, the tax you owe on $1000000 is $280000.\nYour take home (net) pay is $720000.\n\n\nNotice how none of the functions return a value.\nNor do they take arguments.\nInstead, they give and take from the global namespace.\nThis is effective when our global environment — the containing script — contains only these functions.\nLater in this course, we will look at mechanisms to segment our code in this way.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Function Groups</span>"
     ]
   },
@@ -1546,7 +1546,7 @@
     "section": "Concluding Observations",
     "text": "Concluding Observations\nNotice how each example has functions that build on each other.\nThese functions share both data and a general goal.\nThe fact that data and functions go together is the motivation for creating classes.",
     "crumbs": [
-      "Python  Functions",
+      "Python Functions",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Function Groups</span>"
     ]
   },
@@ -3417,7 +3417,7 @@
     "text": "The Tidyverse\nTidyverse is a collection of essential R packages for data science.\nThe packages included in the Tidyverse are designed to support the pipeline of activities associated with data science, such as filtering, transforming, visualizing, etc.\nTidyverse was created by Hadley Wickham and his team with the aim of providing all these utilities to clean and work with data.\nHere’s a graphic of the packages associated with the Tidyverse:",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
     ]
   },
   {
@@ -3428,7 +3428,7 @@
     "text": "Tidy Data\nNote that the word “tidy” in Tidyverse stands for a specific way to structure data in data frames.\nTidy data frames have the following qualities:\nEach variable forms a column.\nEach observation forms a row.\nEach type of observational unit forms a table.",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
     ]
   },
   {
@@ -3439,7 +3439,7 @@
     "text": "Using the Tidyverse\nTo use the Tidyverse, we often import everything:\n\ninstall.packages(\"tidyverse\")\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.3     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
     ]
   },
   {
@@ -3450,7 +3450,7 @@
     "text": "Piping with %&gt;%\nJust a quick note about this odd looking operator that you will start to see.\nOne of the key elements of the Tidyverse is the use of piping.\nPiping is the ability of to pass the return values of one function to another, without having to nest functions.\nFor example, instead of something like this:\n\na &lt;- \"Hello\"\nb &lt;- \"World\"\n\nvar1 &lt;- c(a, b)\nvar2 &lt;- paste(var1)\nprint(var2)\n\n[1] \"Hello\" \"World\"\n\n\nOr this:\n\nprint(paste(c(a,b)))\n\n[1] \"Hello\" \"World\"\n\n\nWe can do:\n\nc(a, b) %&gt;%\n  paste() %&gt;%\n  print()\n\n[1] \"Hello\" \"World\"\n\n\nYou can see that although this pattern is longer than the preceding, it is easier to read and write.\nThe pipe operator %&gt;% is similar to the pipe operator | in Unix shells.\nmore foo.txt | grep bar\nPiping is also similar to method chaining in Python, but is more pervasive.\nIn Python you can chain individual objects that return themselves (as it were).\nFor example, we chain four operations below:\ndf.value_counts('foo').to_frame('n').fillna(0).T\nIn the Tidyverse, you pipe together any two functions so long as it makes sense that the output of one function is the input of another.\nBy default, the output of one function becomes the first argument of the function following the %&gt;%.\nIf not use the . placeholder variable to tell pipe operator where to put the data.\nFor example, here we want the data frame to be the second argument of the lm() function:\nmy_data_frame %&gt;%\nlm(y ~ x, .)\nBy the way, the operator comes with the magrittr package, which is a central part of the Tidyverse. It is so central, in fact, that packages in the tidyverse load %&gt;% automatically.",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
     ]
   },
   {
@@ -3461,7 +3461,7 @@
     "text": "Creating tibbles\nIf you need to make a tibble “by hand”, you can use tibble() or tribble().\ntibble() works by assembling individual vectors, a column-wise operation:\n\nx &lt;- c(1, 2, 5)\ny &lt;- c(\"a\", \"b\", \"h\")\ntibble(x, y)\n\n\nA tibble: 3 × 2\n\n\nx\ny\n\n\n&lt;dbl&gt;\n&lt;chr&gt;\n\n\n\n\n1\na\n\n\n2\nb\n\n\n5\nh\n\n\n\n\n\nYou can also name the inputs, provide data inline with c(), and perform computation:\n\ntibble(\n  x1 = x,\n  x2 = c(10, 15, 25),\n  y = sqrt(x1^2 + x2^2)\n)\n\n\nA tibble: 3 × 3\n\n\nx1\nx2\ny\n\n\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\n1\n10\n10.04988\n\n\n2\n15\n15.13275\n\n\n5\n25\n25.49510\n\n\n\n\n\nEvery column in a data frame or tibble must be the same length. If they are not, you will get an error:\n\ntibble(  \n    x = c(1, 5),   \n    y = c(\"a\", \"b\", \"c\") \n)\n\n\nError in `tibble()`:\n! Tibble columns must have compatible sizes.\n• Size 2: Existing data.\n• Size 3: Column `y`.\nℹ Only values of size one are recycled.\nTraceback:\n\n1. tibble(x = c(1, 5), y = c(\"a\", \"b\", \"c\"))\n2. tibble_quos(xs, .rows, .name_repair)\n3. vectbl_recycle_rows(res, first_size, j, given_col_names[[j]], \n .     call)\n4. abort_incompatible_size(n, name, size, \"Existing data\", call)\n5. tibble_abort(call = call, bullets(\"Tibble columns must have compatible sizes:\", \n .     if (!is.null(.rows)) paste0(\"Size \", .rows, \": \", rows_source), \n .     problems, info = \"Only values of size one are recycled.\"))\n6. abort(x, class, ..., call = call, parent = parent, use_cli_format = TRUE)\n7. signal_abort(cnd, .file)\n\n\n\nAs the error message says, “Only values of size one are recycled.”\nSo this will work:\n\ntibble(\n  x = 1:5,\n  y = \"a\",\n  z = TRUE\n)\n\n\nA tibble: 5 × 3\n\n\nx\ny\nz\n\n\n&lt;int&gt;\n&lt;chr&gt;\n&lt;lgl&gt;\n\n\n\n\n1\na\nTRUE\n\n\n2\na\nTRUE\n\n\n3\na\nTRUE\n\n\n4\na\nTRUE\n\n\n5\na\nTRUE",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
     ]
   },
   {
@@ -3472,7 +3472,7 @@
     "text": "Tribbles\nAnother way to create a tibble is with tribble(), which short for transposed tibble.\ntribble() is customized for entering data directly in code, where row-wise entries are more natural.\nColumn headings start with ~.\nEntries are separated by commas.\nThis makes it possible to lay out small amounts of data in an easy to read form:\n\ntribble(\n  ~x, ~y, ~z,\n  \"a\", 2, 3.6,\n  \"b\", 1, 8.5\n)\n\n\nA tibble: 2 × 3\n\n\nx\ny\nz\n\n\n&lt;chr&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\na\n2\n3.6\n\n\nb\n1\n8.5\n\n\n\n\n\nFinally, if you have a regular data frame you can turn it into to a tibble with as_tibble():\n\nas_tibble(mtcars) %&gt;% head()\n\n\nA tibble: 6 × 11\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\n21.0\n6\n160\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\n21.0\n6\n160\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\n22.8\n4\n108\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\n21.4\n6\n258\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\n18.7\n8\n360\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n\n\n18.1\n6\n225\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1\n\n\n\n\n\nThe inverse of as_tibble() is as.data.frame().\nIt converts a tibble back into a regular data.frame.",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
     ]
   },
   {
@@ -3483,7 +3483,7 @@
     "text": "Non-syntactic names\nIt’s possible for a tibble to have column names that are not valid R variable names, names that are non-syntactic.\nFor example, the variables might not start with a letter or they might contain unusual characters like a space.\n\ntb &lt;- tibble(\n  `:)` = \"smile\", \n  ` ` = \"space\",\n  `2000` = \"number\"\n)\n\n\ntb\n\n\nA tibble: 1 × 3\n\n\n:)\n\n2000\n\n\n&lt;chr&gt;\n&lt;chr&gt;\n&lt;chr&gt;\n\n\n\n\nsmile\nspace\nnumber\n\n\n\n\n\nNote that to refer to these variables, you need to surround them with backticks, `:\nYou’ll also need the backticks when working with these variables in other packages, like ggplot2, dplyr, and tidyr.",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
     ]
   },
   {
@@ -3494,7 +3494,7 @@
     "text": "Printing\nThe print method will print only the first 10 rows and the columns that fit on screen.\nThis makes it much easier to work with large data.\n\nmy_trib &lt;- tibble(\n  a = lubridate::now() + runif(1e3) * 86400,\n  b = lubridate::today() + runif(1e3) * 30,\n  c = 1:1e3,\n  d = runif(1e3),\n  e = sample(letters, 1e3, replace = TRUE)\n)\n\n\nprint(my_trib)\n\n# A tibble: 1,000 × 5\n   a                   b              c      d e    \n   &lt;dttm&gt;              &lt;date&gt;     &lt;int&gt;  &lt;dbl&gt; &lt;chr&gt;\n 1 2024-09-27 11:55:17 2024-10-01     1 0.299  k    \n 2 2024-09-28 09:32:40 2024-10-06     2 0.247  k    \n 3 2024-09-27 13:15:14 2024-10-08     3 0.456  b    \n 4 2024-09-28 04:51:21 2024-10-21     4 0.357  e    \n 5 2024-09-28 10:08:21 2024-10-13     5 0.150  q    \n 6 2024-09-28 01:33:43 2024-09-29     6 0.565  r    \n 7 2024-09-27 21:58:04 2024-10-19     7 0.0905 y    \n 8 2024-09-28 05:03:11 2024-10-02     8 0.912  f    \n 9 2024-09-28 10:27:03 2024-10-13     9 0.169  z    \n10 2024-09-28 03:24:24 2024-09-30    10 0.338  u    \n# ℹ 990 more rows\n\n\nWhere possible, tibbles also use color to draw your eye to important differences.\nOne of the most important distinctions is between the string \"NA\" and the missing value, NA:\n\nprint(tibble(x = c(\"NA\", NA)))\n\n# A tibble: 2 × 1\n  x    \n  &lt;chr&gt;\n1 NA   \n2 NA   \n\n\nTibbles are designed to avoid overwhelming your console when you print large data frames.\nBut sometimes you need more output than the default display.\nThere are a few options that can help.\nFirst, you can explicitly print() the data frame and control the number of rows (n) and the width of the display. width = Inf will display all columns:\n\n# install.packages(\"nycflights13\")\n\n\nlibrary(nycflights13)\n\n\nflights %&gt;% print(n = 10, width = Inf)\n\n# A tibble: 336,776 × 19\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     1     1      517            515         2      830            819\n 2  2013     1     1      533            529         4      850            830\n 3  2013     1     1      542            540         2      923            850\n 4  2013     1     1      544            545        -1     1004           1022\n 5  2013     1     1      554            600        -6      812            837\n 6  2013     1     1      554            558        -4      740            728\n 7  2013     1     1      555            600        -5      913            854\n 8  2013     1     1      557            600        -3      709            723\n 9  2013     1     1      557            600        -3      838            846\n10  2013     1     1      558            600        -2      753            745\n   arr_delay carrier flight tailnum origin dest  air_time distance  hour minute\n       &lt;dbl&gt; &lt;chr&gt;    &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;\n 1        11 UA        1545 N14228  EWR    IAH        227     1400     5     15\n 2        20 UA        1714 N24211  LGA    IAH        227     1416     5     29\n 3        33 AA        1141 N619AA  JFK    MIA        160     1089     5     40\n 4       -18 B6         725 N804JB  JFK    BQN        183     1576     5     45\n 5       -25 DL         461 N668DN  LGA    ATL        116      762     6      0\n 6        12 UA        1696 N39463  EWR    ORD        150      719     5     58\n 7        19 B6         507 N516JB  EWR    FLL        158     1065     6      0\n 8       -14 EV        5708 N829AS  LGA    IAD         53      229     6      0\n 9        -8 B6          79 N593JB  JFK    MCO        140      944     6      0\n10         8 AA         301 N3ALAA  LGA    ORD        138      733     6      0\n   time_hour          \n   &lt;dttm&gt;             \n 1 2013-01-01 05:00:00\n 2 2013-01-01 05:00:00\n 3 2013-01-01 05:00:00\n 4 2013-01-01 05:00:00\n 5 2013-01-01 06:00:00\n 6 2013-01-01 05:00:00\n 7 2013-01-01 06:00:00\n 8 2013-01-01 06:00:00\n 9 2013-01-01 06:00:00\n10 2013-01-01 06:00:00\n# ℹ 336,766 more rows\n\n\nYou can also control the default print behavior by setting options:\n\noptions(tibble.print_max = n, tibble.print_min = m): if more than n rows, print only m rows.\nUse options(tibble.print_min = Inf) to always show all rows.\nUse options(tibble.width = Inf) to always print all columns, regardless of the width of the screen.\n\nYou can see a complete list of options by looking at the package help with package?tibble.",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
     ]
   },
   {
@@ -3505,7 +3505,7 @@
     "text": "Using RStudio View()\nA final option is to use RStudio’s built-in data viewer to get a scrollable view of the complete dataset. This is also often useful at the end of a long chain of manipulations.\nYou can open a window with a view to your data by calling View(), like so:\nflights %&gt;% View()\nHere’s what the opened window would looks like:",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
     ]
   },
   {
@@ -3516,7 +3516,7 @@
     "text": "Extracting variables\nSo far all the tools you’ve learned have worked with complete data frames.\nIf you want to pull out a single variable, you can use dplyr::pull():\n\ntb &lt;- tibble(\n  id = LETTERS[1:5],\n  x1  = 1:5,\n  y1  = 6:10\n)\n\n\ntb %&gt;% pull(x1) # by name\n\n\n12345\n\n\n\ntb %&gt;% pull(1)  # by position\n\n\n'A''B''C''D''E'\n\n\npull() also takes an optional name argument that specifies the column to be used as names for a named vector.\n\ntb %&gt;% pull(x1, name = id) %&gt;% print()\n\nA B C D E \n1 2 3 4 5 \n\n\nYou can also use the base R tools $ and [[.\n[[ can extract by name or position.\n$ only extracts by name but is a little less typing.\nHere we extract by name:\n\ntb$x1\n\n\n12345\n\n\n\ntb[[\"x1\"]]\n\n\n12345\n\n\nHere we extract by position:\n\ntb[[1]]\n\n\n'A''B''C''D''E'\n\n\nCompared to a data frame, tibbles are more strict.\nThey never do partial matching.\nPartial matching is when you specify a part of a column name in a selection operation and R returns the column that matches the substring if there is one.\nFor example, if you have a data frame df with a column called x1 and you do this — df$x — R will return that column, assuming there are no other columns that begin with x.\n\ndf &lt;- as.data.frame(tb)\n\n\ndf$x\n\n\n12345\n\n\nNor will data frames generate a warning if the column you are trying to access does not exist.\n\ndf$z\n\nNULL\n\n\nTibbles don’t do these things.\nInstead, they treat both cases as unknown columns and warn the user.\n\ntb$x\n\nWarning message:\n“Unknown or uninitialised column: `x`.”\n\n\nNULL\n\n\n\ntb$z\n\nWarning message:\n“Unknown or uninitialised column: `z`.”\n\n\nNULL\n\n\nFor this reason we sometimes joke that tibbles are lazy and surly.\nThey do less and complain more :-)",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
     ]
   },
   {
@@ -3527,7 +3527,7 @@
     "text": "Subsetting\nLastly, there are some important differences when using [.\nWith traditional data frames, [ sometimes returns a data.frame, and sometimes returns a vector.\nThis is a common source of bugs.\nWith tibbles, [ always returns another tibble.\nThis can sometimes cause problems when working with older code.\nIf you hit one of those functions, just use as.data.frame() to turn your tibble back to a data.frame.",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>The Tidyverse and Tibbles</span>"
     ]
   },
   {
@@ -3538,7 +3538,7 @@
     "text": "What is Dplyr?\nThe Dplyr package is a cetnral component of the Tidyverse.\nTechnically, Dplyr is an optimized and distilled version of the previous Plyr package.\nPlyr organizes much of the functionality of the family of apply functions in base R — functions like apply(), lapply(), sapply(), and tapply().\nThese functions perform the same action on multiple chunks of data in a repetitive way.\nFor example, apply() applies a function to every element of a row or column in a dataset.",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Dplyr</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Dplyr</span>"
     ]
   },
   {
@@ -3549,7 +3549,7 @@
     "text": "Why Dplyr?\nDplyr was developed to provide a clean and intelligble way to process data tables.\nIt does this by providing a simple grammar for data manipulation and for operating on data frames.\nWith this grammar, you can clearly express and communicate what it is that you are doing to a data frame that other people can understand.\nThis is useful because it provides an abstraction for data manipulation that previously did not exist within R and other programming languages.\nAnother useful contribution is that the Dplyr functions are very fast, as many key operations are coded in C++.\nNote that Dplyr does not provide any new functionality to R per se.\nEverything Dplyr does may already be done with base R.\nBut it greatly simplifies existing functionality in R.\nIn the table below, you can see that that Dplyr provides a consistent way of phrasing the someone chaotic idioms of base R.\n\n\n\ndplyr\nbase R\n\n\n\n\narrange(df, x)\ndf[order(x), , drop = FALSE]\n\n\ndistinct(df, x)\ndf[!duplicated(x), , drop = FALSE], unique()\n\n\nfilter(df, x)\ndf[which(x), , drop = FALSE], subset()\n\n\nmutate(df, z = x + y)\ndf$z &lt;- df$x + df$y, transform()\n\n\npull(df, 1)\ndf[[1]]\n\n\npull(df, x)\ndf$x\n\n\nrename(df, y = x)\nnames(df)[names(df) == \"x\"] &lt;- \"y\"\n\n\nrelocate(df, y)\ndf[union(\"y\", names(df))]\n\n\nselect(df, x, y)\ndf[c(\"x\", \"y\")], subset()\n\n\nselect(df, starts_with(\"x\"))\ndf[grepl(\"\n\n\nsummarise(df, mean(x))\nmean(df$x), tapply(), aggregate(), by()\n\n\nslice(df, c(1, 2, 5))\ndf[c(1, 2, 5), , drop = FALSE]",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Dplyr</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Dplyr</span>"
     ]
   },
   {
@@ -3560,7 +3560,7 @@
     "text": "A Grammar of Data\nSome of the key “verbs” provided by the Dplyr package are:\n\nselect: return a subset of the columns of a data frame, using a flexible notation.\nfilter: extract a subset of rows from a data frame based on logical conditions.\narrange: reorder rows of a. data frame.\nrename: rename variables in a data frame.\nmutate: add new variables/columns or transform existing variables.\nsummarise / summarize: generate summary statistics of different variables in the data frame, possibly within strata.\n\n%&gt;%: the pipe operator is used to connect multiple verb actions together into a pipeline.",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Dplyr</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Dplyr</span>"
     ]
   },
   {
@@ -3571,7 +3571,7 @@
     "text": "Common Function Properties\nAll Dplyr functions have some common characteristics:\n\nThe first argument is a data frame (or tibble).\nThe succeeding arguments describe what to do with the data frame specified in the first argument.\nThe return result of a function is a new data frame.\n\nIn addition, Dplyr expects data frames to be be properly structured as tidy data.",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Dplyr</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Dplyr</span>"
     ]
   },
   {
@@ -3582,7 +3582,7 @@
     "text": "Installing Dplyr\nYou can install Dplyr directly or as part of Tidyverse, which we installed in the previous notebook.\n\n# install.packages(\"dplyr\")\n\nOnce the package is installed, you may load it into your R session by calling the library() function.\n\n# library(dplyr)\n\nOf course, you can also just install tidyverse if you plan to visualize your results.\nSince we did this in our previous notebook, we can import it now.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.3     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nYou may get some warnings when the package is loaded because there are functions in the dplyr package that have the same name as functions in other packages. For now you can ignore the warnings.",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Dplyr</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Dplyr</span>"
     ]
   },
   {
@@ -3593,7 +3593,7 @@
     "text": "Getting a dataset\nLet’s use a dataset containing air pollution and temperature data for the city of Chicago in the U.S.\nYou will find the data in the directory for this module.\nWe load the data into R using the readRDS() function and then convert it to a tibble.\n\nchicago &lt;- readRDS(\"chicago.rds\") %&gt;% as_tibble()\n\nWe can see some basic characteristics of the dataset with the print() function.\n\nprint(chicago)\n\n# A tibble: 6,940 × 8\n   city   tmpd  dptp date       pm25tmean2 pm10tmean2 o3tmean2 no2tmean2\n   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;date&gt;          &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n 1 chic   31.5  31.5 1987-01-01         NA       34       4.25      20.0\n 2 chic   33    29.9 1987-01-02         NA       NA       3.30      23.2\n 3 chic   33    27.4 1987-01-03         NA       34.2     3.33      23.8\n 4 chic   29    28.6 1987-01-04         NA       47       4.38      30.4\n 5 chic   32    28.9 1987-01-05         NA       NA       4.75      30.3\n 6 chic   40    35.1 1987-01-06         NA       48       5.83      25.8\n 7 chic   34.5  26.8 1987-01-07         NA       41       9.29      20.6\n 8 chic   29    22   1987-01-08         NA       36      11.3       17.0\n 9 chic   26.5  29   1987-01-09         NA       33.3     4.5       23.4\n10 chic   32.5  27.8 1987-01-10         NA       NA       4.96      19.5\n# ℹ 6,930 more rows",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Dplyr</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Dplyr</span>"
     ]
   },
   {
@@ -3604,7 +3604,7 @@
     "text": "select()\nWe use the select() function to select columns you want to focus on.\nFor example, we can inspect the tmpd column like so:\n\nchicago %&gt;% select(tmpd) %&gt;% head()\n\n\nA tibble: 6 × 1\n\n\ntmpd\n\n\n&lt;dbl&gt;\n\n\n\n\n31.5\n\n\n33.0\n\n\n33.0\n\n\n29.0\n\n\n32.0\n\n\n40.0\n\n\n\n\n\nIn base R, we would do this:\n\nhead(chicago[\"tmpd\"])\n\n\nA tibble: 6 × 1\n\n\ntmpd\n\n\n&lt;dbl&gt;\n\n\n\n\n31.5\n\n\n33.0\n\n\n33.0\n\n\n29.0\n\n\n32.0\n\n\n40.0\n\n\n\n\n\nNow suppose we wanted to take the first \\(3\\) columns only.\nWe could use numerical indices in base R.\n\nhead(chicago[1:3])\n\n\nA tibble: 6 × 3\n\n\ncity\ntmpd\ndewpoint\n\n\n&lt;chr&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\nchic\n31.5\n31.500\n\n\nchic\n33.0\n29.875\n\n\nchic\n33.0\n27.375\n\n\nchic\n29.0\n28.625\n\n\nchic\n32.0\n28.875\n\n\nchic\n40.0\n35.125\n\n\n\n\n\nIn Dplr, we can use the names directly to create a column range slice:\n\nchicago %&gt;%\n  select(city:dptp) %&gt;%\n  head()\n\n\nA tibble: 6 × 3\n\n\ncity\ntmpd\ndptp\n\n\n&lt;chr&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\nchic\n31.5\n31.500\n\n\nchic\n33.0\n29.875\n\n\nchic\n33.0\n27.375\n\n\nchic\n29.0\n28.625\n\n\nchic\n32.0\n28.875\n\n\nchic\n40.0\n35.125\n\n\n\n\n\nNote the use of : inside the select() — you can use it to specify a range of variable names.\nYou can also omit variables using the select() function by using the negative sign.\nWith select() you can do:\n\nchicago %&gt;%\n    select(-(city:dptp)) %&gt;% \n    head()\n\n\nA tibble: 6 × 5\n\n\ndate\npm25tmean2\npm10tmean2\no3tmean2\nno2tmean2\n\n\n&lt;date&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\n1987-01-01\nNA\n34.00000\n4.250000\n19.98810\n\n\n1987-01-02\nNA\nNA\n3.304348\n23.19099\n\n\n1987-01-03\nNA\n34.16667\n3.333333\n23.81548\n\n\n1987-01-04\nNA\n47.00000\n4.375000\n30.43452\n\n\n1987-01-05\nNA\nNA\n4.750000\n30.33333\n\n\n1987-01-06\nNA\n48.00000\n5.833333\n25.77233\n\n\n\n\n\nThis indicates that we should include every variable except the variables city through dptp.\nThe select() function also allows a special syntax that allows you to specify variable names based on patterns.\nIf you wanted to keep every variable that ends with a “2”, we could do this:\n\nchicago %&gt;%\n  select(ends_with(\"2\")) %&gt;%\n  head()\n\n\nA tibble: 6 × 4\n\n\npm25tmean2\npm10tmean2\no3tmean2\nno2tmean2\n\n\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\nNA\n34.00000\n4.250000\n19.98810\n\n\nNA\nNA\n3.304348\n23.19099\n\n\nNA\n34.16667\n3.333333\n23.81548\n\n\nNA\n47.00000\n4.375000\n30.43452\n\n\nNA\nNA\n4.750000\n30.33333\n\n\nNA\n48.00000\n5.833333\n25.77233\n\n\n\n\n\nOr if we wanted to keep every variable that starts with a “d”, we could do this:\n\nchicago %&gt;%\n  select(starts_with(\"d\")) %&gt;%\n  head()\n\n\nA tibble: 6 × 2\n\n\ndptp\ndate\n\n\n&lt;dbl&gt;\n&lt;date&gt;\n\n\n\n\n31.500\n1987-01-01\n\n\n29.875\n1987-01-02\n\n\n27.375\n1987-01-03\n\n\n28.625\n1987-01-04\n\n\n28.875\n1987-01-05\n\n\n35.125\n1987-01-06\n\n\n\n\n\nThis is super useful if you have a table with prefixes, such as doc_.\nYou can also use more general regular expressions if necessary.",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Dplyr</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Dplyr</span>"
     ]
   },
   {
@@ -3615,7 +3615,7 @@
     "text": "Aside: Helper Functions\nNote the use of the function ends_with() inside of the argument space for the function select() above.\nends_with() is an example of a “helper function” — a function that helps make Dplyr functions more effective.\nThere are many of these introduced by Dplyr.\nHere is a set of helper functions that can be especially useful with select():\n\n\n\n\n\n\n\n\nHelper Function\nDescription\nExample\n\n\n\n\nstarts_with()\nMatches variable names that start with a given prefix\nselect(data, starts_with(\"X\"))\n\n\nends_with()\nMatches variable names that end with a given suffix\nselect(data, ends_with(\"_2019\"))\n\n\ncontains()\nMatches variable names that contain a given string\nselect(data, contains(\"income\"))\n\n\nmatches()\nMatches variable names that match a given regular expression\nselect(data, matches(\"^X[1-3]$\"))\n\n\nnum_range()\nMatches variable names that match a pattern of prefix + number\nselect(data, num_range(\"X\", 1:3))\n\n\none_of()\nMatches variable names that are in a given set of names\nselect(data, one_of(c(\"var1\", \"var2\")))\n\n\neverything()\nMatches all variable names (used to reorder variables)\nselect(data, starts_with(\"X\"), everything())",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Dplyr</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Dplyr</span>"
     ]
   },
   {
@@ -3626,7 +3626,7 @@
     "text": "filter()\nThe filter() function extracts subsets of rows from a data frame.\nWhereas select() is a column-wise operation, filter() is row-wise.\nThis function is similar to the existing subset() function in R but is quite a bit faster.\nSuppose we wanted to extract the rows of the chicago data frame where the levels of PM2.5 are greater than 30 (which is a reasonably high level), we could do this:\n\nchicago %&gt;%\n  filter(pm25tmean2 &gt; 30) %&gt;%\n  head()\n\n\nA tibble: 6 × 8\n\n\ncity\ntmpd\ndptp\ndate\npm25tmean2\npm10tmean2\no3tmean2\nno2tmean2\n\n\n&lt;chr&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;date&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\nchic\n23\n21.9\n1998-01-17\n38.10\n32.46154\n3.180556\n25.30000\n\n\nchic\n28\n25.8\n1998-01-23\n33.95\n38.69231\n1.750000\n29.37630\n\n\nchic\n55\n51.3\n1998-04-30\n39.40\n34.00000\n10.786232\n25.31310\n\n\nchic\n59\n53.7\n1998-05-01\n35.40\n28.50000\n14.295125\n31.42905\n\n\nchic\n57\n52.0\n1998-05-02\n33.30\n35.00000\n20.662879\n26.79861\n\n\nchic\n57\n56.0\n1998-05-07\n32.10\n34.50000\n24.270422\n33.99167\n\n\n\n\n\nCompare this to base R:\n\nhead(na.omit(chicago[(chicago$pm25tmean2 &gt; 30),]))\n\n\nA tibble: 6 × 8\n\n\ncity\ntmpd\ndptp\ndate\npm25tmean2\npm10tmean2\no3tmean2\nno2tmean2\n\n\n&lt;chr&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;date&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\nchic\n23\n21.9\n1998-01-17\n38.10\n32.46154\n3.180556\n25.30000\n\n\nchic\n28\n25.8\n1998-01-23\n33.95\n38.69231\n1.750000\n29.37630\n\n\nchic\n55\n51.3\n1998-04-30\n39.40\n34.00000\n10.786232\n25.31310\n\n\nchic\n59\n53.7\n1998-05-01\n35.40\n28.50000\n14.295125\n31.42905\n\n\nchic\n57\n52.0\n1998-05-02\n33.30\n35.00000\n20.662879\n26.79861\n\n\nchic\n57\n56.0\n1998-05-07\n32.10\n34.50000\n24.270422\n33.99167\n\n\n\n\n\nNote that we have to filter out the NA values, which Dplyr does for you.\nNote also that column names in Dply do not need to be prefixed by the data frame name; they are called directly.\nFor example, compare how the column pm25tmean2 is accessed below:\nchicago %&gt;% filter(pm25tmean2 &gt; 30)\nvs\nchicago[(chicago$pm25tmean2 &gt; 30),]\nWe can place an arbitrarily complex logical sequence inside of filter().\nFor example, we may extract the rows where PM2.5 is greater than \\(30\\) and temperature is greater than \\(80\\) degrees Fahrenheit.\n\nchicago %&gt;%\n    filter(pm25tmean2 &gt; 30 & tmpd &gt; 80) %&gt;%\n    select(date, tmpd, pm25tmean2) %&gt;%\n    head()\n\n\nA tibble: 6 × 3\n\n\ndate\ntmpd\npm25tmean2\n\n\n&lt;date&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\n1998-08-23\n81\n39.6000\n\n\n1998-09-06\n81\n31.5000\n\n\n2001-07-20\n82\n32.3000\n\n\n2001-08-01\n84\n43.7000\n\n\n2001-08-08\n85\n38.8375\n\n\n2001-08-09\n84\n38.2000\n\n\n\n\n\nHere’s a table of helper functions specifically associated with filter():\n\n\n\n\n\n\n\n\nHelper Function\nDescription\nExample\n\n\n\n\nbetween()\nCheck if a value lies between two other values.\nfilter(data, between(age, 18, 30))\n\n\nnear()\nCheck for near equality (useful for floating-point numbers).\nfilter(data, near(price, 19.99, tolerance = 0.01))\n\n\nisin() (or %in%)\nCheck if a value is in a set of values.\nfilter(data, region %in% c(\"East\", \"West\"))\n\n\nall_of()\nCheck for all of the variables, even if some don’t exist. Useful with character vectors.\nfilter(data, all_of(variables))\n\n\nany_of()\nCheck for any of the variables. Useful with character vectors.\nfilter(data, any_of(variables))\n\n\ncur_group_id()\nIdentify the current group inside group_by(). Useful for more complex filtering with groups.\nfilter(data, cur_group_id() == 1)",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Dplyr</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Dplyr</span>"
     ]
   },
   {
@@ -3637,7 +3637,7 @@
     "text": "arrange()\nWe use arrange() to reorder rows of a data frame according to one or more of the columns.\nThis normally called sorting.\nReordering rows of a data frame (while preserving corresponding order of other columns) is normally a pain to do in R.\nThe arrange() function simplifies the process quite a bit.\nHere we order the rows of the data frame by date in ascending order:\n\nchicago_by_date &lt;- chicago %&gt;%\n    arrange(date)\n\nchicago_by_date %&gt;% head()\n\n\nA tibble: 6 × 8\n\n\ncity\ntmpd\ndptp\ndate\npm25tmean2\npm10tmean2\no3tmean2\nno2tmean2\n\n\n&lt;chr&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;date&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\nchic\n31.5\n31.500\n1987-01-01\nNA\n34.00000\n4.250000\n19.98810\n\n\nchic\n33.0\n29.875\n1987-01-02\nNA\nNA\n3.304348\n23.19099\n\n\nchic\n33.0\n27.375\n1987-01-03\nNA\n34.16667\n3.333333\n23.81548\n\n\nchic\n29.0\n28.625\n1987-01-04\nNA\n47.00000\n4.375000\n30.43452\n\n\nchic\n32.0\n28.875\n1987-01-05\nNA\nNA\n4.750000\n30.33333\n\n\nchic\n40.0\n35.125\n1987-01-06\nNA\n48.00000\n5.833333\n25.77233\n\n\n\n\n\nWe can now check the first few rows\n\nchicago_by_date %&gt;%\n  select(date, pm25tmean2) %&gt;%\n  head(3)\n\n\nA tibble: 3 × 2\n\n\ndate\npm25tmean2\n\n\n&lt;date&gt;\n&lt;dbl&gt;\n\n\n\n\n1987-01-01\nNA\n\n\n1987-01-02\nNA\n\n\n1987-01-03\nNA\n\n\n\n\n\nand the last few rows.\n\nchicago_by_date %&gt;%\n  select(date, pm25tmean2) %&gt;%\n  tail(3)\n\n\nA tibble: 3 × 2\n\n\ndate\npm25tmean2\n\n\n&lt;date&gt;\n&lt;dbl&gt;\n\n\n\n\n2005-12-29\n7.45000\n\n\n2005-12-30\n15.05714\n\n\n2005-12-31\n15.00000\n\n\n\n\n\nColumns can be arranged in descending order too by using the desc() helper function.\n\nchicago %&gt;%\n  arrange(desc(date)) %&gt;%\n  head()\n\n\nA tibble: 6 × 8\n\n\ncity\ntmpd\ndptp\ndate\npm25tmean2\npm10tmean2\no3tmean2\nno2tmean2\n\n\n&lt;chr&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;date&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\nchic\n35\n30.1\n2005-12-31\n15.00000\n23.5\n2.531250\n13.25000\n\n\nchic\n36\n31.0\n2005-12-30\n15.05714\n19.2\n3.034420\n22.80556\n\n\nchic\n35\n29.4\n2005-12-29\n7.45000\n23.5\n6.794837\n19.97222\n\n\nchic\n37\n34.5\n2005-12-28\n17.75000\n27.5\n3.260417\n19.28563\n\n\nchic\n40\n33.6\n2005-12-27\n23.56000\n27.0\n4.468750\n23.50000\n\n\nchic\n35\n29.6\n2005-12-26\n8.40000\n8.5\n14.041667\n16.81944\n\n\n\n\n\nHere’s a table of helper functions specifically associated with arrange():\n\n\n\n\n\n\n\n\nHelper Function\nDescription\nExample\n\n\n\n\ndesc()\nOrder by descending instead of default ascending.\narrange(data, desc(salary))\n\n\nacross()\nApply to multiple columns, especially with c_across() in dplyr 1.0.0 and later.\narrange(data, across(starts_with(\"X\")))\n\n\nrow_number()\nCreate an index based on the order of rows.\nmutate(data, idx = row_number())\n\n\n\nNote that row_number() is often seen in mutate() for creating an index column based on ordering.\nThe across() function provides a more concise syntax for working with multiple columns.\nIt is useful in arrange() when you’re trying to order rows based on a selection of columns that match a certain criterion.\nMost of the magic with arrange() happens through the way you structure its arguments and not necessarily through a large set of helper functions.",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Dplyr</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Dplyr</span>"
     ]
   },
   {
@@ -3648,7 +3648,7 @@
     "text": "rename()\nRenaming a variable in a data frame in R is surprisingly hard to do!\nThe rename() function is designed to make this process easier.\nHere we select the names of the first five variables in the chicago data frame.\n\nchicago %&gt;% select(1:5) %&gt;% head(3)\n\n\nA tibble: 3 × 5\n\n\ncity\ntmpd\ndptp\ndate\npm25tmean2\n\n\n&lt;chr&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;date&gt;\n&lt;dbl&gt;\n\n\n\n\nchic\n31.5\n31.500\n1987-01-01\nNA\n\n\nchic\n33.0\n29.875\n1987-01-02\nNA\n\n\nchic\n33.0\n27.375\n1987-01-03\nNA\n\n\n\n\n\nThe dptp column represents the dew point temperature and the pm25tmean2 column the PM2.5 data.\nThese names are cryptic, so let’s rename them.\n\nchicago &lt;- chicago %&gt;%\n  rename(dewpoint = dptp, pm25 = pm25tmean2) \n\nchicago %&gt;%  \n  head(3)\n\n\nA tibble: 3 × 8\n\n\ncity\ntmpd\ndewpoint\ndate\npm25\npm10tmean2\no3tmean2\nno2tmean2\n\n\n&lt;chr&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;date&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\nchic\n31.5\n31.500\n1987-01-01\nNA\n34.00000\n4.250000\n19.98810\n\n\nchic\n33.0\n29.875\n1987-01-02\nNA\nNA\n3.304348\n23.19099\n\n\nchic\n33.0\n27.375\n1987-01-03\nNA\n34.16667\n3.333333\n23.81548\n\n\n\n\n\nThe syntax inside the rename() function is to have the new name on the left-hand side of the = sign and the old name on the right-hand side.\nHere’s a table of helper functions that can be used with rename():\n\n\n\n\n\n\n\n\nHelper Function\nDescription\nExample\n\n\n\n\nstarts_with()\nMatch columns that start with a given prefix.\nrename(data, start_X = starts_with(\"X\")) (Note: This example would rename the first column that starts with “X” to “start_X”)\n\n\nends_with()\nMatch columns that end with a given suffix.\nrename(data, end_year = ends_with(\"_2021\"))\n\n\ncontains()\nMatch columns that contain a given string.\nrename(data, has_rate = contains(\"rate\"))\n\n\nmatches()\nMatch columns that match a given regular expression.\nrename(data, match_num = matches(\"^X[1-3]$\"))\n\n\neverything()\nMatch all columns.\nRarely used with rename(), but possible.\n\n\n\nIt’s worth noting that these helper functions will typically target the first column that meets the specified criterion.\nIf there are multiple columns that match the criterion (e.g., multiple columns that start with “X”), you’ll need to use these helpers with more precision or utilize other techniques.\nAlso, remember to always refer to the official Dplyr documentation as the package continues to evolve and new functionalities might be added over time.",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Dplyr</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Dplyr</span>"
     ]
   },
   {
@@ -3659,7 +3659,7 @@
     "text": "mutate()\nThe mutate() function creates new columns based on computations usually involving the other columns.\nFor example, with air pollution data, we often want to de-trend the data by subtracting the mean from the data.\nThis allows us to see whether a given day’s air pollution level is higher than or less than average.\nHere we create a pm25detrend variable that subtracts the mean from the pm25 variable.\nWe also compute the Z-score.\n\nchicago &lt;- chicago %&gt;%\n    mutate(pm25detrend = pm25 - mean(pm25, na.rm = TRUE),\n       pm25z = pm25detrend / sd(pm25, na.rm = TRUE))\n\nchicago %&gt;% tail()\n\n\nA tibble: 6 × 10\n\n\ncity\ntmpd\ndewpoint\ndate\npm25\npm10tmean2\no3tmean2\nno2tmean2\npm25detrend\npm25z\n\n\n&lt;chr&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;date&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\nchic\n35\n29.6\n2005-12-26\n8.40000\n8.5\n14.041667\n16.81944\n-7.830958\n-0.9003429\n\n\nchic\n40\n33.6\n2005-12-27\n23.56000\n27.0\n4.468750\n23.50000\n7.329042\n0.8426366\n\n\nchic\n37\n34.5\n2005-12-28\n17.75000\n27.5\n3.260417\n19.28563\n1.519042\n0.1746477\n\n\nchic\n35\n29.4\n2005-12-29\n7.45000\n23.5\n6.794837\n19.97222\n-8.780958\n-1.0095666\n\n\nchic\n36\n31.0\n2005-12-30\n15.05714\n19.2\n3.034420\n22.80556\n-1.173815\n-0.1349561\n\n\nchic\n35\n30.1\n2005-12-31\n15.00000\n23.5\n2.531250\n13.25000\n-1.230958\n-0.1415260\n\n\n\n\n\nNote how the new column name pm25detrend can be used immediately within the argument space of mutate().\nDplyr also has a related transmute() function.\nIt does the same thing as mutate() but then drops all non-transformed variables.\nHere we de-trend the PM10 and ozone (O3) variables.\n\nchicago_detrended &lt;- chicago %&gt;%\n  transmute(pm10detrend = pm10tmean2 - mean(pm10tmean2, na.rm = TRUE), \n            o3detrend = o3tmean2 - mean(o3tmean2, na.rm = TRUE),\n            o3z = o3detrend / sd(o3tmean2, na.rm = TRUE))\n\nchicago_detrended %&gt;% head()\n\n\nA tibble: 6 × 3\n\n\npm10detrend\no3detrend\no3z\n\n\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\n0.1047939\n-15.18551\n-1.333702\n\n\nNA\n-16.13117\n-1.416756\n\n\n0.2714605\n-16.10218\n-1.414211\n\n\n13.1047939\n-15.06051\n-1.322724\n\n\nNA\n-14.68551\n-1.289789\n\n\n14.1047939\n-13.60218\n-1.194642\n\n\n\n\n\nNote that there are only three columns in the transmuted data frame.\nHere’s a table of helper functions specifically associated with mutate():\n\n\n\n\n\n\n\n\nHelper Function\nDescription\nExample\n\n\n\n\nif_else()\nA vectorized conditional operation (if-else).\nmutate(data, status = if_else(age &lt; 18, \"minor\", \"adult\"))\n\n\ncase_when()\nGeneralized multiple conditions for transformations.\nmutate(data, category = case_when(score &gt; 90 ~ \"A\", score &gt; 80 ~ \"B\", TRUE ~ \"C\"))\n\n\nlead()\nAccess the subsequent value in the column.\nmutate(data, next_value = lead(column_name))\n\n\nlag()\nAccess the preceding value in the column.\nmutate(data, previous_value = lag(column_name))\n\n\nrow_number()\nGenerate row numbers, often used with arrange().\nmutate(data, rank = row_number())\n\n\nrank(), min_rank(), dense_rank()\nDifferent types of ranking functions.\nmutate(data, rank = rank(score))\n\n\ncumsum(), cumprod(), cummin(), cummax()\nCumulative functions.\nmutate(data, cumulative_total = cumsum(total))\n\n\ncoalesce()\nReturn the first non-missing value among its arguments.\nmutate(data, combined = coalesce(col1, col2))\n\n\nna_if()\nReplace a specified value with NA.\nmutate(data, updated_col = na_if(column_name, \"replace_me\"))\n\n\nreplace_na()\nReplace NA values with a specified value.\nmutate(data, updated_col = replace_na(column_name, \"new_value\"))\n\n\nrecode()\nRecode or replace values in a column.\nmutate(data, recoded_col = recode(column_name, old=\"new\", ...))\n\n\nacross()\nApply a function across multiple columns (from dplyr 1.0.0).\nmutate(data, across(c(col1, col2), function_name))",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Dplyr</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Dplyr</span>"
     ]
   },
   {
@@ -3670,7 +3670,7 @@
     "text": "group_by()\nThe group_by() function is used to generate summary or aggregate statistics from a data frame.\nIn conjunction with the group_by() function we often use the summarize() function.\nThe general operation here is a combination of:\n\nsplitting a table into separate pieces defined by a variable or group of variables (group_by()),\nthen applying a summary function across those subsets (summarize()),\nthen combining back into another table.\n\nThis pattern is called split, apply, and combine.\nIt is a fundamental pattern in data processing.\nFor example, in this air pollution dataset, you might want to know the average annual level of PM2.5.\nThe stratum is the year, which we can derive from the date variable.\nFirst, we can create a year variable using as.POSIXlt().\nThen we group on our new column and compute summary statistics for each year with the summarize() function.\n\nyears &lt;- chicago %&gt;%\n  mutate(year = as.POSIXlt(date)$year + 1900) %&gt;%\n  group_by(year) %&gt;%\n  summarize(pm25 = mean(pm25, na.rm = TRUE), \n          o3 = max(o3tmean2, na.rm = TRUE), \n          no2 = median(no2tmean2, na.rm = TRUE), .groups = \"drop\")\n\nyears %&gt;% head()\n\n\nA tibble: 6 × 4\n\n\nyear\npm25\no3\nno2\n\n\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\n1987\nNaN\n62.96966\n23.49369\n\n\n1988\nNaN\n61.67708\n24.52296\n\n\n1989\nNaN\n59.72727\n26.14062\n\n\n1990\nNaN\n52.22917\n22.59583\n\n\n1991\nNaN\n63.10417\n21.38194\n\n\n1992\nNaN\n50.82870\n24.78921\n\n\n\n\n\nTo see why we add \\(1900\\) in the preceding mutation, note that the date function returns just the last two digits of the year.\n\nas.POSIXlt(chicago$date)$year %&gt;% head()\n\n\n878787878787\n\n\nNote in the process, we implicitly created a separate data frame that splits the original data frame by year, which is then passed to summarize().\nsummarize() then returns a data frame with columns for year and the annual averages of pm25, o3, and no2.\nIn a slightly more complicated example, we might want to know what are the average levels of ozone o3 and nitrogen dioxide no2 within quantiles of pm25.\nWe could do this with a regression model, but we can also do this quickly with group_by() and summarize().\nFirst, we can create a categorical variable of pm25 divided into quantiles.\n\nqq &lt;- quantile(chicago$pm25, seq(0, 1, 0.2), na.rm = TRUE)\nprint(qq)\n\n    0%    20%    40%    60%    80%   100% \n 1.700  8.700 12.375 16.700 22.610 61.500 \n\n\nThen we group the data frame by the pm25.quint variable and compute the mean of o3 and no2 within quantiles of pm25.\n\nchicago %&gt;%\n  mutate(pm25.quint = cut(pm25, qq)) %&gt;%\n  group_by(pm25.quint) %&gt;%\n  summarize(o3 = mean(o3tmean2, na.rm = TRUE), \n          no2 = mean(no2tmean2, na.rm = TRUE),\n          .groups = \"drop\")\n\n\nA tibble: 6 × 3\n\n\npm25.quint\no3\nno2\n\n\n&lt;fct&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\n(1.7,8.7]\n21.66401\n17.99129\n\n\n(8.7,12.4]\n20.38248\n22.13004\n\n\n(12.4,16.7]\n20.66160\n24.35708\n\n\n(16.7,22.6]\n19.88122\n27.27132\n\n\n(22.6,61.5]\n20.31775\n29.64427\n\n\nNA\n18.79044\n25.77585\n\n\n\n\n\nFrom the table, it seems there isn’t a strong relationship between pm25 and o3, but there appears to be a positive correlation between pm25 and no2.\nMore sophisticated statistical modeling can help to provide precise answers to these questions, but a simple application of Dplyr functions can often get you most of the way there.\nHere is another example:\n\nchicago %&gt;%  \n  mutate(month = as.POSIXlt(date)$mon + 1) %&gt;% \n  group_by(month) %&gt;%                              # SPLIT\n  summarize(pm25 = mean(pm25, na.rm = TRUE),       # APPLY \n    o3 = max(o3tmean2, na.rm = TRUE), \n    no2 = median(no2tmean2, na.rm = TRUE),\n    .groups = \"drop\") \n                                                    # COMBINE (in the result)\n\n\nA tibble: 12 × 4\n\n\nmonth\npm25\no3\nno2\n\n\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n&lt;dbl&gt;\n\n\n\n\n1\n17.76996\n28.22222\n25.35417\n\n\n2\n20.37513\n37.37500\n26.78034\n\n\n3\n17.40818\n39.05000\n26.76984\n\n\n4\n13.85879\n47.94907\n25.03125\n\n\n5\n14.07420\n52.75000\n24.22222\n\n\n6\n15.86461\n66.58750\n25.01140\n\n\n7\n16.57087\n59.54167\n22.38442\n\n\n8\n16.93380\n53.96701\n22.98333\n\n\n9\n15.91279\n57.48864\n24.47917\n\n\n10\n14.23557\n47.09275\n24.15217\n\n\n11\n15.15794\n29.45833\n23.56537\n\n\n12\n17.52221\n27.70833\n24.45773\n\n\n\n\n\nHere’s a table of helper functions specifically associated with group_by():\n\n\n\n\n\n\n\n\nHelper Function\nDescription\nExample\n\n\n\n\nadd_tally()\nAdds a column with the count of each group (equivalent to adding a count with mutate() after a group_by()).\ngroup_by(data, group_var) %&gt;% add_tally()\n\n\ngroup_size()\nReturns the size of each group.\ngroup_by(data, group_var) %&gt;% summarise(size = group_size())\n\n\nntile()\nCreates rank percentiles within groups.\ngroup_by(data, group_var) %&gt;% mutate(perc = ntile(score, 4))\n\n\ncur_group_id()\nGives an integer identifier for the current group.\ngroup_by(data, group_var) %&gt;% filter(cur_group_id() == 1)\n\n\ncur_group_rows()\nProvides row indices for the current group.\nUsed internally, but can be useful for advanced operations.\n\n\ngroup_map(), group_modify(), group_walk()\nFunctions to iterate over groups, modify them or walk them with side effects.\ngroup_map(data, ~ head(.x, 2)) shows the first two rows of each group.\n\n\n\nIt’s worth noting that group_by() often works in tandem with other verbs, so the real power comes from the combined operations.\nFor example, after grouping data, one often uses summarise() to calculate summary statistics for each group.\nThe combination of these functions and their associated helpers allow for a wide range of group-wise data manipulation tasks.\nBased on Peng 2022",
     "crumbs": [
       "R Dplyr",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Dplyr</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Dplyr</span>"
     ]
   },
   {
@@ -3681,7 +3681,7 @@
     "text": "Programming for Data Science\nGGPlot is the graphics package associated with the Tidyverse.\nIn this notebook, we will present a quick overview of the design principles behind the package.\nAs with Dplyr, GGPlot2 is a an entirely new system that supplants the older graph functions that are built into R.\nIt is founded on a principled analysis of its domain and from this develops a basic grammar which can then be expressed in R.\nJust as Dplyr is built on a grammar of data consisting of pipable verbs that correspond to the logic data transformation, GGPlot2 is built on a grammar of graphics consisting of nouns that correspond to the architecture of a graphic (aka plot).\nThe phrase “grammar of graphics” actually comes from the book by that name written by statistician and computer scientist Leland Wilkinson in 1999 and later revised:\n\nIt is worth reading if you want to get a solid grounding in visualization, which belongs to the design area of data science.\nThe Grammar of Graphics takes an object-oriented approach to visualization and formalizes two main principles:\n\nGraphics are built out of distinct layers.\nIn each layer, meaningful plots are constructed through mappings of data onto aesthetics.\n\nThe primary layers are these:\n\nAccording to Wickham, who adopted these principles and applied them to R,\n\nA grammar of graphics is a tool that enables us to concisely describe the components of a graphic. Such a grammar allows us to move beyond named graphics (e.g., the “scatterplot”) and gain insight into the deep structure that underlies statistical graphics (Wickham 2012).\n\nWickham takes this idea and develops it into this:\n\nSource (see also ScienceCraft).\nIn this model, everything starts with data.\nThen data are mapped on aesthetics within geometries.\n\nGeometries are geometric things like points, lines, and bars.\nAesthetics are visual things like position, size, color and shape.\n\nAlso note that aesthetics make use of visual channels to signify features and their properties.\n\nSize can mean greater than, which is good for numeric scale but not categories\nColor can signify things like value, e.g. via red : dangerous : : green : safe.\n\nThese compose the primary layers.\nThe other layers apply downstream modifications that add more information and style to the graph.",
     "crumbs": [
       "R Visualization",
-      "<span class='chapter-number'>45</span>  <span class='chapter-title'>GGPlot and the Grammar of Graphics</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>GGPlot and the Grammar of Graphics</span>"
     ]
   },
   {
@@ -3692,7 +3692,7 @@
     "text": "Programming for Data Science\nIn this notebook, we look at GGPlot2, the specific graphics package associated with the Tidyverse.\nIt implements the logic of the grammar of graphics model described in the previous notebook.\n\nA First Plot\nEverything starts with getting ggplot(), which is imported when you import tidyverse.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.3     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nGGPlot gives lots of warning messages.\nFor sake of clarity, we are going to turn these off for now.\nWe’re also going to the set the default size of our plots so they display better.\nWe do this with the options() function we saw earlier.\n\noptions(warn=-1)\noptions(repr.plot.width = 16, repr.plot.height = 10)\n\nHere is a basic graph — a scatterplot comparing two features in the iris dataset.\nThe functions and arguments are broken out so you can see how the grammar is implemented:\n\niris %&gt;%\n    ggplot(\n        mapping = aes(x = Sepal.Length, y = Sepal.Width)\n    ) + \n    geom_point(\n        size = 5, \n        aes(color = Species)\n    )\n\n\n\n\n\n\n\n\nHere is an alternate way to build the graph:\n\niris %&gt;%\n    ggplot() +\n    aes(x = Sepal.Length, y = Sepal.Width) + \n    geom_point(size = 5) +\n    aes(color = Species)\n\n\n\n\n\n\n\n\nNote how we can pull the aes() functions out of the geom_ and mapping() functions.\nNote that to create a scatterplot, we did not use a function like geom_scatterplot().\nInstead, we constructed one from scratch using the buildings blocks according to a simple design pattern.\nWe will see that some plot types are constructred this way while others have named functions.\nFor example, a histogram is created with geom_hist().\n\n\nHow it Works\nThe ggplot() function starts by creating a coordinate system that you can add layers to.\nYou can think of it as providing a base layer or canvas.\nOther layers are added by calling geometry functions.\nFor example, geom_point creates a point-based visualization.\nFor each layer, we can apply an aesthetic mapping.\nHere’s a description of what we just plotted:\ngglot() + # Build the coordinate system, i.e. the base layer canvas\n\naes(x = Sepal.Length, y = Sepal.Width) + # Map two features onto the `x` and `y` axes\n\ngeom_point(size = 3) + # Define a geometry that gives visible form to `x` and `y` coordinates\n\naes(color = Species) # Map colors onto coordinates by a third dimension\nNote that the coordinate system can be changed after the graph is initiated.\nThere are many geom_ functions:\n\ngeom_point()\ngeom_bar()\ngeom_histogram()\ngeom_boxplot()\ngeom_violin()\ngeom_density()\n\netc.\nThese can be layered on top of each other in a variety of ways.\nThere are also many channels that can used to represent numeric and categorical features with aes():\n\nx and y positions (in a two-dimensional system)\nColor\nSize\nShape\nText\n\n\n\nA Two Layered Plot\nHere we have a plot with two layers.\nThe second layer is created by a stat_ function.\nThis function internally applies a geom_ function to a statistical transformation to the data.\n\niris %&gt;%\n    ggplot(aes(x = Sepal.Length, y = Sepal.Width)) + \n    geom_point(size = 5, aes(color = Species)) + \n    stat_smooth(method = lm)\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nThe tilde sign ~ means “as a function of” — in this case, y is being plotted as function of x.\nInterestingly, if we pull the aes() function out of geom_point(), we get a different plot.\n\niris %&gt;%\n    ggplot() +\n    aes(color=Species) +\n    geom_point(size = 5) +\n    aes(x = Sepal.Length, y = Sepal.Width) +\n    stat_smooth(method = lm)\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n\n\nThe + Operator\nYou will notice the use of the + operator to connect GGPlot functions together to produce a final product.\nTheses are not quite the same as pipes %&gt;%.\nWhereas pipes feed data from one function to another, the + operation is a form of method chaining.\nWe saw method chaining in Pandas.\nKeep in mind: the + always goes at the end of a line, never at the beginning.\n\n\nFaceting\nGGPlot also provides plot faceting.\nFaceting is the visual equivalent of grouping in the split-apply-combine pattern.\nJust as with grouping, the distinct values in a data feature are used to divide the visualization into groups.\nEach group takes the same form but shows a different subset of data.\n\niris %&gt;%\n    ggplot(aes(x = Sepal.Length, y = Sepal.Width)) + \n    geom_point(size = 5, aes(color = Species)) + \n    stat_smooth(method = lm) +\n    facet_wrap(facets = vars(Species))\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nBy the way, this is an example of Simpson’s Paradox.\nThe overall trend is downward, but each group trend upward.\nWe can see this by layering the regression line for the aggregate over the individual ones.\n\niris %&gt;%\n    ggplot(aes(x = Sepal.Length, y = Sepal.Width)) + \n    geom_point(size = 5, aes(color=Species)) + \n    stat_smooth(method = lm, se=F) +\n    stat_smooth(method = lm, se=F, aes(color=Species))\n\n`geom_smooth()` using formula = 'y ~ x'\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nNote, the se argument in stat_smooth() toggles whether or not to display the shaded confidence intervals.\n\n\nVisualizing Dimensions\nAesthetics and facets are ways to represent extra dimensions without resorting to increasing the number of axes in our plots.\nFor example, instead of using color or facets to represent species, we might have considered a third axis z to represent this feature.\nWe tend to avoid going beyond two axes in our plots and so resort to other visual devices.\n\n\nBar Chart\nLet’s look at some other geometries.\nHere is a simple bar chart made with gemo_bar().\n\nmtcars %&gt;% \n    ggplot(aes(x = cyl)) +\n    geom_bar(fill = 'limegreen')\n\n\n\n\n\n\n\n\n\n\nHistogram\nThe function geom_hist() will generate a histogram.\nNote that this function actually performs a behind-the-scenes data transformation, which goes beyond mapping the data.\nWe typically see this with the stat_ family of functions.\n\nmtcars %&gt;% \n    ggplot(aes(x = mpg)) + \n    geom_histogram(bins = 20, aes(fill = factor(cyl))) + \n    labs(title=\"Histogram\") \n\n\n\n\n\n\n\n\nNote the use of the lab() function to provide a title.\n\n\nDensity Plot\nHere is a kernel density estimate (KDE) plot made with geom_density().\nA KDE plot is a smoothed version of a histogram.\nAs with geom_histogram(), this function does some behind-the-scenes compuation and then plots the result.\n\nmtcars %&gt;% \n    ggplot(aes(x = mpg)) + \n    geom_density(size = 2, aes(fill = factor(cyl))) + \n    labs(title=\"Density plot\") \n\n\n\n\n\n\n\n\n\n\nBoxplot\nThe function geom_boxplot() gives a classic boxplot, showing the mean, quantiles, and outliers of each variable.\nNote the arguments used — they control how the outliers are rendered.\nNotice we also pull out the aes() function for clarity; it could have remained within the geometry function’s argument space.\n\nmtcars %&gt;% \n    ggplot(aes(x = factor(cyl), y = mpg)) +\n    geom_boxplot(\n        width = 0.5, \n        outlier.colour = \"dodgerblue\", \n        outlier.size = 4, \n        outlier.shape = 16, \n        outlier.stroke = 2, \n    ) + \n    aes(fill = factor(cyl)) +\n    labs(title = \"Box plot\")\n\n\n\n\n\n\n\n\n\n\nViolin Plot\nThis is a violin plot using geom_violin().\nA violin plot is something like a smoothed version of a boxplot.\nThis version is untrimmed, i.e. we set trim to FALSE.\n\nmtcars %&gt;%\n    ggplot(aes(factor(cyl), mpg)) + \n    geom_violin(width = 0.5, trim = F) + \n    aes(fill = factor(cyl)) +\n    labs(title = \"Violin plot\")\n\n\n\n\n\n\n\n\n\n\nHeatmap\nTo create a heatmap, we use geom_tile().\nTo use this function, we first need to reshape our data into narrow form.\nHere, we take a correlation matrix among the features of mtcars.\n\ncorr &lt;- round(cor(mtcars), 2)\ncorr\n\n\nA matrix: 11 × 11 of type dbl\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\nmpg\n1.00\n-0.85\n-0.85\n-0.78\n0.68\n-0.87\n0.42\n0.66\n0.60\n0.48\n-0.55\n\n\ncyl\n-0.85\n1.00\n0.90\n0.83\n-0.70\n0.78\n-0.59\n-0.81\n-0.52\n-0.49\n0.53\n\n\ndisp\n-0.85\n0.90\n1.00\n0.79\n-0.71\n0.89\n-0.43\n-0.71\n-0.59\n-0.56\n0.39\n\n\nhp\n-0.78\n0.83\n0.79\n1.00\n-0.45\n0.66\n-0.71\n-0.72\n-0.24\n-0.13\n0.75\n\n\ndrat\n0.68\n-0.70\n-0.71\n-0.45\n1.00\n-0.71\n0.09\n0.44\n0.71\n0.70\n-0.09\n\n\nwt\n-0.87\n0.78\n0.89\n0.66\n-0.71\n1.00\n-0.17\n-0.55\n-0.69\n-0.58\n0.43\n\n\nqsec\n0.42\n-0.59\n-0.43\n-0.71\n0.09\n-0.17\n1.00\n0.74\n-0.23\n-0.21\n-0.66\n\n\nvs\n0.66\n-0.81\n-0.71\n-0.72\n0.44\n-0.55\n0.74\n1.00\n0.17\n0.21\n-0.57\n\n\nam\n0.60\n-0.52\n-0.59\n-0.24\n0.71\n-0.69\n-0.23\n0.17\n1.00\n0.79\n0.06\n\n\ngear\n0.48\n-0.49\n-0.56\n-0.13\n0.70\n-0.58\n-0.21\n0.21\n0.79\n1.00\n0.27\n\n\ncarb\n-0.55\n0.53\n0.39\n0.75\n-0.09\n0.43\n-0.66\n-0.57\n0.06\n0.27\n1.00\n\n\n\n\n\nThe we melt it into narrow form:\n\nnarrow &lt;- reshape2::melt(corr)\n\n\nnarrow %&gt;% head()\n\n\nA data.frame: 6 × 3\n\n\n\nVar1\nVar2\nvalue\n\n\n\n&lt;fct&gt;\n&lt;fct&gt;\n&lt;dbl&gt;\n\n\n\n\n1\nmpg\nmpg\n1.00\n\n\n2\ncyl\nmpg\n-0.85\n\n\n3\ndisp\nmpg\n-0.85\n\n\n4\nhp\nmpg\n-0.78\n\n\n5\ndrat\nmpg\n0.68\n\n\n6\nwt\nmpg\n-0.87\n\n\n\n\n\nNow we can pass the narrow data frame to our plot constructor:\n\nnarrow %&gt;% ggplot() +\n    aes(x = Var1, y = Var2, fill = value, label = value) +\n    geom_tile() + \n    geom_text(color = \"white\", size = 8) + \n    labs(title=\"mtcars - Correlation plot\") + \n    theme(text=element_text(size = 20), legend.position = \"none\")\n\n\n\n\n\n\n\n\nNote the use of theme() function to remove the legend and alter the font size in the result.\n\n\nAssigning to a Variable\nWe can assign plots to variables and build them incrementally.\n\ngg &lt;- iris %&gt;% ggplot()\ngg\n\n\n\n\n\n\n\n\n\ngg &lt;- gg + aes(x = Sepal.Length, y = Sepal.Width)\ngg\n\n\n\n\n\n\n\n\n\ngg &lt;- gg + geom_point(size=5)\ngg\n\n\n\n\n\n\n\n\n\ngg &lt;- gg + aes(color = Species)\ngg\n\n\n\n\n\n\n\n\n\ngg &lt;- gg + stat_smooth(method = 'lm')\ngg\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n\n\nDesign Pattern\nLet’s use this ability to assign plots to variables to demonstrate another design pattern.\nOften, you will have data of a certain kind and you want to visualize it various ways.\nYou may not be sure of the most effective visualization, so you want to play around.\nFor example, you may want to explore the relationship between two continuous variables.\nThis relationship can visualized using a variety of geometries.\nSo, we may begin by assigning the basic plot to a variable and then applying different geometries to it.\n\nmy_gg &lt;- ggplot(mpg, aes(cty, hwy))\nmy_gg\n\n\n\n\n\n\n\n\nThe object my_gg just contains a blank canvas with two labeled and scaled axes.\nHere we draw a simple scatter plot by adding a geometry to our object.\n\nmy_gg + geom_point(size=5, color='red')\n\n\n\n\n\n\n\n\nHere we show the coordinates as text labels showing cty with a rectangle background.\nThe object remains unchanged by the previous visualization; we are just swapping out geometries.\n\nmy_gg + geom_label(aes(label = cty), nudge_x = 1, nudge_y = 1, color = 'blue') \n\n\n\n\n\n\n\n\nHere is a simple regression line.\n\nmy_gg + geom_smooth(method = lm) \n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nAnd here is a boxplot …\n\nmy_gg + geom_boxplot()\n\n\n\n\n\n\n\n\nThe geom_density2d() function shows a \\(2\\)D kernel density estimation overlaying a scatterplot.\n\nmy_gg + geom_point() + geom_density2d()\n\n\n\n\n\n\n\n\nAnd here is filled line graph.\n\nmy_gg + geom_area(fill='red')\n\n\n\n\n\n\n\n\n\n\nConclusion\nThis notebook just scratches the surface of what you can do with GGPlot.\nThere are many other features we have not covered, such as changing coordinates.\nIn addition, there are many more geometry and statistics layers we have not shown.\nHowever, hopefully you understanding something of the logic of GGPlot and have gained insight into how graphics are built.\nThis should enable you to make informed guesses and asked effective questions as you develop your knowledge of this powerful toolkit.",
     "crumbs": [
       "R Visualization",
-      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Getting Started with GGPlot2</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Getting Started with GGPlot2</span>"
     ]
   },
   {
@@ -3703,7 +3703,7 @@
     "text": "Programming for Data Science\n\nLiterate Programming\nR provides a notebook style coding environment similar to Jupyter called R Markdown.\nIt follows the literate programming paradigm of inter-leaving text and runnable code.\nAs with Jupyter, they can be used interactively or as exported documents into standard formats.\nR Markdown files consists of the three types of element:\n\nMetadata, written in YAML (at the top of the file).\nText, written in Markdown.\nCode, written in one of several supported programming languages.\n\nAll of these are plain text and live in the same .Rmd file.\n\n\nMarkdown\nAs the name implies, R Markdown files uses a version of Markdown to create the text components and define the code blocks.\nMardown is a simplified version of HTML markup that uses typographic symbols and line spaces instead of angle brackets.\nFor example, instead of writing this in HTML:\n\nThis is is header\n\n\nThis paragraph defines a link/\n\nYou would write this:\n\n\nThis is a header\nThis paragraph defines a link.\nThe markdown gets converted into HTML by a viewer or converter at display time.\n\n\nCode\nThe code blocks are delimmited by three backtacks ``` with a language specified in braces.\nFor example, to run a block of R code, you would enter this:\nx &lt;- 10\nprint(x)\nR Markdown also supports running code in other languages in the same document.\nTo run a Python block, you could do something like this:\nx = 10\nprint(x)\nIn RStudio, these blocks of code can be executed in place, with results output in below the cell, as with Jupyter.\n\n\nComparison to Jupyter\nR Markdown files are optimized to be published documents.\nJupyter notebooks are meant primarily to be interactive environments.\nR Markdown files are plain text.\nJupyter notebooks are written in JavaScript.\nJavaScript is the native programming language of web browsers; the notebook format is executable code that can be integrated into a web application.\n\n\nVarieties of R Markdown outputs\nR Markdown is designed to be output to several formats, including notebooks, documents, presentations, and interactive applications.\nNotebooks and documents can be output as HTML, PDF, or Word files.\nPresentations may be output in IOSlides, Beamer, or PowerPoint format.\nInteractive applications are interactive apps that can be published on the web with a framework called Shiny.\n\n\nKnitting\nKnitting is the process of compiling all the code and visual assets of an R Markdown into a single file.\n\n\nPublishing\nRMarkdown has publication in mind as an outcome. RStudio allows you to publish in these destinations:\n\nRPubs\nR Studio Connect\n\n\n\nOutputting\nThere are two ways to set the output of a document:\n\nPermanently, by modifying the YAML header:\n\n---\ntitle: \"Viridis Demo\"\noutput: html_document\n---\n\nTransiently, by calling rmarkdown::render() by hand:\n\nrmarkdown::render(“diamond-sizes.Rmd”, output_format = “word_document”)\nThis is useful if you want to programmatically produce multiple types of output.\nRStudio’s knit button renders a file to the first format listed in its output field.\n\n\nOutput options\nTo override the default parameter values, you need to use an expanded output field. For example, if you wanted to render an html_document with a floating table of contents, you’d use:\n---\noutput:\n  html_document:\n    toc: true\n    toc_float: true\n---\nYou can even render to multiple outputs by supplying a list of formats:\n---\noutput:\n  html_document:\n    toc: true\n    toc_float: true\n  pdf_document: default\n---\nNote the special syntax if you don’t want to override any of the default options.\n\n\nHow It Works",
     "crumbs": [
       "R Visualization",
-      "<span class='chapter-number'>47</span>  <span class='chapter-title'>R Markdown</span>"
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>R Markdown</span>"
     ]
   },
   {
@@ -3714,7 +3714,7 @@
     "text": "Programming for Data Science\nRelated to GGPlot are two other visualization libraries that are worth looking into.\nPlotly is a cross platform visualization library that is great for making interactive plots.\nAnd GGPlotly provides a convenient way to translate GGPlot plots into Ploty plots.\nLet quickly take a look at these.\nFirst, lets install the Tidyverse and turn off warnings.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.3     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\noptions(warn = -1) # Turn off warnings\n\n\nPlotly in R\nPlotly runs on R, Python, JavaScript, and Matlab.\nIt uses the same model in each language, so learning it in R can help you use it in these other languages.\nWe first install it and then import it.\n\n# install.packages(\"plotly\")\n\n\nlibrary(plotly)\n\n\nAttaching package: ‘plotly’\n\n\nThe following object is masked from ‘package:ggplot2’:\n\n    last_plot\n\n\nThe following object is masked from ‘package:stats’:\n\n    filter\n\n\nThe following object is masked from ‘package:graphics’:\n\n    layout\n\n\n\n\nHere is a list of the kinds of plots you can create in Plotly:\nTypes of plots\n'bar', 'barpolar', 'box', 'candlestick', 'carpet', 'choropleth', 'choroplethmapbox', 'cone', 'contour', 'contourcarpet', 'densitymapbox', 'funnel', 'funnelarea', 'heatmap', 'heatmapgl', 'histogram', 'histogram2d', 'histogram2dcontour', 'icicle', 'image', 'indicator', 'isosurface', 'mesh3d', 'ohlc', 'parcats', 'parcoords', 'pie', 'pointcloud', 'sankey', 'scatter', 'scatter3d', 'scattercarpet', 'scattergeo', 'scattergl', 'scattermapbox', 'scatterpolar', 'scatterpolargl', 'scatterternary', 'splom', 'streamtube', 'sunburst', 'surface', 'table', 'treemap', 'violin', 'volume', 'waterfall'\nLet’s create a scatter plot.\nNote how we just specify the type and set the relevant arguments. Also note also the ~ prefix to feature names.\n\nfig1 &lt;- mpg %&gt;%\n    plot_ly(\n        x         = ~hwy, \n        y         = ~cty, \n        type      = 'scatter', \n        size      = ~displ, \n        color     = ~class,\n        hovertext = ~manufacturer,\n        mode      = \"markers\",\n        height    = 500, width = 750)\n\n\nfig1\n\n\n\n    \n        \n        \n\n\n\n\n\n\n\n    \n    \n        \n\n    \n\n\n\nHere we visualize the iris data set.\n\nfig2 &lt;- iris %&gt;%\n    plot_ly(\n        x         = ~Petal.Length, \n        y         = ~Petal.Width, \n        size      = ~Sepal.Length, \n        color     = ~Sepal.Width,\n        symbol    = ~Species,\n        type      = \"scatter\", \n        mode      = \"markers\",\n        height    = 500, width = 750)\n\n\nfig2\n\n\n\n    \n        \n        \n\n\n\n\n\n\n\n    \n    \n        \n\n    \n\n\n\n\n\nGGPlotly\nGGPlotly by Plotly lets you can convert your GGPlot figures into interactive ones powered by the Plotly library.\nIt works by calling ggplotly() with no argument right after a GGPlot definition.\nHere’s a quick example.\n\ndf &lt;- data.frame(\n    x = rnorm(100, mean = 0, sd = 1),\n    y = rnorm(100, mean = 5, sd = 10)\n)\n\n\ndf %&gt;% ggplot() + \n    aes(x, y) +\n    geom_point()\n\n\n\n\n\n\n\n\n\nggplotly()\n\n\n\n    \n        \n        \n\n\n\n\n\n\n\n\n    \n    \n        \n\n    \n\n\n\n\nggplotly(height=500, width=500)\n\n\n\n    \n        \n        \n\n\n\n\n\n\n\n    \n    \n        \n\n    \n\n\n\nYou also pass it a plot that was assigned to a variable.\nIn both cases, you can then add ploty features to your graph.\n\np &lt;- df %&gt;% ggplot() + \n    aes(x, y) +\n    geom_point(color='red')\n\n\nggplotly(p, height=500, width=500)",
     "crumbs": [
       "R Visualization",
-      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Plotly and GGPlotly</span>"
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>Plotly and GGPlotly</span>"
     ]
   },
   {
@@ -3725,7 +3725,7 @@
     "text": "GGPlot in Python\nThere are two ports of GGPlot2 to Python: pygg and plotnine.\nThe first seems to have stopped development and is much less used.\nLet’s look at Plotnine.\n# ! conda install -c conda-forge plotnine -y\nfrom plotnine import *\nfrom plotnine.data import mpg\nOur old friend, mpg in Python:\nmpg\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\nclass\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n229\nvolkswagen\npassat\n2.0\n2008\n4\nauto(s6)\nf\n19\n28\np\nmidsize\n\n\n230\nvolkswagen\npassat\n2.0\n2008\n4\nmanual(m6)\nf\n21\n29\np\nmidsize\n\n\n231\nvolkswagen\npassat\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\nmidsize\n\n\n232\nvolkswagen\npassat\n2.8\n1999\n6\nmanual(m5)\nf\n18\n26\np\nmidsize\n\n\n233\nvolkswagen\npassat\n3.6\n2008\n6\nauto(s6)\nf\n17\n26\np\nmidsize\n\n\n\n\n234 rows × 11 columns",
     "crumbs": [
       "R Visualization",
-      "<span class='chapter-number'>49</span>  <span class='chapter-title'>GGPlot in Python with Plotnine</span>"
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>GGPlot in Python with Plotnine</span>"
     ]
   },
   {
@@ -3736,7 +3736,7 @@
     "text": "A Simple Bar Chart\n\n(ggplot(mpg)            # defining what data to use\n    + aes(x='class')    # defining what variable to use\n    + geom_bar(size=20) # defining the type of plot to use\n)\n\n\n\n\n\n\n\n\nNotice that aes() is not a helper function (a function in the argument space).\nAlso, R dots become _ in the argument names.\nNote that we don’t have to use the syntax above, which groups the functions in a single expression with (...).\nWe can do this:\n\nggplot(mpg) + aes(x='class') + geom_bar(size=20)\n\n\n\n\n\n\n\n\nOr this:\n\nggplot(mpg) + \\\n    aes(x='class') + \\\n    geom_bar(size=20)\n\n\n\n\n\n\n\n\nNote that none of these are like R due to differing white space rules.",
     "crumbs": [
       "R Visualization",
-      "<span class='chapter-number'>49</span>  <span class='chapter-title'>GGPlot in Python with Plotnine</span>"
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>GGPlot in Python with Plotnine</span>"
     ]
   },
   {
@@ -3747,7 +3747,7 @@
     "text": "Aesthetics\nPlotnine supports using color and size on which to map features with aes().\n\nggplot(mpg) + \\\n    aes(x = 'drv', y = 'cty', color = 'class', size='cyl') + \\\n    geom_point()",
     "crumbs": [
       "R Visualization",
-      "<span class='chapter-number'>49</span>  <span class='chapter-title'>GGPlot in Python with Plotnine</span>"
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>GGPlot in Python with Plotnine</span>"
     ]
   },
   {
@@ -3758,7 +3758,7 @@
     "text": "Facets\nYou can also create facets with facet_wrap().\n\n(ggplot(mpg)         \n + aes(x='drv', y='cty', color='class', size='cyl')\n + geom_point()\n + facet_wrap('class')\n + theme(legend_position = \"none\")\n)",
     "crumbs": [
       "R Visualization",
-      "<span class='chapter-number'>49</span>  <span class='chapter-title'>GGPlot in Python with Plotnine</span>"
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>GGPlot in Python with Plotnine</span>"
     ]
   },
   {
@@ -3819,12 +3819,12 @@
   {
     "objectID": "pages/M02-Exercises.html",
     "href": "pages/M02-Exercises.html",
-    "title": "M02 Exercises",
+    "title": "Exercises",
     "section": "",
-    "text": "TBD\nExercises",
+    "text": "Click on the link below to open a set of practice exerices for this module.\nThese exercises are designed to give you practice implementing the ideas covered.\nThese exercises are in the form of a slide show that functions as a set of prompts.\nTo peform the exercises, advance to a slide with a promopt and attempt to perform the task asked.\nWhen you are ready to see the solution, navigate to the slide below.\nNote that the slide show is in Reveal.js. To navigate the Reveal.js slide deck, you can use the following keyboard shortcuts:\n\nPress the right arrow key (→) to move to the next slide.\nPress the left arrow key (←) to move to the previous slide.\nPress the down arrow key (↓) to move to the next vertical slide.\nPress the up arrow key (↑) to move to the previous vertical slide.\nPress the ‘Home’ key to go to the first slide.\nPress the ‘End’ key to go to the last slide.\nPress the ‘Esc’ key to toggle the overview mode.\n\nYou can also use the navigation widget in the lower right corner of the screen to navigate through the slides.\nExercises",
     "crumbs": [
       "Python Introduction",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>M02 Exercises</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercises</span>"
     ]
   },
   {
@@ -3863,45 +3863,78 @@
   {
     "objectID": "pages/M03-Exercises.html",
     "href": "pages/M03-Exercises.html",
-    "title": "M03 Exercises",
+    "title": "Exercises",
     "section": "",
-    "text": "TBD\nExercises",
+    "text": "Click on the link below to open a set of practice exerices for this module.\nThese exercises are designed to give you practice implementing the ideas covered.\nThese exercises are in the form of a slide show that functions as a set of prompts.\nTo peform the exercises, advance to a slide with a promopt and attempt to perform the task asked.\nWhen you are ready to see the solution, navigate to the slide below.\nNote that the slide show is in Reveal.js. To navigate the Reveal.js slide deck, you can use the following keyboard shortcuts:\n\nPress the right arrow key (→) to move to the next slide.\nPress the left arrow key (←) to move to the previous slide.\nPress the down arrow key (↓) to move to the next vertical slide.\nPress the up arrow key (↑) to move to the previous vertical slide.\nPress the ‘Home’ key to go to the first slide.\nPress the ‘End’ key to go to the last slide.\nPress the ‘Esc’ key to toggle the overview mode.\n\nYou can also use the navigation widget in the lower right corner of the screen to navigate through the slides.\nExercises",
     "crumbs": [
       "Python Control Structures",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>M03 Exercises</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Exercises</span>"
     ]
   },
   {
     "objectID": "pages/M04-Exercises.html",
     "href": "pages/M04-Exercises.html",
-    "title": "M04 Exercises",
+    "title": "Exercises",
     "section": "",
-    "text": "TBD\nExercises",
+    "text": "Click on the link below to open a set of practice exerices for this module.\nThese exercises are designed to give you practice implementing the ideas covered.\nThese exercises are in the form of a slide show that functions as a set of prompts.\nTo peform the exercises, advance to a slide with a promopt and attempt to perform the task asked.\nWhen you are ready to see the solution, navigate to the slide below.\nNote that the slide show is in Reveal.js. To navigate the Reveal.js slide deck, you can use the following keyboard shortcuts:\n\nPress the right arrow key (→) to move to the next slide.\nPress the left arrow key (←) to move to the previous slide.\nPress the down arrow key (↓) to move to the next vertical slide.\nPress the up arrow key (↑) to move to the previous vertical slide.\nPress the ‘Home’ key to go to the first slide.\nPress the ‘End’ key to go to the last slide.\nPress the ‘Esc’ key to toggle the overview mode.\n\nYou can also use the navigation widget in the lower right corner of the screen to navigate through the slides.\nExercises",
     "crumbs": [
-      "Python  Functions",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>M04 Exercises</span>"
+      "Python Functions",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Exercises</span>"
     ]
   },
   {
     "objectID": "pages/M05-Exercises.html",
     "href": "pages/M05-Exercises.html",
-    "title": "M05 Exercises",
+    "title": "Exercises",
     "section": "",
-    "text": "TBD\nExercises",
+    "text": "Click on the link below to open a set of practice exerices for this module.\nThese exercises are designed to give you practice implementing the ideas covered.\nThese exercises are in the form of a slide show that functions as a set of prompts.\nTo peform the exercises, advance to a slide with a promopt and attempt to perform the task asked.\nWhen you are ready to see the solution, navigate to the slide below.\nNote that the slide show is in Reveal.js. To navigate the Reveal.js slide deck, you can use the following keyboard shortcuts:\n\nPress the right arrow key (→) to move to the next slide.\nPress the left arrow key (←) to move to the previous slide.\nPress the down arrow key (↓) to move to the next vertical slide.\nPress the up arrow key (↑) to move to the previous vertical slide.\nPress the ‘Home’ key to go to the first slide.\nPress the ‘End’ key to go to the last slide.\nPress the ‘Esc’ key to toggle the overview mode.\n\nYou can also use the navigation widget in the lower right corner of the screen to navigate through the slides.\nExercises",
     "crumbs": [
       "Python NumPy",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>M05 Exercises</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Exercises</span>"
     ]
   },
   {
     "objectID": "pages/M06-Exercises.html",
     "href": "pages/M06-Exercises.html",
-    "title": "M06 Exercises",
+    "title": "Exercises",
     "section": "",
-    "text": "TBD\nExercises",
+    "text": "Click on the link below to open a set of practice exerices for this module.\nThese exercises are designed to give you practice implementing the ideas covered.\nThese exercises are in the form of a slide show that functions as a set of prompts.\nTo peform the exercises, advance to a slide with a promopt and attempt to perform the task asked.\nWhen you are ready to see the solution, navigate to the slide below.\nNote that the slide show is in Reveal.js. To navigate the Reveal.js slide deck, you can use the following keyboard shortcuts:\n\nPress the right arrow key (→) to move to the next slide.\nPress the left arrow key (←) to move to the previous slide.\nPress the down arrow key (↓) to move to the next vertical slide.\nPress the up arrow key (↑) to move to the previous vertical slide.\nPress the ‘Home’ key to go to the first slide.\nPress the ‘End’ key to go to the last slide.\nPress the ‘Esc’ key to toggle the overview mode.\n\nYou can also use the navigation widget in the lower right corner of the screen to navigate through the slides.\nExercises",
     "crumbs": [
       "Python Pandas",
-      "<span class='chapter-number'>36</span>  <span class='chapter-title'>M06 Exercises</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "pages/M10-Exercises.html",
+    "href": "pages/M10-Exercises.html",
+    "title": "Exercises",
+    "section": "",
+    "text": "Click on the link below to open a set of practice exerices for this module.\nThese exercises are designed to give you practice implementing the ideas covered.\nThese exercises are in the form of a slide show that functions as a set of prompts.\nTo peform the exercises, advance to a slide with a promopt and attempt to perform the task asked.\nWhen you are ready to see the solution, navigate to the slide below.\nNote that the slide show is in Reveal.js. To navigate the Reveal.js slide deck, you can use the following keyboard shortcuts:\n\nPress the right arrow key (→) to move to the next slide.\nPress the left arrow key (←) to move to the previous slide.\nPress the down arrow key (↓) to move to the next vertical slide.\nPress the up arrow key (↑) to move to the previous vertical slide.\nPress the ‘Home’ key to go to the first slide.\nPress the ‘End’ key to go to the last slide.\nPress the ‘Esc’ key to toggle the overview mode.\n\nYou can also use the navigation widget in the lower right corner of the screen to navigate through the slides.\nExercises",
+    "crumbs": [
+      "R Introduction",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "pages/M11-Exercises.html",
+    "href": "pages/M11-Exercises.html",
+    "title": "Exercises",
+    "section": "",
+    "text": "Click on the link below to open a set of practice exerices for this module.\nThese exercises are designed to give you practice implementing the ideas covered.\nThese exercises are in the form of a slide show that functions as a set of prompts.\nTo peform the exercises, advance to a slide with a promopt and attempt to perform the task asked.\nWhen you are ready to see the solution, navigate to the slide below.\nNote that the slide show is in Reveal.js. To navigate the Reveal.js slide deck, you can use the following keyboard shortcuts:\n\nPress the right arrow key (→) to move to the next slide.\nPress the left arrow key (←) to move to the previous slide.\nPress the down arrow key (↓) to move to the next vertical slide.\nPress the up arrow key (↑) to move to the previous vertical slide.\nPress the ‘Home’ key to go to the first slide.\nPress the ‘End’ key to go to the last slide.\nPress the ‘Esc’ key to toggle the overview mode.\n\nYou can also use the navigation widget in the lower right corner of the screen to navigate through the slides.\nExercises",
+    "crumbs": [
+      "R Dplyr",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "pages/M12-Exercises.html",
+    "href": "pages/M12-Exercises.html",
+    "title": "Exercises",
+    "section": "",
+    "text": "Click on the link below to open a set of practice exerices for this module.\nThese exercises are designed to give you practice implementing the ideas covered.\nThese exercises are in the form of a slide show that functions as a set of prompts.\nTo peform the exercises, advance to a slide with a promopt and attempt to perform the task asked.\nWhen you are ready to see the solution, navigate to the slide below.\nNote that the slide show is in Reveal.js. To navigate the Reveal.js slide deck, you can use the following keyboard shortcuts:\n\nPress the right arrow key (→) to move to the next slide.\nPress the left arrow key (←) to move to the previous slide.\nPress the down arrow key (↓) to move to the next vertical slide.\nPress the up arrow key (↑) to move to the previous vertical slide.\nPress the ‘Home’ key to go to the first slide.\nPress the ‘End’ key to go to the last slide.\nPress the ‘Esc’ key to toggle the overview mode.\n\nYou can also use the navigation widget in the lower right corner of the screen to navigate through the slides.\nExercises",
+    "crumbs": [
+      "R Visualization",
+      "<span class='chapter-number'>52</span>  <span class='chapter-title'>Exercises</span>"
     ]
   },
   {
@@ -4001,7 +4034,7 @@
     "section": "",
     "text": "Topics",
     "crumbs": [
-      "Python  Functions"
+      "Python Functions"
     ]
   },
   {
@@ -4011,7 +4044,7 @@
     "section": "",
     "text": "Built-in functions\nUser-defined functions\nVariable scope\nLambda functions\nDesign of functions\nRecursion",
     "crumbs": [
-      "Python  Functions"
+      "Python Functions"
     ]
   },
   {
@@ -4021,7 +4054,7 @@
     "section": "Readings",
     "text": "Readings\n\nSuggested\n\nLutz 2019, Part IV, Chapter 16: Function Basics\nLutz 2019, Part IV, Chapter 17: Scopes\n\nNon-local is for advanced users.\n\nLutz 2019, Part IV, Chapter 18. Arguments\nLutz 2019, Part IV, Chapter 19: Advanced Function Topics\n\n\n\nOptional\n\nMcKinney, 2023, Python for Data Analysis, “3.2: Functions”\nFunctions (W3S)\nGlobal and Local Variables (GFG)\nLambda Functions (Real Python)",
     "crumbs": [
-      "Python  Functions"
+      "Python Functions"
     ]
   },
   {
@@ -4031,7 +4064,7 @@
     "section": "Videos",
     "text": "Videos",
     "crumbs": [
-      "Python  Functions"
+      "Python Functions"
     ]
   },
   {
@@ -4200,6 +4233,36 @@
     "title": "R Visualization",
     "section": "Readings",
     "text": "Readings\n\nRequired\n\nW3Schools R Graphics\nRFDS Explore 3 Data Visualization\n\nggplot2\n\nRDFS Communicate 27 R Markdown\nRDFS Communicate 28 Graphics for Communication\n\n\n\nOptional\n\nggplot2 (Tidyverse)\nThe Complete ggplot2 Tutorial (r-statitics.co)\nR Markdown (RStudio)\nOverview (RStudio)\nIndex of Pages (RStudio)\nknitr (Yihui Xie)\nR Markdown: the Definitive Guide (Yihui Xie, J. J. Allaire, Garrett Grolemund)\nR Markdown Cookbook (Yihui Xie, Christophe Dervieux, Emily Riederer)\nGetting Started with R Markdown — Guide and Cheatsheet (Dataquest)\nGallery (RStudio)",
+    "crumbs": [
+      "R Visualization"
+    ]
+  },
+  {
+    "objectID": "modules/m10/m10-intro.html#videos",
+    "href": "modules/m10/m10-intro.html#videos",
+    "title": "R Introduction",
+    "section": "Videos",
+    "text": "Videos",
+    "crumbs": [
+      "R Introduction"
+    ]
+  },
+  {
+    "objectID": "modules/m11/m11-intro.html#videos",
+    "href": "modules/m11/m11-intro.html#videos",
+    "title": "R Dplyr",
+    "section": "Videos",
+    "text": "Videos",
+    "crumbs": [
+      "R Dplyr"
+    ]
+  },
+  {
+    "objectID": "modules/m12/m12-intro.html#videos",
+    "href": "modules/m12/m12-intro.html#videos",
+    "title": "R Visualization",
+    "section": "Videos",
+    "text": "Videos",
     "crumbs": [
       "R Visualization"
     ]

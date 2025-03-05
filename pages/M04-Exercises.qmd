@@ -1,5 +1,5 @@
-# M04 Exercises
+# Exercises
 
 {{< include snippets/exercise-instructions.qmd >}}
 
-[Exercises](../../exercises/M04-Exercises.slides.html)
+[Exercises](../../exercises/M04-Exercises.slides.html){target="_blank" .btn .btn-outline-primary .btn role="button"}

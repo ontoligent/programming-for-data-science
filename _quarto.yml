@@ -98,11 +98,13 @@ book:
         - notebooks/M10_RBasics/M10-04-DataFrames.ipynb
         - notebooks/M10_RBasics/M10-05-ControlStructures.ipynb
         - notebooks/M10_RBasics/M10-06-Functions.ipynb
+        - pages/M10-Exercises.qmd
         
     - part: modules/m11/m11-intro.qmd # R Dplyr
       chapters: 
         - notebooks/M11_RDplyr/M11-01-Tibbles.ipynb
         - notebooks/M11_RDplyr/M11-02-Dplyr.ipynb
+        - pages/M11-Exercises.qmd
 
     - part: modules/m12/m12-intro.qmd # R Visualization
       chapters:
@@ -111,6 +113,7 @@ book:
         - notebooks/M12_RViz/M12-02-RMarkdown.ipynb
         - notebooks/M12_RViz/M12-03-Qplot-and-Plotly.ipynb
         - notebooks/M12_RViz/M12-04-Plotnine.ipynb
+        - pages/M12-Exercises.qmd
         
 #     - part: modules/m13/m13-intro.qmd # "13 Agile"
 #       chapters: 

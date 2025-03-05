@@ -1,4 +1,4 @@
-# Python  Functions
+# Python Functions
 
 ## Topics
 
@@ -28,4 +28,4 @@
 
 ## Videos
 
-<iframe src="https://kaltura-connect.its.virginia.edu/embedplaylist/secure/embed/v2/1/playlistId/1_zcuqcvm2/uiConfId/44972551" width="740px" height="330px" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerpolicy="no-referrer-when-downgrade" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="M01 Introducing Python"></iframe>
+<iframe src="https://kaltura-prod.its.virginia.edu/embedplaylist/secure/embed/v2/0/playlistId/1_g77mhg7l/uiConfId/55951532" width="960px" height="540px" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerpolicy="no-referrer-when-downgrade" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
