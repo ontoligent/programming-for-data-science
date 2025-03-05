@@ -40,6 +40,7 @@ book:
         - notebooks/M02_BasicPython/M02-04-Strings.ipynb
         - notebooks/M02_BasicPython/M02-05-Structures.ipynb
         - notebooks/M02_BasicPython/M02-06-AsideOnImmutables.ipynb
+        - exercises/M02-Exercises.slides.html
         
     - part: modules/m03/m03-intro.qmd # 03 Control Structures
       chapters:
