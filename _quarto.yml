@@ -113,13 +113,3 @@ format:
 
 bibliography:
   - refs.bib
-
-resources:
-  - exercises/M02-Exercises.slides.html
-  - exercises/M03-Exercises.slides.html
-  - exercises/M04-Exercises.slides.html
-  - exercises/M05-Exercises.slides.html
-  - exercises/M06-Exercises.slides.html
-  - exercises/M10-Exercises.slides.html
-  - exercises/M11-Exercises.slides.html
-  - exercises/M12-Exercises.slides.html
