@@ -26,7 +26,7 @@ book:
         - notebooks/M02_BasicPython/M02-04-Strings.ipynb
         - notebooks/M02_BasicPython/M02-05-Structures.ipynb
         - notebooks/M02_BasicPython/M02-06-AsideOnImmutables.ipynb
-        - pages/M02-Exercises.qmd
+        - exercises/M02-Exercises.qmd
         
     - part: modules/m03/m03-intro.qmd # Python Control Structures
       chapters:
@@ -35,7 +35,7 @@ book:
         - notebooks/M03_ControlStructures/M03-02-IterablesAndIterators.ipynb
         - notebooks/M03_ControlStructures/M03-03-Comprehensions.ipynb
         - notebooks/M03_ControlStructures/M03-04-NestedComprehensions.ipynb
-        - pages/M03-Exercises.qmd
+        - exercises/M03-Exercises.qmd
         
     - part: modules/m04/m04-intro.qmd # Python Functions
       chapters: 
@@ -45,7 +45,7 @@ book:
         - notebooks/M04_PythonFunctions/M04-04-RecursiveFunctions.ipynb
         - notebooks/M04_PythonFunctions/M04-05-Scope.ipynb
         - notebooks/M04_PythonFunctions/M04-06-FunctionsCallingFunctions.ipynb
-        - pages/M04-Exercises.qmd
+        - exercises/M04-Exercises.qmd
         
     - part: modules/m05/m05-intro.qmd # Python NumPy
       chapters:
@@ -55,7 +55,7 @@ book:
         - notebooks/M05_NumPy/M05-03-NumPyIndexing.ipynb
         - notebooks/M05_NumPy/M05-04-NumPyOperating.ipynb
         - notebooks/M05_NumPy/M05-05-NumPyFunctions.ipynb
-        - pages/M05-Exercises.qmd
+        - exercises/M05-Exercises.qmd
         
     - part: modules/m06/m06-intro.qmd # Python Pandas
       chapters:
@@ -65,7 +65,7 @@ book:
         - notebooks/M06_Pandas/M06-03-NarrowWide.ipynb
         - notebooks/M06_Pandas/M06-04-MethodChaining.ipynb
         - notebooks/M06_Pandas/M06-05-Pandas-and-SQL.ipynb
-        - pages/M06-Exercises.qmd
+        - exercises/M06-Exercises.qmd
         
     - part: modules/m10/m10-intro.qmd # R Introduction
       chapters: 
@@ -75,13 +75,13 @@ book:
         - notebooks/M10_RBasics/M10-04-DataFrames.ipynb
         - notebooks/M10_RBasics/M10-05-ControlStructures.ipynb
         - notebooks/M10_RBasics/M10-06-Functions.ipynb
-        - pages/M10-Exercises.qmd
+        - exercises/M10-Exercises.qmd
         
     - part: modules/m11/m11-intro.qmd # R Dplyr
       chapters: 
         - notebooks/M11_RDplyr/M11-01-Tibbles.ipynb
         - notebooks/M11_RDplyr/M11-02-Dplyr.ipynb
-        - pages/M11-Exercises.qmd
+        - exercises/M11-Exercises.qmd
 
     - part: modules/m12/m12-intro.qmd # R Visualization
       chapters:
@@ -90,20 +90,8 @@ book:
         - notebooks/M12_RViz/M12-02-RMarkdown.ipynb
         - notebooks/M12_RViz/M12-03-Qplot-and-Plotly.ipynb
         - notebooks/M12_RViz/M12-04-Plotnine.ipynb
-        - pages/M12-Exercises.qmd
-        
-    
-    - part: "Appendices"
-      chapters: 
-          - exercises/M02-Exercises.slides.html
-          - exercises/M03-Exercises.slides.html
-          - exercises/M04-Exercises.slides.html
-          - exercises/M05-Exercises.slides.html
-          - exercises/M06-Exercises.slides.html
-          - exercises/M10-Exercises.slides.html
-          - exercises/M11-Exercises.slides.html
-          - exercises/M12-Exercises.slides.html
-  
+        - exercises/M12-Exercises.qmd
+          
   sidebar:
     style: docked
     reader-mode: false
@@ -112,8 +100,6 @@ book:
     collapse-level: 1
     subtitle: Summer 2024
 
-# comments:
-#   hypothesis: true
 
 format:
   html:
@@ -124,8 +110,16 @@ format:
     link-external-icon: true
     link-external-newwindow: true
     reader-mode: false
-  # pdf:
-  #   documentclass: scrreport    
 
 bibliography:
   - refs.bib
+
+resources:
+  - exercises/M02-Exercises.slides.html
+  - exercises/M03-Exercises.slides.html
+  - exercises/M04-Exercises.slides.html
+  - exercises/M05-Exercises.slides.html
+  - exercises/M06-Exercises.slides.html
+  - exercises/M10-Exercises.slides.html
+  - exercises/M11-Exercises.slides.html
+  - exercises/M12-Exercises.slides.html
