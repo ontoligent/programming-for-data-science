@@ -16,7 +16,7 @@ book:
   repo-url: "https://github.com/ontoligent/programming-for-data-science"
   chapters:
     - index.qmd # 00 Welcome
-    - modules/m00/syllabus.qmd 
+    - notebooks/M00/syllabus.qmd 
     - part: notebooks/M02_BasicPython/m02-intro.qmd # 1 Python Introduction
       chapters:
         - notebooks/M02_BasicPython/on-data.qmd
