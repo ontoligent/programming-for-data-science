@@ -1,0 +1,47 @@
+# R Visualization
+
+## Topics
+
+-   R's basic visualization tools
+-   GGPlot2
+-   RMarkown
+
+## Suggested Readings
+
+-   [W3Schools R Graphics](https://www.w3schools.com/r/r_graph_plot.asp)
+-   [RFDS Explore 3 Data Visualization](https://r4ds.had.co.nz/data-visualisation.html)
+    -   `ggplot2`
+-   [RDFS Communicate 27 R Markdown](https://r4ds.had.co.nz/r-markdown.html)
+-   [RDFS Communicate 28 Graphics for Communication](https://r4ds.had.co.nz/graphics-for-communication.html)
+-   [ggplot2 (Tidyverse)](https://ggplot2.tidyverse.org/)
+-   [The Complete ggplot2 Tutorial (r-statitics.co)](http://r-statistics.co/Complete-Ggplot2-Tutorial-Part1-With-R-Code.html)
+-   [R Markdown (RStudio)](https://rmarkdown.rstudio.com/lesson-1.html)
+-   [Overview (RStudio)](https://rmarkdown.rstudio.com/lesson-1.html)
+-   [Index of Pages (RStudio)](https://rmarkdown.rstudio.com/articles.html)
+-   [knitr (Yihui Xie)](https://yihui.org/knitr/)
+-   [R Markdown: the Definitive Guide (Yihui Xie, J. J. Allaire, Garrett Grolemund)](https://bookdown.org/yihui/rmarkdown)
+-   [R Markdown Cookbook (Yihui Xie, Christophe Dervieux, Emily Riederer)](https://bookdown.org/yihui/rmarkdown-cookbook/)
+-   [Getting Started with R Markdown — Guide and Cheatsheet (Dataquest)](https://www.dataquest.io/blog/r-markdown-guide-cheatsheet/)
+-   [Gallery (RStudio)](https://rmarkdown.rstudio.com/gallery.html)
+
+## Videos
+
+### GGPlot and the Grammar of Graphics
+
+<iframe id="kmsembed-1_jun909j7" width="400" height="285" src="https://343772-1.kaf.kaltura.com/embed/secure/iframe/entryId/1_jun909j7/uiConfId/50243942/pbc/353035032/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="DS 5100 M12 GGPlot and the Grammar of Graphics"></iframe><br />
+
+### Getting Started with GGPlot
+
+<iframe id="kmsembed-1_nzodp9r1" width="400" height="285" src="https://343772-1.kaf.kaltura.com/embed/secure/iframe/entryId/1_nzodp9r1/uiConfId/50243942/pbc/353035032/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="DS 5100 M12 Getting Started with GGPlot"></iframe><br />
+
+### R Markdown
+
+<iframe id="kmsembed-1_1mv88mg1" width="400" height="285" src="https://343772-1.kaf.kaltura.com/embed/secure/iframe/entryId/1_1mv88mg1/uiConfId/50243942/pbc/353035032/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="DS 5100 M12 R Markdown"></iframe><br />
+
+### Plotly and GGPlotly
+
+<iframe id="kmsembed-1_llkxqifs" width="400" height="285" src="https://343772-1.kaf.kaltura.com/embed/secure/iframe/entryId/1_llkxqifs/uiConfId/50243942/pbc/353035032/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="DS 5100 M12 Plotly and GGPlotly"></iframe><br />
+
+### GGPlot in Python
+
+<iframe id="kmsembed-1_0a6erij4" width="400" height="285" src="https://343772-1.kaf.kaltura.com/embed/secure/iframe/entryId/1_0a6erij4/uiConfId/50243942/pbc/353035032/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="DS 5100 M12 GGPlot in Python"></iframe><br />

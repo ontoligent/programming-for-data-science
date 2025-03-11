@@ -1,5 +1,0 @@
-# Exercises
-
-{{< include snippets/exercise-instructions.qmd >}}
-
-[Exercises](M03-Exercises.slides.html){target="_blank" .btn .btn-outline-primary .btn role="button"}

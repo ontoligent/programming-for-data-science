@@ -1,0 +1,55 @@
+# Python Introduction
+
+## Topics
+
+-   Running Python code
+-   Python's basic data types
+-   Python's primary operators associated with each data type
+-   Python's built-in data structures
+
+## Suggested Readings
+
+-   [Katz and Katz 2019, Section 1, Preparing the Workspace](https://learning.oreilly.com/library/view/learn-python-by/9781789535365/8f352965-cebb-43c0-b2ca-0f6bf944899e.xhtml)
+-   [Lutz, Learning Python, Part I: Getting Started, Chapter 2](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch02.html)
+-   [Lutz, Learning Python, Part I: Getting Started, Chapter 3](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch03.html)
+-   [Lutz, Learning Python, Part II: Types and Operations, Chapters 4–9](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/part02.html)
+-   [Katz and Katz 2019, Section 1, First Steps in Coding - Variables and Data Types](https://learning.oreilly.com/library/view/learn-python-by/9781789535365/5fea535c-b144-4c8b-b20b-0a0ee1c1f157.xhtml)
+-   [Built-in Types (Official)](https://docs.python.org/3/library/stdtypes.html)
+-   [Python Data Types (GFG)](https://www.geeksforgeeks.org/python-data-types/)
+-   [Python Operators (W3S)](https://www.w3schools.com/python/python_operators.asp)
+-   [Immutable vs Mutable Data Types in Python (Medium)](https://towardsdatascience.com/immutable-vs-mutable-data-types-in-python-e8a9a6fcfbdc)
+
+## Videos 
+
+### Data and Code
+
+<iframe id="kmsembed-1_hq4ol2v8" width="400" height="285" src="https://343772-1.kaf.kaltura.com/embed/secure/iframe/entryId/1_hq4ol2v8/uiConfId/50243942/pbc/353035032/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="DS 5100 M02 Data and Code"></iframe><br />
+
+### Data Types and Structures
+
+<iframe id="kmsembed-1_s0lxdwyp" width="400" height="285" src="https://343772-1.kaf.kaltura.com/embed/secure/iframe/entryId/1_s0lxdwyp/uiConfId/50243942/pbc/353035032/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="DS 5100 M02 Data Types and Structures"></iframe><br />
+
+### Data Types, Literals, and Variables
+
+<iframe id="kmsembed-1_aqr51ts5" width="400" height="285" src="https://343772-1.kaf.kaltura.com/embed/secure/iframe/entryId/1_aqr51ts5/uiConfId/50243942/pbc/353035032/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="DS 5100 M02 Data Types, Literals, and Variables"></iframe><br />
+
+### Operators and Expressions
+
+<iframe id="kmsembed-1_l6q43u51" width="400" height="285" src="https://343772-1.kaf.kaltura.com/embed/secure/iframe/entryId/1_l6q43u51/uiConfId/50243942/pbc/353035032/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="DS 5100 M02 Operators and Expressions"></iframe><br />
+
+### Numbers
+
+<iframe id="kmsembed-1_euocdrkk" width="400" height="285" src="https://343772-1.kaf.kaltura.com/embed/secure/iframe/entryId/1_euocdrkk/uiConfId/50243942/pbc/353035032/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="DS 5100 M02 Numbers"></iframe><br />
+
+### Strings
+
+<iframe id="kmsembed-1_jicff7ax" width="400" height="285" src="https://343772-1.kaf.kaltura.com/embed/secure/iframe/entryId/1_jicff7ax/uiConfId/50243942/pbc/353035032/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="DS 5100 M02 Strings"></iframe><br />
+
+### Data Structures
+
+<iframe id="kmsembed-1_lvztu61o" width="400" height="285" src="https://343772-1.kaf.kaltura.com/embed/secure/iframe/entryId/1_lvztu61o/uiConfId/50243942/pbc/353035032/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="DS 5100 M02 Data Structures"></iframe><br />
+
+### Aside on Immutables
+
+<iframe id="kmsembed-1_gg5g61pq" width="400" height="285" src="https://343772-1.kaf.kaltura.com/embed/secure/iframe/entryId/1_gg5g61pq/uiConfId/50243942/pbc/353035032/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="DS 5100 M02 Aside on Immutables"></iframe><br />
+

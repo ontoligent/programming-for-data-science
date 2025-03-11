@@ -15,8 +15,9 @@ book:
   repo-actions: [edit]
   repo-url: "https://github.com/ontoligent/programming-for-data-science"
   chapters:
-    - index.qmd # 00 Welcome         
-    - part: modules/m02/m02-intro.qmd # Python Introduction
+    - index.qmd # 00 Welcome
+    - modules/m00/syllabus.qmd 
+    - part: notebooks/M02_BasicPython/m02-intro.qmd # 1 Python Introduction
       chapters:
         - notebooks/M02_BasicPython/on-data.qmd
         - notebooks/M02_BasicPython/python-object-types.qmd
@@ -26,18 +27,18 @@ book:
         - notebooks/M02_BasicPython/M02-04-Strings.ipynb
         - notebooks/M02_BasicPython/M02-05-Structures.ipynb
         - notebooks/M02_BasicPython/M02-06-AsideOnImmutables.ipynb
-        - exercises/M02-Exercises.qmd
+        - notebooks/M02_BasicPython/M02-Exercises.qmd
         
-    - part: modules/m03/m03-intro.qmd # Python Control Structures
+    - part: notebooks/M03_ControlStructures/m03-intro.qmd # 2 Python Control Structures
       chapters:
         - notebooks/M03_ControlStructures/vals-vars-expressions-statements.qmd
         - notebooks/M03_ControlStructures/M03-01-ControlStructures.ipynb
         - notebooks/M03_ControlStructures/M03-02-IterablesAndIterators.ipynb
         - notebooks/M03_ControlStructures/M03-03-Comprehensions.ipynb
         - notebooks/M03_ControlStructures/M03-04-NestedComprehensions.ipynb
-        - exercises/M03-Exercises.qmd
+        - notebooks/M03_ControlStructures/M03-Exercises.qmd
         
-    - part: modules/m04/m04-intro.qmd # Python Functions
+    - part: notebooks/M04_PythonFunctions/m04-intro.qmd # 3 Python Functions
       chapters: 
         - notebooks/M04_PythonFunctions/M04-01-Functions.ipynb
         - notebooks/M04_PythonFunctions/M04-02-Importing.ipynb
@@ -45,9 +46,9 @@ book:
         - notebooks/M04_PythonFunctions/M04-04-RecursiveFunctions.ipynb
         - notebooks/M04_PythonFunctions/M04-05-Scope.ipynb
         - notebooks/M04_PythonFunctions/M04-06-FunctionsCallingFunctions.ipynb
-        - exercises/M04-Exercises.qmd
+        - notebooks/M04_PythonFunctions/M04-Exercises.qmd
         
-    - part: modules/m05/m05-intro.qmd # Python NumPy
+    - part: notebooks/M05_NumPy/m05-intro.qmd # 4 Python NumPy
       chapters:
         - notebooks/M05_NumPy/M05-00-Time.ipynb
         - notebooks/M05_NumPy/M05-01-BasicFileIO.ipynb
@@ -55,9 +56,9 @@ book:
         - notebooks/M05_NumPy/M05-03-NumPyIndexing.ipynb
         - notebooks/M05_NumPy/M05-04-NumPyOperating.ipynb
         - notebooks/M05_NumPy/M05-05-NumPyFunctions.ipynb
-        - exercises/M05-Exercises.qmd
+        - notebooks/M05_NumPy/M05-Exercises.qmd
         
-    - part: modules/m06/m06-intro.qmd # Python Pandas
+    - part: notebooks/M06_Pandas/m06-intro.qmd # 5 Python Pandas
       chapters:
         - notebooks/M06_Pandas/M06-00-IntroducingPandas.ipynb
         - notebooks/M06_Pandas/M06-01-ExploringPandas.ipynb
@@ -65,9 +66,9 @@ book:
         - notebooks/M06_Pandas/M06-03-NarrowWide.ipynb
         - notebooks/M06_Pandas/M06-04-MethodChaining.ipynb
         - notebooks/M06_Pandas/M06-05-Pandas-and-SQL.ipynb
-        - exercises/M06-Exercises.qmd
+        - notebooks/M06_Pandas/M06-Exercises.qmd
         
-    - part: modules/m10/m10-intro.qmd # R Introduction
+    - part: notebooks/M10_RBasics/m10-intro.qmd # 6 R Introduction
       chapters: 
         - notebooks/M10_RBasics/M10-01-Intro.ipynb
         - notebooks/M10_RBasics/M10-02-DataTypes.ipynb
@@ -75,22 +76,22 @@ book:
         - notebooks/M10_RBasics/M10-04-DataFrames.ipynb
         - notebooks/M10_RBasics/M10-05-ControlStructures.ipynb
         - notebooks/M10_RBasics/M10-06-Functions.ipynb
-        - exercises/M10-Exercises.qmd
+        - notebooks/M10_RBasics/M10-Exercises.qmd
         
-    - part: modules/m11/m11-intro.qmd # R Dplyr
+    - part: notebooks/M11_RDplyr/m11-intro.qmd # 7 R Dplyr
       chapters: 
         - notebooks/M11_RDplyr/M11-01-Tibbles.ipynb
         - notebooks/M11_RDplyr/M11-02-Dplyr.ipynb
-        - exercises/M11-Exercises.qmd
+        - notebooks/M11_RDplyr/M11-Exercises.qmd
 
-    - part: modules/m12/m12-intro.qmd # R Visualization
+    - part: notebooks/M12_RViz/m12-intro.qmd # 8 R Visualization
       chapters:
         - notebooks/M12_RViz/M12-00-AGrammarOfGraphics.ipynb      
         - notebooks/M12_RViz/M12-01-GettingStartedWithGGPlot.ipynb
         - notebooks/M12_RViz/M12-02-RMarkdown.ipynb
         - notebooks/M12_RViz/M12-03-Qplot-and-Plotly.ipynb
         - notebooks/M12_RViz/M12-04-Plotnine.ipynb
-        - exercises/M12-Exercises.qmd
+        - notebooks/M12_RViz/M12-Exercises.qmd
           
   sidebar:
     style: docked
