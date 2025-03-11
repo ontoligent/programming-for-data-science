@@ -67,29 +67,6 @@ book:
         - notebooks/M06_Pandas/M06-05-Pandas-and-SQL.ipynb
         - pages/M06-Exercises.qmd
         
-    # - part: modules/m07/m07-intro.qmd # "07 Classes"
-    #   chapters: 
-    #     - topics/what-is-oop.qmd      
-    #     - notebooks/M07_PythonClasses/M07-01-Classes.ipynb
-    #     - notebooks/M07_PythonClasses/M07-02-ClassesExample.ipynb
-    #     - notebooks/M07_PythonClasses/M07-03-MoreOnClasses.ipynb
-    #     - notebooks/M07_PythonClasses/M07-04-ClassAttributeWeirdness.ipynb
-    #     - notebooks/M07_PythonClasses/M07-05-Example.ipynb
-        
-    # - part: modules/m08/m08-intro.qmd # "08 Testing"
-    #   chapters:
-    #     # - modules/m08/m08-testing-and-verification.qmd
-    #     - notebooks/M08_PythonTesting/M08-00-TestingAndVerification.ipynb
-    #     - notebooks/M08_PythonTesting/M08-01-ExceptionHandling.ipynb 
-    #     - notebooks/M08_PythonTesting/M08-02-PythonUnitTesting.ipynb
-        
-    # - part: modules/m09/m09-intro.qmd # "09 Modules"
-    #   chapters: 
-    #     - notebooks/M09_PythonModules/M09-01-ModulesAndPackages.ipynb
-    #     - notebooks/M09_PythonModules/M09-02-Namespaces.ipynb
-    #     - notebooks/M09_PythonModules/M09-03-MakingYourOwn.ipynb
-        
-        # - modules/m09/m09-review.qmd
     - part: modules/m10/m10-intro.qmd # R Introduction
       chapters: 
         - notebooks/M10_RBasics/M10-01-Intro.ipynb
@@ -115,16 +92,17 @@ book:
         - notebooks/M12_RViz/M12-04-Plotnine.ipynb
         - pages/M12-Exercises.qmd
         
-#     - part: modules/m13/m13-intro.qmd # "13 Agile"
-#       chapters: 
-#         - notebooks/M13_Agile/M13-01-ProjectManagement.ipynb
-#         - notebooks/M13_Agile/M13-02-AgileDevelopment.ipynb
-#         - notebooks/M13_Agile/M13-03-UserStories.ipynb
     
-#     - part: "Appendices"
-#       chapters: 
-#         - topics/oreilly-accounts.qmd
-#         # - topics/refreshing-the-course-repo.qmd
+    - part: "Appendices"
+      chapters: 
+          - exercises/M02-Exercises.slides.html
+          - exercises/M03-Exercises.slides.html
+          - exercises/M04-Exercises.slides.html
+          - exercises/M05-Exercises.slides.html
+          - exercises/M06-Exercises.slides.html
+          - exercises/M10-Exercises.slides.html
+          - exercises/M11-Exercises.slides.html
+          - exercises/M12-Exercises.slides.html
   
   sidebar:
     style: docked
