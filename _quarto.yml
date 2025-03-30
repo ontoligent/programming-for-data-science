@@ -16,8 +16,8 @@ book:
   repo-url: "https://github.com/ontoligent/programming-for-data-science"
   chapters:
     - index.qmd # 00 Welcome
-    - notebooks/M00/syllabus.qmd 
-    - part: notebooks/M02_BasicPython/m02-intro.qmd # 1 Python Introduction
+    # - notebooks/M00/syllabus.qmd 
+    - part: notebooks/M02_BasicPython/m02-intro.qmd # 1 | Python Introduction
       chapters:
         - notebooks/M02_BasicPython/on-data.qmd
         - notebooks/M02_BasicPython/python-object-types.qmd
@@ -29,7 +29,7 @@ book:
         - notebooks/M02_BasicPython/M02-06-AsideOnImmutables.ipynb
         - notebooks/M02_BasicPython/M02-Exercises.qmd
         
-    - part: notebooks/M03_ControlStructures/m03-intro.qmd # 2 Python Control Structures
+    - part: notebooks/M03_ControlStructures/m03-intro.qmd # 2 | Python Control Structures
       chapters:
         - notebooks/M03_ControlStructures/vals-vars-expressions-statements.qmd
         - notebooks/M03_ControlStructures/M03-01-ControlStructures.ipynb
@@ -38,7 +38,7 @@ book:
         - notebooks/M03_ControlStructures/M03-04-NestedComprehensions.ipynb
         - notebooks/M03_ControlStructures/M03-Exercises.qmd
         
-    - part: notebooks/M04_PythonFunctions/m04-intro.qmd # 3 Python Functions
+    - part: notebooks/M04_PythonFunctions/m04-intro.qmd # 3 | Python Functions
       chapters: 
         - notebooks/M04_PythonFunctions/M04-01-Functions.ipynb
         - notebooks/M04_PythonFunctions/M04-02-Importing.ipynb
@@ -48,7 +48,7 @@ book:
         - notebooks/M04_PythonFunctions/M04-06-FunctionsCallingFunctions.ipynb
         - notebooks/M04_PythonFunctions/M04-Exercises.qmd
         
-    - part: notebooks/M05_NumPy/m05-intro.qmd # 4 Python NumPy
+    - part: notebooks/M05_NumPy/m05-intro.qmd # 4 | Python NumPy
       chapters:
         - notebooks/M05_NumPy/M05-00-Time.ipynb
         - notebooks/M05_NumPy/M05-01-BasicFileIO.ipynb
@@ -58,7 +58,7 @@ book:
         - notebooks/M05_NumPy/M05-05-NumPyFunctions.ipynb
         - notebooks/M05_NumPy/M05-Exercises.qmd
         
-    - part: notebooks/M06_Pandas/m06-intro.qmd # 5 Python Pandas
+    - part: notebooks/M06_Pandas/m06-intro.qmd # 5 | Python Pandas
       chapters:
         - notebooks/M06_Pandas/M06-00-IntroducingPandas.ipynb
         - notebooks/M06_Pandas/M06-01-ExploringPandas.ipynb
@@ -68,7 +68,7 @@ book:
         - notebooks/M06_Pandas/M06-05-Pandas-and-SQL.ipynb
         - notebooks/M06_Pandas/M06-Exercises.qmd
         
-    - part: notebooks/M10_RBasics/m10-intro.qmd # 6 R Introduction
+    - part: notebooks/M10_RBasics/m10-intro.qmd # 6 | R Introduction
       chapters: 
         - notebooks/M10_RBasics/M10-01-Intro.ipynb
         - notebooks/M10_RBasics/M10-02-DataTypes.ipynb
@@ -78,13 +78,13 @@ book:
         - notebooks/M10_RBasics/M10-06-Functions.ipynb
         - notebooks/M10_RBasics/M10-Exercises.qmd
         
-    - part: notebooks/M11_RDplyr/m11-intro.qmd # 7 R Dplyr
+    - part: notebooks/M11_RDplyr/m11-intro.qmd # 7 | R Dplyr
       chapters: 
         - notebooks/M11_RDplyr/M11-01-Tibbles.ipynb
         - notebooks/M11_RDplyr/M11-02-Dplyr.ipynb
         - notebooks/M11_RDplyr/M11-Exercises.qmd
 
-    - part: notebooks/M12_RViz/m12-intro.qmd # 8 R Visualization
+    - part: notebooks/M12_RViz/m12-intro.qmd # 8 | R Visualization
       chapters:
         - notebooks/M12_RViz/M12-00-AGrammarOfGraphics.ipynb      
         - notebooks/M12_RViz/M12-01-GettingStartedWithGGPlot.ipynb
@@ -92,6 +92,11 @@ book:
         - notebooks/M12_RViz/M12-03-Qplot-and-Plotly.ipynb
         - notebooks/M12_RViz/M12-04-Plotnine.ipynb
         - notebooks/M12_RViz/M12-Exercises.qmd
+
+  page-footer:
+    left: Copyright &copy; 2025 by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://orcid.org/0000-0002-7218-0114">Rafael C. Alvarado</a> 
+    right: | 
+     <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
           
   sidebar:
     style: docked
@@ -100,7 +105,6 @@ book:
     background: light
     collapse-level: 1
     subtitle: Summer 2024
-
 
 format:
   html:
