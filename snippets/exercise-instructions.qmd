@@ -1,10 +1,10 @@
-Click on the link below to open a set of practice exerices for this module.
+Click on the link below to open a set of exerices for this module.
 
 These exercises are designed to give you practice implementing the ideas covered.
 
 These exercises are in the form of a slide show that functions as a set of prompts.
 
-To peform the exercises, advance to a slide with a promopt and attempt to perform the task asked.
+To peform the exercises, advance to a slide with a prompt and attempt to perform the task asked.
 
 When you are ready to see the solution, navigate to the slide below.
 
