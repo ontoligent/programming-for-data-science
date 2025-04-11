@@ -2,7 +2,6 @@
 
 ## Topics
 
--   Running Python code
 -   Python's basic data types
 -   Python's primary operators associated with each data type
 -   Python's built-in data structures
