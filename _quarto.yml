@@ -17,6 +17,14 @@ book:
   chapters:
     - index.qmd # 00 Welcome
     # - notebooks/M00/syllabus.qmd 
+    - part: "Getting Started"
+      chapters:
+        - notebooks/M01_GettingStarted/M01-00-Intro.qmd
+      #   - notebooks/M01_GettingStarted/M01-01-InstallingPython.ipynb
+      #   - notebooks/M01_GettingStarted/M01-02-RunningPython.ipynb
+      #   - notebooks/M01_GettingStarted/M01-03-InstallingVSCode.ipynb
+      #   - notebooks/M01_GettingStarted/M01-03-InstallingVSCode.ipynb
+      #   - notebooks/M01_GettingStarted/M01-05-UsingJupyterNotebooks.ipynb
     - part: notebooks/M02_BasicPython/m02-intro.qmd # 1 | Python Introduction
       chapters:
         - notebooks/M02_BasicPython/on-data.qmd
