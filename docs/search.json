@@ -3787,7 +3787,7 @@
     "href": "notebooks/M01_GettingStarted/M01-00-Intro.html#choices-choices",
     "title": "Setting Up Your Programming Environment",
     "section": "",
-    "text": "$ python hello_world.py\n\nHello, World!\n\n\n\n\n\n\n\n\nImportant\n\n\n\nAlthough we do not provide specifications for your entire programming environment, we do expect that you have installed a version of Python &gt;= 3.9 and R &gt;= 4.3.",
+    "text": "$ python hello_world.py\n\nHello, World!\n\n\n\n\n\n\n\n\nImportant\n\n\n\nAlthough we do not provide specifications for your entire programming environment, we do expect that you have installed a version of Python \\(&gt;=\\) 3.9 and R \\(&gt;=\\) 4.3.",
     "crumbs": [
       "Getting Started",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setting Up Your Programming Environment</span>"
