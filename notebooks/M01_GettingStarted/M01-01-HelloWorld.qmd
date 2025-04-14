@@ -1,0 +1,24 @@
+# Hello, World!
+
+When learning a new programming language, it is traditional that you write a super simple program that just prints out the message "Hello, World!".
+
+Although simple and a little goofy, this simple rite of passage effectively moves your from someone who has never written an executable script in the language to someone who has. In the process, you also learn how to use the tools you will need to use throughout your career as a programmer — the interpreter, the editor, and the execution environment.
+
+The following two videos guide you through this crucial ritual for Python and R respectively.
+
+## Anaconda Cloud for Python
+
+This video walks you through the process of logging onto Anaconda Cloud to create your first Python file for this course.
+
+It introduces you to Anaconda Cloud, Jupyter Lab, plain text Python files, Jupyter Notebooks, and the terminal.
+
+<iframe id="kmsembed-1_jcsbr8db" width="800" height="510" src="https://kaltura-prod.its.virginia.edu/embed/secure/iframe/entryId/1_jcsbr8db/uiConfId/55951482/pbc/365587152/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="PFDS M01 Python Hello, World! ">
+</iframe>
+
+## Posit Cloud for R
+
+This video walks you through the process of logging onto Posit Cloud to create your first R file for this course.
+
+It introduces you to Posit Cloud, R Studio, plain text R files, RMarkdown notebooks, and the terminal.
+
+<iframe id="kmsembed-1_ss5abra5" width="800" height="510" src="https://kaltura-prod.its.virginia.edu/embed/secure/iframe/entryId/1_ss5abra5/uiConfId/55951482/pbc/365587152/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="PFDS M01 R Hello, World!"></iframe>
