@@ -1,8 +1,8 @@
 # Hello, World!
 
-When learning a new programming language, it is traditional that you write a super simple program that just prints out the message "Hello, World!".
+When learning a new programming language, it is traditional that you write a super simple program that just prints out the message "Hello, World!"
 
-Although simple and a little goofy, this simple rite of passage effectively moves your from someone who has never written an executable script in the language to someone who has. In the process, you also learn how to use the tools you will need to use throughout your career as a programmer — the interpreter, the editor, and the execution environment.
+Although simple and a little goofy, this simple rite of passage effectively moves you from someone who has never written an executable script in the language to someone who has. In the process, you also learn how to use the tools you will need to use throughout your career as a programmer — the interpreter, the editor, and the execution environment.
 
 The following two videos guide you through this crucial ritual for Python and R respectively.
 
