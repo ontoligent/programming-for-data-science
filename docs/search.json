@@ -4027,7 +4027,7 @@
     "href": "notebooks/M02_BasicPython/m02-intro.html#suggested-readings",
     "title": "Python Introduction",
     "section": "Suggested Readings",
-    "text": "Suggested Readings\n\nKatz and Katz 2019, Section 1, Preparing the Workspace\nLutz, Learning Python, Part I: Getting Started, Chapter 2\nLutz, Learning Python, Part I: Getting Started, Chapter 3\nLutz, Learning Python, Part II: Types and Operations, Chapters 4–9\nKatz and Katz 2019, Section 1, First Steps in Coding - Variables and Data Types\nBuilt-in Types (Official)\nPython Data Types (GFG)\nPython Operators (W3S)\nImmutable vs Mutable Data Types in Python (Medium)",
+    "text": "Suggested Readings\n\nKatz and Katz 2019, Section 1, Preparing the Workspace\nLutz, Learning Python, Part I: Getting Started, Chapter 2\nLutz, Learning Python, Part I: Getting Started, Chapter 3\nLutz, Learning Python, Part II: Types and Operations, Chapters 4–9\nKatz and Katz 2019, Section 1, First Steps in Coding - Variables and Data Types\nBuilt-in Types (Official)\nPython Data Types (GFG)\nPython Operators (W3S)\nMutable vs Immutable Objects in Python (GFG)",
     "crumbs": [
       "Python Introduction"
     ]

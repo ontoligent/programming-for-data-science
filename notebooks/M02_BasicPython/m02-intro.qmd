@@ -16,7 +16,8 @@
 -   [Built-in Types (Official)](https://docs.python.org/3/library/stdtypes.html)
 -   [Python Data Types (GFG)](https://www.geeksforgeeks.org/python-data-types/)
 -   [Python Operators (W3S)](https://www.w3schools.com/python/python_operators.asp)
--   [Immutable vs Mutable Data Types in Python (Medium)](https://towardsdatascience.com/immutable-vs-mutable-data-types-in-python-e8a9a6fcfbdc)
+-   [Mutable vs Immutable Objects in Python (GFG)](https://www.geeksforgeeks.org/mutable-vs-immutable-objects-in-python/)
+<!-- -   [Immutable vs Mutable Data Types in Python (Medium)](https://towardsdatascience.com/immutable-vs-mutable-data-types-in-python-e8a9a6fcfbdc) -->
 
 ## Videos 
 
