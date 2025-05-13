@@ -201,6 +201,7 @@ C-        70 - 72
 Many of our readings will draw from these texts. We will try to stick with some core texts to provide continuity. These will often be supplemented by shorter sources of information drawn from the web.
 
 - Lutz, 2013, **[Learning Python](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/)**, 5th Edition, O'Reilly Media.
+  - The [Sixth Edition](https://learning.oreilly.com/library/view/learning-python-6th/9781098171292/) of this text is now out. Textbook readings will be updated accordingly. If you have the patience and where possible, please refer to the new version. A lot has changed for Python between these two editions!
 - McKinney, 2017, **[Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython](https://learning.oreilly.com/library/view/python-for-data/9781491957653/?ar=)**, 2nd Edition. O'Reilly Media.
 - Wickham and Grolemund, 2017, **[R for Data Science: Import, Tidy, Transform, Visualize, and Model Data](http://r4ds.had.co.nz)**, 1st Edition. O'Reilly Media.
 
