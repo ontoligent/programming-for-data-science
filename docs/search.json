@@ -4027,7 +4027,7 @@
     "href": "notebooks/M02_BasicPython/m02-intro.html#suggested-readings",
     "title": "Python Introduction",
     "section": "Suggested Readings",
-    "text": "Suggested Readings\n\nKatz and Katz 2019, Section 1, Preparing the Workspace\nLutz, Learning Python, Part I: Getting Started, Chapter 2\nLutz, Learning Python, Part I: Getting Started, Chapter 3\nLutz, Learning Python, Part II: Types and Operations, Chapters 4–9\nKatz and Katz 2019, Section 1, First Steps in Coding - Variables and Data Types\nBuilt-in Types (Official)\nPython Data Types (GFG)\nPython Operators (W3S)\nMutable vs Immutable Objects in Python (GFG)",
+    "text": "Suggested Readings\n\nKatz and Katz 2019, Section 1, Preparing the Workspace\nLutz, Learning Python, Part I: Getting Started, Chapter 2\nLutz, Learning Python, Part I: Getting Started, Chapter 3\nLutz, Learning Python, Part II: Objects and Operations, Chapters 4–9\nKatz and Katz 2019, Section 1, First Steps in Coding - Variables and Data Types\nBuilt-in Types (Official)\nPython Data Types (GFG)\nPython Operators (W3S)\nMutable vs Immutable Objects in Python (GFG)",
     "crumbs": [
       "Python Introduction"
     ]
@@ -4067,7 +4067,7 @@
     "href": "notebooks/M03_ControlStructures/m03-intro.html#suggested-readings",
     "title": "Python Control Structures",
     "section": "Suggested Readings",
-    "text": "Suggested Readings\n\nLutz, 2019, Part III, Chapter 10. Introducing Python Statements\nLutz, 2019, Part III, Chapter 11. Assignments, Expressions, and Prints\n\nRead only up to and including “The Python 3.X print Function.”\n\nLutz, 2019, Part III, Chapter 12. if Tests and Syntax Rules\nLutz, 2019, Part III, Chapter 13. while and for Loops\nLutz, 2019, Part III, Chapter 14. Iterations and Comprehensions\nLutz, 2019, Part III, Chapter 15: The Documentations Interlude\nVariables, Expressions, Statements, Types (Python Notes)\nMore Control Flow Tools (Python Docs)\nIf … Then (W3S)\nIterators (GFG)",
+    "text": "Suggested Readings\n\nLutz, 2019, Part III, Chapter 10. Introducing Python Statements\nLutz, 2019, Part III, Chapter 11. Assignments, Expressions, and Prints\nLutz, 2019, Part III, Chapter 12. if and match Selection\nLutz, 2019, Part III, Chapter 13. while and for Loops\nLutz, 2019, Part III, Chapter 14. Iterations and Comprehensions\nLutz, 2019, Part III, Chapter 15: The Documentations Interlude\nVariables, Expressions, Statements, Types (Python Notes)\nMore Control Flow Tools (Python Docs)\nIf … Then (W3S)\nIterators (GFG)",
     "crumbs": [
       "Python Control Structures"
     ]
@@ -4107,7 +4107,7 @@
     "href": "notebooks/M04_PythonFunctions/m04-intro.html#suggested-readings",
     "title": "Python Functions",
     "section": "Suggested Readings",
-    "text": "Suggested Readings\n\nLutz 2019, Part IV, Chapter 16: Function Basics\nLutz 2019, Part IV, Chapter 17: Scopes\n\nNon-local is for advanced users.\n\nLutz 2019, Part IV, Chapter 18. Arguments\nLutz 2019, Part IV, Chapter 19: Advanced Function Topics\nMcKinney, 2023, Python for Data Analysis, “3.2: Functions”\nFunctions (W3S)\nGlobal and Local Variables (GFG)\nLambda Functions (Real Python)",
+    "text": "Suggested Readings\n\nLutz 2019, Part IV, Chapter 16: Function Basics\nLutz 2019, Part IV, Chapter 17: Scopes\n\nNon-local is for advanced users.\n\nLutz 2019, Part IV, Chapter 18. Arguments\nLutz 2019, Part IV, Chapter 19: Functions Odds and Ends\nMcKinney, 2023, Python for Data Analysis, “3.2: Functions”\nFunctions (W3S)\nGlobal and Local Variables (GFG)\nLambda Functions (Real Python)",
     "crumbs": [
       "Python Functions"
     ]
