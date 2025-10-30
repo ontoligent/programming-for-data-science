@@ -1,0 +1,10 @@
+These are the strings that have to be replaced in the kaltura URLs to use the new viewer:
+
+For the machine name in the URL:
+
+* 343772-1.kaf.kaltura.com -> kaltura-prod.its.virginia.edu
+
+In the path:
+
+* uiConfId/50243942  -> uiConfId/55951482
+* pbc/353035032 -> pbc/365587152
