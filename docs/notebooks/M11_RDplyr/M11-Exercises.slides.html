@@ -7482,38 +7482,16 @@ main {
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=999780f6-c755-4015-b6d9-fdcbf59a44b4">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=999780f6-c755-4015-b6d9-fdcbf59a44b4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>── <span class="ansi-bold">Attaching core tidyverse packages</span> ──────────────────────── tidyverse 2.0.0 ──
-<span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">dplyr    </span> 1.1.3     <span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">readr    </span> 2.1.4
-<span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">forcats  </span> 1.0.0     <span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">stringr  </span> 1.5.0
-<span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">ggplot2  </span> 3.4.4     <span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">tibble   </span> 3.2.1
-<span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">lubridate</span> 1.9.3     <span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">tidyr    </span> 1.3.0
-<span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">purrr    </span> 1.0.2     
-── <span class="ansi-bold">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──
-<span class="ansi-red-fg">✖</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">filter()</span> masks <span class="ansi-blue-fg">stats</span>::filter()
-<span class="ansi-red-fg">✖</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">lag()</span>    masks <span class="ansi-blue-fg">stats</span>::lag()
-<span class="ansi-cyan-fg">ℹ</span> Use the conflicted package (<span class="ansi-blue-fg">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
-</pre>
 </div>
 </div>
 </div>
@@ -7526,27 +7504,25 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Exercise-2">Exercise 2<a class="anchor-link" href="#Exercise-2">¶</a></h1><p>We create a super simple tibble to use in the exercises.</p>
-<p>You can find a text file called <code>exercise-data.txt</code> in the directory of today's module (<code>M11</code>).</p>
-<p>Just cut and paste it into you code.</p>
+<p>Cut and paste the following code into your notebook:</p>
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d221c8f5-6481-4ff3-ad6c-cc9a54a398b0">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8b0c8f31">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">tibble</span><span class="p">(</span>
-<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"mike"</span><span class="p">,</span><span class="w"> </span><span class="s">"carol"</span><span class="p">,</span><span class="w"> </span><span class="s">"greg"</span><span class="p">,</span><span class="w"> </span><span class="s">"marcia"</span><span class="p">,</span><span class="w"> </span><span class="s">"peter"</span><span class="p">,</span><span class="w"> </span><span class="s">"jan"</span><span class="p">,</span><span class="w"> </span><span class="s">"bobby"</span><span class="p">,</span><span class="w"> </span><span class="s">"cindy"</span><span class="p">,</span><span class="w"> </span><span class="s">"alice"</span><span class="p">),</span>
-<span class="w">    </span><span class="n">school</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"south"</span><span class="p">,</span><span class="w"> </span><span class="s">"south"</span><span class="p">,</span><span class="w"> </span><span class="s">"south"</span><span class="p">,</span><span class="w"> </span><span class="s">"south"</span><span class="p">,</span><span class="w"> </span><span class="s">"north"</span><span class="p">,</span><span class="w"> </span><span class="s">"north"</span><span class="p">,</span><span class="w"> </span><span class="s">"north"</span><span class="p">,</span><span class="w"> </span><span class="s">"south"</span><span class="p">,</span><span class="w"> </span><span class="s">"south"</span><span class="p">),</span>
-<span class="w">    </span><span class="n">teacher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"johnson"</span><span class="p">,</span><span class="w"> </span><span class="s">"johnson"</span><span class="p">,</span><span class="w"> </span><span class="s">"johnson"</span><span class="p">,</span><span class="w"> </span><span class="s">"johnson"</span><span class="p">,</span><span class="w">  </span><span class="s">"smith"</span><span class="p">,</span><span class="w"> </span><span class="s">"smith"</span><span class="p">,</span><span class="w"> </span><span class="s">"smith"</span><span class="p">,</span><span class="w"> </span><span class="s">"perry"</span><span class="p">,</span><span class="w"> </span><span class="s">"perry"</span><span class="p">),</span>
-<span class="w">    </span><span class="n">sex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"male"</span><span class="p">,</span><span class="w"> </span><span class="s">"female"</span><span class="p">,</span><span class="w"> </span><span class="s">"male"</span><span class="p">,</span><span class="w"> </span><span class="s">"female"</span><span class="p">,</span><span class="w"> </span><span class="s">"male"</span><span class="p">,</span><span class="w"> </span><span class="s">"female"</span><span class="p">,</span><span class="w"> </span><span class="s">"male"</span><span class="p">,</span><span class="w"> </span><span class="s">"female"</span><span class="p">,</span><span class="w"> </span><span class="s">"female"</span><span class="p">),</span>
-<span class="w">    </span><span class="n">math_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">),</span>
-<span class="w">    </span><span class="n">reading_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">&lt;-</span> <span class="n">tibble</span><span class="p">(</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">"mike"</span><span class="p">,</span> <span class="s2">"carol"</span><span class="p">,</span> <span class="s2">"greg"</span><span class="p">,</span> <span class="s2">"marcia"</span><span class="p">,</span> <span class="s2">"peter"</span><span class="p">,</span> <span class="s2">"jan"</span><span class="p">,</span> <span class="s2">"bobby"</span><span class="p">,</span> <span class="s2">"cindy"</span><span class="p">,</span> <span class="s2">"alice"</span><span class="p">),</span>
+    <span class="n">school</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">"south"</span><span class="p">,</span> <span class="s2">"south"</span><span class="p">,</span> <span class="s2">"south"</span><span class="p">,</span> <span class="s2">"south"</span><span class="p">,</span> <span class="s2">"north"</span><span class="p">,</span> <span class="s2">"north"</span><span class="p">,</span> <span class="s2">"north"</span><span class="p">,</span> <span class="s2">"south"</span><span class="p">,</span> <span class="s2">"south"</span><span class="p">),</span>
+    <span class="n">teacher</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">"johnson"</span><span class="p">,</span> <span class="s2">"johnson"</span><span class="p">,</span> <span class="s2">"johnson"</span><span class="p">,</span> <span class="s2">"johnson"</span><span class="p">,</span>  <span class="s2">"smith"</span><span class="p">,</span> <span class="s2">"smith"</span><span class="p">,</span> <span class="s2">"smith"</span><span class="p">,</span> <span class="s2">"perry"</span><span class="p">,</span> <span class="s2">"perry"</span><span class="p">),</span>
+    <span class="n">sex</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">"male"</span><span class="p">,</span> <span class="s2">"female"</span><span class="p">,</span> <span class="s2">"male"</span><span class="p">,</span> <span class="s2">"female"</span><span class="p">,</span> <span class="s2">"male"</span><span class="p">,</span> <span class="s2">"female"</span><span class="p">,</span> <span class="s2">"male"</span><span class="p">,</span> <span class="s2">"female"</span><span class="p">,</span> <span class="s2">"female"</span><span class="p">),</span>
+    <span class="n">math_score</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+    <span class="n">reading_score</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -7569,10 +7545,10 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span>
 </pre></div>
 </div>
 </div>
@@ -7612,10 +7588,10 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7668,11 +7644,11 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">slice</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="nb">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7717,11 +7693,11 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores_small</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">slice</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores_small</span> <span class="o">&lt;-</span> <span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="nb">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7743,10 +7719,10 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores_small</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores_small</span>
 </pre></div>
 </div>
 </div>
@@ -7791,10 +7767,10 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> <span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7839,10 +7815,10 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [59]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,]</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,]</span>
 </pre></div>
 </div>
 </div>
@@ -7899,11 +7875,11 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [60]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">arrange</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -7965,11 +7941,11 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [63]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">arrange</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">arrange</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8020,11 +7996,11 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [64]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">arrange</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">arrange</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8075,11 +8051,11 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [67]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">    </span><span class="nf">arrange</span><span class="p">(</span><span class="n">school</span><span class="p">,</span><span class="w"> </span><span class="n">teacher</span><span class="p">,</span><span class="w"> </span><span class="n">sex</span><span class="p">,</span><span class="w"> </span><span class="n">math_score</span><span class="p">,</span><span class="w"> </span><span class="n">reading_score</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span>
+    <span class="n">arrange</span><span class="p">(</span><span class="n">school</span><span class="p">,</span> <span class="n">teacher</span><span class="p">,</span> <span class="n">sex</span><span class="p">,</span> <span class="n">math_score</span><span class="p">,</span> <span class="n">reading_score</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8141,11 +8117,11 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [68]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">math_score</span><span class="p">,</span><span class="w"> </span><span class="n">reading_score</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">select</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">math_score</span><span class="p">,</span> <span class="n">reading_score</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8196,11 +8172,11 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [69]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="n">sex</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">select</span><span class="p">(</span><span class="o">-</span><span class="n">sex</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8252,11 +8228,11 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [70]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="n">sex</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">reading_score</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">select</span><span class="p">(</span><span class="o">-</span><span class="n">sex</span><span class="p">,</span> <span class="o">-</span><span class="n">reading_score</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8308,11 +8284,11 @@ first column.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [71]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="n">sex</span><span class="p">,</span><span class="w"> </span><span class="nf">everything</span><span class="p">())</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">select</span><span class="p">(</span><span class="n">sex</span><span class="p">,</span> <span class="n">everything</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -8385,11 +8361,11 @@ first column.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">sex</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"male"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">school</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"south"</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="nb">filter</span><span class="p">(</span><span class="n">sex</span> <span class="o">==</span> <span class="s2">"male"</span> <span class="o">&amp;</span> <span class="n">school</span> <span class="o">==</span> <span class="s2">"south"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8434,11 +8410,11 @@ first column.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">sex</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"male"</span><span class="p">,</span><span class="w"> </span><span class="n">school</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"south"</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="nb">filter</span><span class="p">(</span><span class="n">sex</span> <span class="o">==</span> <span class="s2">"male"</span><span class="p">,</span> <span class="n">school</span> <span class="o">==</span> <span class="s2">"south"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8482,11 +8458,11 @@ first column.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [72]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">math_score</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span>
+    <span class="nb">filter</span><span class="p">(</span><span class="n">math_score</span> <span class="o">&gt;</span> <span class="n">mean</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -8535,11 +8511,11 @@ score of $4$ or more and a reading score of $3$ or more.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [73]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">math_score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">reading_score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span>
+    <span class="nb">filter</span><span class="p">(</span><span class="n">math_score</span> <span class="o">&gt;=</span> <span class="mi">4</span> <span class="o">&amp;</span> <span class="n">reading_score</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8585,11 +8561,11 @@ score of $4$ or more and a reading score of $3$ or more.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [74]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">math_score</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">reading_score</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span>
+    <span class="nb">filter</span><span class="p">(</span><span class="n">math_score</span> <span class="o">&lt;=</span> <span class="mi">3</span> <span class="o">|</span> <span class="n">reading_score</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8636,11 +8612,11 @@ score of $4$ or more and a reading score of $3$ or more.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [76]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">reading_score</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">reading_score</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">reading_score</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span>
+    <span class="nb">filter</span><span class="p">(</span><span class="n">reading_score</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">|</span> <span class="n">reading_score</span> <span class="o">==</span> <span class="mi">3</span> <span class="o">|</span> <span class="n">reading_score</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8675,11 +8651,11 @@ score of $4$ or more and a reading score of $3$ or more.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [77]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">reading_score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">reading_score</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span>
+    <span class="nb">filter</span><span class="p">(</span><span class="n">reading_score</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="o">&amp;</span> <span class="n">reading_score</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8714,11 +8690,11 @@ score of $4$ or more and a reading score of $3$ or more.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [78]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">reading_score</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="m">2</span><span class="o">:</span><span class="m">4</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span>
+    <span class="nb">filter</span><span class="p">(</span><span class="n">reading_score</span> <span class="o">%</span><span class="k">in</span>% 2:4)
 </pre></div>
 </div>
 </div>
@@ -8766,10 +8742,10 @@ of the help file to see useful examples.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [79]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="c1"># ?substr</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ?substr</span>
 </pre></div>
 </div>
 </div>
@@ -8780,11 +8756,11 @@ of the help file to see useful examples.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [80]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="nf">substr</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">'m'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span>
+    <span class="nb">filter</span><span class="p">(</span><span class="n">substr</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'m'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8839,12 +8815,12 @@ of the help file to see useful examples.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [81]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="nf">max</span><span class="p">(</span><span class="n">math_score</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">group_by</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="nb">filter</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">math_score</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8902,12 +8878,12 @@ of the help file to see useful examples.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [91]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="nf">mean</span><span class="p">(</span><span class="n">math_score</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span>
+    <span class="n">group_by</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nb">filter</span><span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">math_score</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8965,14 +8941,14 @@ of the help file to see useful examples.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [94]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span>
-<span class="w">      </span><span class="n">math_score</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">math_score</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span>
-<span class="w">      </span><span class="n">reading_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reading_score</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">10</span>
-<span class="w">  </span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">mutate</span><span class="p">(</span>
+      <span class="n">math_score</span> <span class="o">=</span>  <span class="n">math_score</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span> 
+      <span class="n">reading_score</span> <span class="o">=</span> <span class="n">reading_score</span> <span class="o">*</span> <span class="mi">10</span>
+  <span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9025,11 +9001,11 @@ average of a student's math and reading scores.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [97]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">    </span><span class="nf">mutate</span><span class="p">(</span><span class="n">math_reading_avg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">math_score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">reading_score</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+    <span class="n">mutate</span><span class="p">(</span><span class="n">math_reading_avg</span> <span class="o">=</span> <span class="p">(</span><span class="n">math_score</span> <span class="o">+</span> <span class="n">reading_score</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9081,11 +9057,11 @@ indicator of if a student got a 4 or better on their math score.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [100]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">high_math_achiever</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">math_score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">mutate</span><span class="p">(</span><span class="n">high_math_achiever</span> <span class="o">=</span> <span class="n">math_score</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9137,11 +9113,11 @@ student's reading score minus the mean of all students' reading scores.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [101]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">reading_score_centered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reading_score</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">reading_score</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">mutate</span><span class="p">(</span><span class="n">reading_score_centered</span> <span class="o">=</span> <span class="n">reading_score</span> <span class="o">-</span> <span class="n">mean</span><span class="p">(</span><span class="n">reading_score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -9206,12 +9182,12 @@ student's reading score minus the mean of all students' reading scores.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [114]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">    </span><span class="nf">mutate</span><span class="p">(</span><span class="n">science_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">math_score</span><span class="o">**</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">reading_score</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">    </span><span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">science_score</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+    <span class="n">mutate</span><span class="p">(</span><span class="n">science_score</span> <span class="o">=</span> <span class="n">math_score</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">reading_score</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="n">arrange</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="n">science_score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -9274,13 +9250,13 @@ student's reading score minus the mean of all students' reading scores.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [115]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">math_score_centered_by_sex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">math_score</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">  </span><span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">math_score_centered_by_sex</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">group_by</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="n">mutate</span><span class="p">(</span><span class="n">math_score_centered_by_sex</span> <span class="o">=</span> <span class="n">math_score</span> <span class="o">-</span> <span class="n">mean</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span> <span class="o">%&gt;%</span>
+  <span class="n">arrange</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="n">math_score_centered_by_sex</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -9354,12 +9330,12 @@ why does Mike have a higher <code>math_score_centered_by_sex</code> score?</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [117]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">math_score_centered_by_teacher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">math_score</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">group_by</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="n">mutate</span><span class="p">(</span><span class="n">math_score_centered_by_teacher</span> <span class="o">=</span> <span class="n">math_score</span> <span class="o">-</span> <span class="n">mean</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -9412,12 +9388,12 @@ of students in a teacher’s class.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [119]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">number_of_students_in_class</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">n</span><span class="p">())</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">group_by</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="n">mutate</span><span class="p">(</span><span class="n">number_of_students_in_class</span> <span class="o">=</span> <span class="n">n</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -9480,11 +9456,11 @@ all students.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [121]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">summarize</span><span class="p">(</span><span class="n">math_score_mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">summarize</span><span class="p">(</span><span class="n">math_score_mean</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -9539,11 +9515,11 @@ all students.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [127]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">summarize</span><span class="p">(</span><span class="n">math_score_mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">reading_score</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">summarize</span><span class="p">(</span><span class="n">math_score_mean</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">reading_score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -9587,11 +9563,11 @@ all students.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [128]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">summarize</span><span class="p">(</span><span class="n">both_score_mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">((</span><span class="n">math_score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">reading_score</span><span class="p">)</span><span class="o">/</span><span class="m">2</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">summarize</span><span class="p">(</span><span class="n">both_score_mean</span> <span class="o">=</span> <span class="n">mean</span><span class="p">((</span><span class="n">math_score</span> <span class="o">+</span> <span class="n">reading_score</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -9645,12 +9621,12 @@ all students.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [129]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">school</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">summarize</span><span class="p">(</span><span class="n">min_math_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">min</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">group_by</span><span class="p">(</span><span class="n">school</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="n">summarize</span><span class="p">(</span><span class="n">min_math_score</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -9694,12 +9670,12 @@ all students.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [130]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">summarize</span><span class="p">(</span><span class="n">max_math_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">group_by</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="n">summarize</span><span class="p">(</span><span class="n">max_math_score</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -9744,14 +9720,14 @@ all students.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [132]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">    </span><span class="nf">summarize</span><span class="p">(</span><span class="n">max_math</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">max_math</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">    </span><span class="nf">select</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+    <span class="n">group_by</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+    <span class="n">summarize</span><span class="p">(</span><span class="n">max_math</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span> <span class="o">%&gt;%</span>
+    <span class="nb">filter</span><span class="p">(</span><span class="n">max_math</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="n">select</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9815,12 +9791,12 @@ reading score, how many rows would the resulting data frame have?</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [135]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">  </span><span class="nf">summarize</span><span class="p">(</span><span class="n">min_reading_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">min</span><span class="p">(</span><span class="n">reading_score</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">group_by</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="n">summarize</span><span class="p">(</span><span class="n">min_reading_score</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">reading_score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -9865,14 +9841,14 @@ by sex, as well as the number of students of that sex.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [137]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [58]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">summarize</span><span class="p">(</span><span class="n">mean_reading_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">reading_score</span><span class="p">),</span><span class="w"> </span>
-<span class="w">            </span><span class="n">median_reading_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">reading_score</span><span class="p">),</span><span class="w"> </span>
-<span class="w">            </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">n</span><span class="p">())</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">group_by</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="n">summarize</span><span class="p">(</span><span class="n">mean_reading_score</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">reading_score</span><span class="p">),</span> 
+            <span class="n">median_reading_score</span> <span class="o">=</span> <span class="n">median</span><span class="p">(</span><span class="n">reading_score</span><span class="p">),</span> 
+            <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -9930,13 +9906,13 @@ credit points.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [139]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [59]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">math_score</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">math_score_ec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">math_score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">arrange</span><span class="p">(</span><span class="n">math_score_ec</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">select</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">math_score</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="n">mutate</span><span class="p">(</span><span class="n">math_score_ec</span> <span class="o">=</span> <span class="n">math_score</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="n">arrange</span><span class="p">(</span><span class="n">math_score_ec</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9989,13 +9965,13 @@ credit points.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [141]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [60]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="n">teacher</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">mean_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">math_score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">reading_score</span><span class="p">)</span><span class="o">/</span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">arrange</span><span class="p">(</span><span class="n">mean_score</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">select</span><span class="p">(</span><span class="o">-</span><span class="n">teacher</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="n">mutate</span><span class="p">(</span><span class="n">mean_score</span> <span class="o">=</span> <span class="p">(</span><span class="n">math_score</span> <span class="o">+</span> <span class="n">reading_score</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="n">arrange</span><span class="p">(</span><span class="n">mean_score</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -10047,13 +10023,13 @@ mean <code>math_score</code> by <code>sex</code>.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [143]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [61]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">teacher</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">"smith"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">summarize</span><span class="p">(</span><span class="n">mean_math_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="nb">filter</span><span class="p">(</span><span class="n">teacher</span> <span class="o">!=</span> <span class="s2">"smith"</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="n">group_by</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="n">summarize</span><span class="p">(</span><span class="n">mean_math_score</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -10098,14 +10074,14 @@ students at south school.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [144]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [62]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">sex</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"female"</span><span class="p">,</span><span class="w"> </span><span class="n">school</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"south"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">summarize</span><span class="p">(</span><span class="n">min_reading_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">min</span><span class="p">(</span><span class="n">reading_score</span><span class="p">),</span>
-<span class="w">            </span><span class="n">max_reading_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">reading_score</span><span class="p">),</span>
-<span class="w">            </span><span class="n">median_reading_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">reading_score</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="nb">filter</span><span class="p">(</span><span class="n">sex</span> <span class="o">==</span> <span class="s2">"female"</span><span class="p">,</span> <span class="n">school</span> <span class="o">==</span> <span class="s2">"south"</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="n">summarize</span><span class="p">(</span><span class="n">min_reading_score</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">reading_score</span><span class="p">),</span>
+            <span class="n">max_reading_score</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">reading_score</span><span class="p">),</span>
+            <span class="n">median_reading_score</span> <span class="o">=</span> <span class="n">median</span><span class="p">(</span><span class="n">reading_score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -10161,13 +10137,13 @@ computer efficiency standpoint?</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [157]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [63]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">school</span><span class="p">,</span><span class="w"> </span><span class="n">teacher</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">summarize</span><span class="p">(</span><span class="n">max_math_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">school</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"south"</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">group_by</span><span class="p">(</span><span class="n">school</span><span class="p">,</span> <span class="n">teacher</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="n">summarize</span><span class="p">(</span><span class="n">max_math_score</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+  <span class="nb">filter</span><span class="p">(</span><span class="n">school</span> <span class="o">==</span> <span class="s2">"south"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -10219,13 +10195,13 @@ computer efficiency standpoint?</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [146]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [64]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">school</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"south"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">summarize</span><span class="p">(</span><span class="n">max_math_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="nb">filter</span><span class="p">(</span><span class="n">school</span> <span class="o">==</span> <span class="s2">"south"</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="n">group_by</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="n">summarize</span><span class="p">(</span><span class="n">max_math_score</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">math_score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -10280,13 +10256,13 @@ computer efficiency standpoint?</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [159]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [65]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-r"><pre><span></span><span class="n">scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">school</span><span class="p">,</span><span class="w"> </span><span class="n">teacher</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">summarize</span><span class="p">(</span><span class="n">max_math_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">math_score</span><span class="p">),</span><span class="w"> </span><span class="n">.groups</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'keep'</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">school</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"south"</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">%&gt;%</span> 
+  <span class="n">group_by</span><span class="p">(</span><span class="n">school</span><span class="p">,</span> <span class="n">teacher</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="n">summarize</span><span class="p">(</span><span class="n">max_math_score</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">math_score</span><span class="p">),</span> <span class="o">.</span><span class="n">groups</span> <span class="o">=</span> <span class="s1">'keep'</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="nb">filter</span><span class="p">(</span><span class="n">school</span> <span class="o">==</span> <span class="s2">"south"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
