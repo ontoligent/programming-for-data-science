@@ -17,10 +17,14 @@ book:
   chapters:
     - index.qmd # 00 Welcome
     # - notebooks/M00/syllabus.qmd 
-    - part: "Getting Started"
+    - part: notebooks/M01_GettingStarted/m01-intro.qmd # Getting Started
       chapters:
-        - notebooks/M01_GettingStarted/M01-00-Intro.qmd
+        - notebooks/M01_GettingStarted/M01-00-set-up-env.qmd
         - notebooks/M01_GettingStarted/M01-01-HelloWorld.qmd
+        - notebooks/M01_GettingStarted/M01-02-unix.qmd
+        - notebooks/M01_GettingStarted/M01-03-setting-up-ssh.qmd
+        - notebooks/M01_GettingStarted/M01-04-git-and-github.qmd
+         
     - part: notebooks/M02_BasicPython/m02-intro.qmd # 1 | Python Introduction
       chapters:
         - notebooks/M02_BasicPython/on-data.qmd

@@ -1,0 +1,24 @@
+# Getting Started
+
+## Topics
+
+- Setting up your environment
+- Running Python (Hello World!)
+- Working from the command line
+- Setting up SSH 
+- Using Git and Github
+
+## Suggested Readings
+
+- UVA Research Computing's [Unix tutorial](https://learning.rc.virginia.edu/notes/unix-tutorial/).
+- Newham, 2005, [Learning the bash Shell](https://learning.oreilly.com/library/view/learning-the-bash/0596009658/), O'Reilly Media.
+- Jeroen Janssens, 2021, [Data Science From the Command Line](https://datascienceatthecommandline.com/2e/), O’Reilly Media.
+- Neal Stephenson, 1999, [In the Beginning Was The Command Line](http://project.cyberpunk.ru/lib/in_the_beginning_was_the_command_line/). ([PDF version](http://public-library.uk/ebooks/23/31.pdf).)
+
+<!-- ## Videos 
+
+### Introducing Unix
+
+### Setup SSH Keys
+
+### Using Git and Github -->
